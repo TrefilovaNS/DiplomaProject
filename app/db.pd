@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="jdbc:h2:tcp://localhost/~/db [123 на INFORMATION_SCHEMA]">
+  <fieldsEntity entityHeight="70" entityIconified="false" entityId="145519171249145" entityLocationX="179" entityLocationY="21" entityWidth="150" tableName="Job"/>
+  <fieldsEntity entityHeight="82" entityIconified="false" entityId="145519203946607" entityLocationX="0" entityLocationY="144" entityWidth="150" tableName="Dismission"/>
+  <fieldsEntity entityHeight="63" entityIconified="false" entityId="145518969961023" entityLocationX="677" entityLocationY="172" entityWidth="150" tableName="EduDirections"/>
+  <fieldsEntity entityHeight="69" entityIconified="false" entityId="145519240637531" entityLocationX="360" entityLocationY="5" entityWidth="150" tableName="Promotion"/>
+  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145511531841205" entityLocationX="644" entityLocationY="247" entityWidth="150" tableName="SetInterests"/>
+  <fieldsEntity entityHeight="63" entityIconified="false" entityId="145519179852020" entityLocationX="18" entityLocationY="78" entityWidth="150" tableName="Post"/>
+  <fieldsEntity entityHeight="70" entityIconified="false" entityId="145519085946653" entityLocationX="827" entityLocationY="250" entityWidth="150" tableName="SocionicsTypes"/>
+  <fieldsEntity entityHeight="83" entityIconified="false" entityId="145518850737788" entityLocationX="854" entityLocationY="29" entityWidth="150" tableName="EduDegree"/>
+  <fieldsEntity entityHeight="168" entityIconified="false" entityId="145518965557352" entityLocationX="624" entityLocationY="0" entityWidth="150" tableName="EDUCATION"/>
+  <fieldsEntity entityHeight="68" entityIconified="false" entityId="145519221701871" entityLocationX="379" entityLocationY="95" entityWidth="150" tableName="Rewards"/>
+  <fieldsEntity entityHeight="99" entityIconified="false" entityId="145511509607923" entityLocationX="48" entityLocationY="285" entityWidth="150" tableName="SetSkills"/>
+  <fieldsEntity entityHeight="68" entityIconified="false" entityId="145519094664952" entityLocationX="864" entityLocationY="347" entityWidth="150" tableName="PsyhosophyTypes"/>
+  <fieldsEntity entityHeight="152" entityIconified="false" entityId="145519140901113" entityLocationX="193" entityLocationY="110" entityWidth="150" tableName="Career"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="145511478363899" entityLocationX="445" entityLocationY="190" entityWidth="150" tableName="Human"/>
+  <fieldsEntity entityHeight="84" entityIconified="false" entityId="145518951430150" entityLocationX="860" entityLocationY="135" entityWidth="150" tableName="EduCourses"/>
+  <fieldsEntity entityHeight="99" entityIconified="false" entityId="145519044443987" entityLocationX="260" entityLocationY="316" entityWidth="150" tableName="Contacts"/>
+  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145519067715924" entityLocationX="638" entityLocationY="338" entityWidth="150" tableName="Psyhotypes"/>
+</datamodel>
