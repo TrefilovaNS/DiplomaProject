@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="557px" prefWidth="836px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="636px" prefWidth="836px"/>
   <Label cursor="0" horizontalAlignment="0" horizontalTextPosition="0" name="label" parent="view" prefHeight="30px" prefWidth="100px" text="АНКЕТА">
-    <font family="Calibri Light" size="24" style="0"/>
+    <font family="Monospaced" size="24" style="0"/>
     <AnchorsPaneConstraints height="30px" left="340px" right="396px" top="30px"/>
   </Label>
-  <TextField cursor="0" emptyText="Например: Преображенский" name="textField" parent="view" prefHeight="30px" prefWidth="320px">
+  <TextField cursor="0" emptyText="Преображенский" name="textField" parent="view" prefHeight="30px" prefWidth="320px">
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="80px"/>
   </TextField>
@@ -12,7 +12,7 @@
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="80px" width="100px"/>
   </Label>
-  <TextField cursor="0" emptyText="Например: Арсений" name="textField1" parent="view" prefHeight="30px" prefWidth="320px">
+  <TextField cursor="0" emptyText="Арсений" name="textField1" parent="view" prefHeight="30px" prefWidth="320px">
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="120px"/>
   </TextField>
@@ -24,29 +24,27 @@
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="160px" width="100px"/>
   </Label>
-  <TextField cursor="0" emptyText="Например: Семенович" name="textField11" parent="view" prefHeight="30px" prefWidth="320px">
+  <TextField cursor="0" emptyText="Семенович" name="textField11" parent="view" prefHeight="30px" prefWidth="320px">
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="160px"/>
   </TextField>
-  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="280px" prefWidth="740px" selectedComponent="tabbedPane1">
-    <AnchorsPaneConstraints height="280px" left="50px" right="46px" top="210px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="340px" prefWidth="740px" selectedComponent="panel">
+    <AnchorsPaneConstraints height="340px" left="50px" right="46px" top="210px"/>
   </TabbedPane>
-  <TabbedPane cursor="0" name="tabbedPane1" parent="tabbedPane" prefHeight="252px" prefWidth="735px">
-    <TabbedPaneConstraints tabTitle="Образование" tabToolTip=""/>
-  </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane1" prefHeight="224px" prefWidth="730px">
-    <TabbedPaneConstraints tabTitle="tab0"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="312px" prefWidth="735px">
+    <TabbedPaneConstraints tabTitle="Контактные данные" tabToolTip=""/>
   </AnchorsPane>
   <Label cursor="0" name="label2" parent="panel" prefHeight="30px" prefWidth="100px" text="label2">
     <AnchorsPaneConstraints height="30px" left="30px" top="20px" width="100px"/>
   </Label>
-  <TabbedPane cursor="0" name="tabbedPane2" parent="tabbedPane" prefHeight="252px" prefWidth="735px" visible="false">
-    <TabbedPaneConstraints tabTitle="Трудовая деятельность" tabToolTip=""/>
-  </TabbedPane>
-  <TabbedPane cursor="0" name="tabbedPane3" parent="tabbedPane" prefHeight="252px" prefWidth="735px" visible="false">
-    <TabbedPaneConstraints tabTitle="Личные качества" tabToolTip=""/>
-  </TabbedPane>
-  <TabbedPane cursor="0" name="tabbedPane4" parent="tabbedPane" prefHeight="252px" prefWidth="735px" visible="false">
-    <TabbedPaneConstraints tabTitle="Контактная информация" tabToolTip=""/>
-  </TabbedPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="312px" prefWidth="735px" visible="false">
+    <TabbedPaneConstraints tabTitle="Образование" tabToolTip=""/>
+  </AnchorsPane>
+  <Button cursor="0" name="button" opaque="false" parent="panel1" prefHeight="30px" prefWidth="210px" text="Добавить образование">
+    <AnchorsPaneConstraints height="30px" left="20px" top="10px" width="210px"/>
+  </Button>
+  <ScrollPane cursor="0" name="scrollPane" parent="panel1" prefHeight="250px" prefWidth="700px">
+    <AnchorsPaneConstraints height="250px" left="10px" top="50px" width="700px"/>
+  </ScrollPane>
+  <BoxPane background="#ffffff" cursor="0" name="panel2" orientation="1" parent="scrollPane" prefHeight="248px" prefWidth="698px"/>
 </layout>

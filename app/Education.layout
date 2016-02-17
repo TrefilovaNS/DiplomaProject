@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="248px" prefWidth="650px"/>
+  <Label cursor="0" name="label3" parent="view" prefHeight="30px" prefWidth="240px" text="Название образовательного учреждения">
+    <AnchorsPaneConstraints height="30px" left="20px" top="20px" width="240px"/>
+  </Label>
+  <TextField cursor="0" emptyText="МГУ" name="textField2" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="20px"/>
+  </TextField>
+  <Label cursor="0" horizontalAlignment="4" name="label31" parent="view" prefHeight="30px" prefWidth="130px" text="Дата поступления">
+    <AnchorsPaneConstraints height="30px" left="60px" top="190px" width="130px"/>
+  </Label>
+  <TextField cursor="0" emptyText="Балакавриат" name="textField21" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="60px"/>
+  </TextField>
+  <TextField cursor="0" emptyText="Информационные технологии" name="textField211" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="100px"/>
+  </TextField>
+  <Label cursor="0" name="label311" parent="view" prefHeight="30px" prefWidth="220px" text="Направление подготовки">
+    <AnchorsPaneConstraints height="30px" left="20px" top="100px" width="220px"/>
+  </Label>
+  <ModelDate cursor="0" name="modelDate" parent="view" prefHeight="30px" prefWidth="120px">
+    <AnchorsPaneConstraints bottom="28px" height="30px" left="200px" width="120px"/>
+  </ModelDate>
+  <Label cursor="0" horizontalAlignment="4" name="label312" parent="view" prefHeight="30px" prefWidth="100px" text="Дата окончания">
+    <AnchorsPaneConstraints height="30px" left="340px" top="190px" width="100px"/>
+  </Label>
+  <ModelDate cursor="0" name="modelDate1" parent="view" prefHeight="30px" prefWidth="120px">
+    <AnchorsPaneConstraints bottom="28px" height="30px" right="80px" width="120px"/>
+  </ModelDate>
+  <Label cursor="0" name="label3111" parent="view" prefHeight="30px" prefWidth="210px" text="Уровень подготовки">
+    <AnchorsPaneConstraints height="30px" left="20px" top="60px" width="210px"/>
+  </Label>
+  <Label cursor="0" name="label3112" parent="view" prefHeight="30px" prefWidth="230px" text="Профиль">
+    <AnchorsPaneConstraints height="30px" left="20px" top="140px" width="230px"/>
+  </Label>
+  <TextField cursor="0" emptyText="Управление ИС" name="textField2111" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="140px"/>
+  </TextField>
+</layout>
