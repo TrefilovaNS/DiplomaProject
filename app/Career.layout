@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="417px" prefWidth="710px"/>
+  <Label cursor="0" name="label3" parent="view" prefHeight="30px" prefWidth="240px" text="Название учреждения">
+    <AnchorsPaneConstraints height="30px" left="20px" top="20px" width="240px"/>
+  </Label>
+  <TextField cursor="0" emptyText="ООО &quot;Работа&quot;" name="textField2" parent="view" prefHeight="30px" prefWidth="346px">
+    <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="346px"/>
+  </TextField>
+  <Label cursor="0" name="label3111" parent="view" prefHeight="30px" prefWidth="210px" text="Должность">
+    <AnchorsPaneConstraints height="30px" left="20px" top="60px" width="210px"/>
+  </Label>
+  <TextField cursor="0" emptyText="Бухгалтер" name="textField21" parent="view" prefHeight="30px" prefWidth="346px">
+    <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="346px"/>
+  </TextField>
+  <Label cursor="0" name="label311" parent="view" prefHeight="30px" prefWidth="220px" text="Дата устройства">
+    <AnchorsPaneConstraints height="30px" left="20px" top="100px" width="220px"/>
+  </Label>
+  <Label cursor="0" name="label3112" parent="view" prefHeight="30px" prefWidth="230px" text="Причина увольнения">
+    <AnchorsPaneConstraints bottom="87px" height="30px" left="20px" width="230px"/>
+  </Label>
+  <TextField cursor="0" emptyText="Низкий уровень зарплаты" name="textField2111" parent="view" prefHeight="30px" prefWidth="346px">
+    <AnchorsPaneConstraints bottom="87px" height="30px" left="260px" width="346px"/>
+  </TextField>
+  <Label cursor="0" name="label31" parent="view" prefHeight="30px" prefWidth="110px" text="Дата увольнения">
+    <AnchorsPaneConstraints bottom="47px" height="30px" left="20px" width="110px"/>
+  </Label>
+  <ModelDate cursor="0" name="modelDate" parent="view" prefHeight="30px" prefWidth="120px">
+    <AnchorsPaneConstraints height="30px" left="260px" top="100px" width="120px"/>
+  </ModelDate>
+  <ModelDate cursor="0" name="modelDate1" parent="view" prefHeight="30px" prefWidth="120px">
+    <AnchorsPaneConstraints bottom="47px" height="30px" left="260px" width="120px"/>
+  </ModelDate>
+  <Label cursor="0" name="label31121" parent="view" prefHeight="30px" prefWidth="230px" text="Награды, поощрения">
+    <AnchorsPaneConstraints height="30px" left="20px" top="140px" width="230px"/>
+  </Label>
+  <ScrollPane cursor="0" name="scrollPane" parent="view" prefHeight="70px" prefWidth="360px">
+    <AnchorsPaneConstraints height="70px" left="250px" top="220px" width="360px"/>
+  </ScrollPane>
+  <BoxPane background="#ffffff" cursor="0" name="panel" orientation="1" parent="scrollPane" prefHeight="68px" prefWidth="358px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Добавить">
+    <AnchorsPaneConstraints height="30px" right="100px" top="180px" width="110px"/>
+  </Button>
+  <TextField cursor="0" emptyText="Премия за добросовестную работу" name="textField22" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="350px"/>
+  </TextField>
+</layout>

@@ -25,7 +25,7 @@
     <AnchorsPaneConstraints height="30px" left="340px" top="190px" width="100px"/>
   </Label>
   <ModelDate cursor="0" name="modelDate1" parent="view" prefHeight="30px" prefWidth="120px">
-    <AnchorsPaneConstraints bottom="28px" height="30px" right="80px" width="120px"/>
+    <AnchorsPaneConstraints height="30px" left="450px" top="190px" width="120px"/>
   </ModelDate>
   <Label cursor="0" name="label3111" parent="view" prefHeight="30px" prefWidth="210px" text="Уровень подготовки">
     <AnchorsPaneConstraints height="30px" left="20px" top="60px" width="210px"/>
