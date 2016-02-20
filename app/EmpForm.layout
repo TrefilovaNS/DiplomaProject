@@ -4,18 +4,10 @@
     <font family="Monospaced" size="24" style="0"/>
     <AnchorsPaneConstraints height="30px" left="340px" right="396px" top="30px"/>
   </Label>
-  <TextField cursor="0" emptyText="Преображенский" name="textField" parent="view" prefHeight="30px" prefWidth="320px">
-    <font family="Monospaced" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="80px"/>
-  </TextField>
   <Label cursor="0" horizontalAlignment="4" name="label1" parent="view" prefHeight="30px" prefWidth="100px" text="Фамилия">
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="80px" width="100px"/>
   </Label>
-  <TextField cursor="0" emptyText="Арсений" name="textField1" parent="view" prefHeight="30px" prefWidth="320px">
-    <font family="Monospaced" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="120px"/>
-  </TextField>
   <Label cursor="0" horizontalAlignment="4" name="label11" parent="view" prefHeight="30px" prefWidth="100px" text="Имя">
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="120px" width="100px"/>
@@ -24,14 +16,10 @@
     <font family="Monospaced" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="160px" width="100px"/>
   </Label>
-  <TextField cursor="0" emptyText="Семенович" name="textField11" parent="view" prefHeight="30px" prefWidth="320px">
-    <font family="Monospaced" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="270px" right="246px" top="160px"/>
-  </TextField>
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="390px" prefWidth="760px" selectedComponent="panel">
     <AnchorsPaneConstraints height="390px" left="40px" right="36px" top="210px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="360px" prefWidth="755px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="362px" prefWidth="755px">
     <TabbedPaneConstraints tabTitle="Контактные данные" tabToolTip=""/>
   </AnchorsPane>
   <Label cursor="0" name="label3" parent="panel" prefHeight="30px" prefWidth="240px" text="Телефон">
@@ -43,16 +31,16 @@
   <Label cursor="0" name="label311" parent="panel" prefHeight="30px" prefWidth="220px" text="Страница в соц. сети">
     <AnchorsPaneConstraints height="30px" left="40px" top="110px" width="220px"/>
   </Label>
-  <TextField cursor="0" emptyText="+9 (425) 555-0100" name="textField2" parent="panel" prefHeight="30px" prefWidth="455px">
-    <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="455px"/>
-  </TextField>
-  <TextField cursor="0" emptyText="emp@emp.com" name="textField21" parent="panel" prefHeight="30px" prefWidth="455px">
-    <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="455px"/>
-  </TextField>
-  <TextField cursor="0" emptyText="http://vk.com/id230432" name="textField211" parent="panel" prefHeight="30px" prefWidth="455px">
-    <AnchorsPaneConstraints height="30px" left="250px" top="110px" width="455px"/>
-  </TextField>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
+  <ModelFormattedField cursor="0" data="contacts" field="cursor.phonenumber" name="modelFormattedField3" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+    <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="contacts" field="cursor.email" name="modelFormattedField31" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+    <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="contacts" field="cursor.socialpage" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+    <AnchorsPaneConstraints height="30px" left="250px" top="110px" width="450px"/>
+  </ModelFormattedField>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Образование" tabToolTip=""/>
   </AnchorsPane>
   <ScrollPane cursor="0" name="scrollPane" parent="panel1" prefHeight="290px" prefWidth="730px">
@@ -62,8 +50,8 @@
   <Button cursor="0" name="button" opaque="false" parent="panel1" prefHeight="30px" prefWidth="210px" text="Добавить образование">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="15px" width="210px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
-    <TabbedPaneConstraints tabTitle="Трудовая деятельность"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
+    <TabbedPaneConstraints tabTitle="Трудовая деятельность" tabToolTip=""/>
   </AnchorsPane>
   <ScrollPane cursor="0" name="scrollPane14" parent="panel3" prefHeight="290px" prefWidth="730px">
     <AnchorsPaneConstraints height="290px" left="10px" top="10px" width="730px"/>
@@ -72,8 +60,8 @@
   <Button cursor="0" name="button1" opaque="false" parent="panel3" prefHeight="30px" prefWidth="210px" text="Добавить работу">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="15px" width="210px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
-    <TabbedPaneConstraints tabTitle="Личностные аспекты"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
+    <TabbedPaneConstraints tabTitle="Личностные аспекты" tabToolTip=""/>
   </AnchorsPane>
   <Label cursor="0" name="label31" parent="panel4" prefHeight="30px" prefWidth="240px" text="Соционический тип">
     <AnchorsPaneConstraints height="30px" left="40px" top="30px" width="240px"/>
@@ -113,4 +101,16 @@
   <BoxPane background="#ffffff" cursor="0" name="panel82" orientation="1" parent="panel4" prefHeight="210px" prefWidth="1px">
     <AnchorsPaneConstraints height="210px" left="370px" top="120px" width="1px"/>
   </BoxPane>
+  <ModelFormattedField cursor="0" data="human" field="cursor.name" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
+    <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="human" field="cursor.surname" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="320px" selectOnly="true" text="modelFormattedField">
+    <AnchorsPaneConstraints height="30px" left="270px" top="80px" width="320px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="human" field="cursor.middlename" name="modelFormattedField2" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
+    <AnchorsPaneConstraints height="30px" left="270px" top="160px" width="320px"/>
+  </ModelFormattedField>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="button3">
+    <AnchorsPaneConstraints bottom="6px" height="30px" right="76px" width="100px"/>
+  </Button>
 </layout>
