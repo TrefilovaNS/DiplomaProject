@@ -17,7 +17,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             model.requery(function(){
                 if (model.human.length===0){
                     model.human.push({});
-                    model.contacts.push({});
+                    model.qContacts.push({});
                 }
             });
 
@@ -97,7 +97,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         };
         
         form.btnSave.onActionPerformed = function(event) {
-             model.human.schema.human_id = 1;
+//             model.human.schema.human_id = 1;
             model.save();
         };
 

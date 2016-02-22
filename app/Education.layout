@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <ModelFormattedField cursor="0" format="" name="modelFormattedField" prefHeight="0px" prefWidth="0px" text="modelFormattedField"/>
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="248px" prefWidth="650px"/>
   <Label cursor="0" name="label3" parent="view" prefHeight="30px" prefWidth="240px" text="Название образовательного учреждения">
     <AnchorsPaneConstraints height="30px" left="20px" top="20px" width="240px"/>
   </Label>
-  <TextField cursor="0" emptyText="МГУ" name="textField2" parent="view" prefHeight="30px" prefWidth="350px">
-    <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="20px"/>
-  </TextField>
   <Label cursor="0" horizontalAlignment="4" name="label31" parent="view" prefHeight="30px" prefWidth="130px" text="Дата поступления">
     <AnchorsPaneConstraints height="30px" left="60px" top="190px" width="130px"/>
   </Label>
@@ -36,4 +34,7 @@
   <TextField cursor="0" emptyText="Управление ИС" name="textField2111" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" right="40px" top="140px"/>
   </TextField>
+  <ModelFormattedField cursor="0" format="" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+    <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
+  </ModelFormattedField>
 </layout>

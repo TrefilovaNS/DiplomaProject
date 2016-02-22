@@ -10,6 +10,11 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 , form = Forms.loadForm(ModuleName, model);
         
         self.show = function () {
+             model.requery(function(){
+                if (model.human.length===0){
+                   model.qSetSkills.push({});
+                }
+            });
             form.show();
         };
          self.showOn = function(aPanel){

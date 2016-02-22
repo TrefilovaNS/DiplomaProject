@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <ModelFormattedField name="modelFormattedField" prefHeight="22px" prefWidth="141px" text="modelFormattedField"/>
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="84px" prefWidth="341px"/>
-  <TextField cursor="0" emptyText="Основы HTML и CSS" name="textField2" parent="view" prefHeight="30px" prefWidth="310px">
-    <AnchorsPaneConstraints height="30px" left="10px" top="10px" width="310px"/>
-  </TextField>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="190px" text="Уровень навыка (от 1 до 10)">
     <AnchorsPaneConstraints height="20px" left="10px" top="50px" width="190px"/>
   </Label>
   <ModelSpin cursor="0" max="10.0" min="1.0" name="modelSpin" parent="view" prefHeight="22px" prefWidth="100px">
     <AnchorsPaneConstraints height="22px" left="210px" top="50px" width="100px"/>
   </ModelSpin>
+  <ModelFormattedField cursor="0" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="310px" text="modelFormattedField1">
+    <AnchorsPaneConstraints height="30px" left="10px" top="10px" width="310px"/>
+  </ModelFormattedField>
 </layout>

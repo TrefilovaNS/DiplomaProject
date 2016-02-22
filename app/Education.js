@@ -10,6 +10,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 , form = Forms.loadForm(ModuleName, model);
         
         self.show = function () {
+           
             form.show();
         };
         
