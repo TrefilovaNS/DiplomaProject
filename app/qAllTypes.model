@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="17" entityLocationY="3" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="145615051063741" entityLocationX="346" entityLocationY="4" entityWidth="150" queryId="qSocTypes" tableAlias="q" tableName="" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="145615054501486" entityLocationX="176" entityLocationY="13" entityWidth="150" tableAlias="t" tableName="PSYHOTYPES" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="145615050249981" entityLocationX="518" entityLocationY="6" entityWidth="150" queryId="qPsyTypes" tableAlias="q1" tableName="" tableSchemaName=""/>
+  <relation leftEntityFieldName="socionicstypes_id" leftEntityId="145615054501486" rightEntityFieldName="socionicstypes_id" rightEntityId="145615051063741"/>
+  <relation leftEntityFieldName="psyhosophytypes_id" leftEntityId="145615054501486" rightEntityFieldName="psyhosophytypes_id" rightEntityId="145615050249981"/>
+</datamodel>

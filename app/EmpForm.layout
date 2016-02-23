@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="674px" prefWidth="836px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="691px" prefWidth="836px"/>
   <Label cursor="0" horizontalAlignment="0" horizontalTextPosition="0" name="label" parent="view" prefHeight="30px" prefWidth="100px" text="АНКЕТА">
     <font family="Monospaced" size="22" style="0"/>
     <AnchorsPaneConstraints height="30px" left="340px" right="396px" top="30px"/>
@@ -69,12 +69,6 @@
   <Label cursor="0" name="label31111" parent="panel4" prefHeight="30px" prefWidth="210px" text="ПЙ-тип (психософия)">
     <AnchorsPaneConstraints height="30px" left="40px" top="70px" width="210px"/>
   </Label>
-  <TextField cursor="0" emptyText="СЛИ &quot;Габен&quot;" name="textField22" parent="panel4" prefHeight="30px" prefWidth="455px">
-    <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="455px"/>
-  </TextField>
-  <TextField cursor="0" emptyText="ВЭЛФ" name="textField212" parent="panel4" prefHeight="30px" prefWidth="455px">
-    <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="455px"/>
-  </TextField>
   <ScrollPane cursor="0" name="scrollPane15" parent="panel4" prefHeight="140px" prefWidth="350px">
     <AnchorsPaneConstraints height="140px" left="380px" top="170px" width="350px"/>
   </ScrollPane>
@@ -101,6 +95,12 @@
   <BoxPane background="#ffffff" cursor="0" name="panel82" orientation="1" parent="panel4" prefHeight="210px" prefWidth="1px">
     <AnchorsPaneConstraints height="210px" left="370px" top="120px" width="1px"/>
   </BoxPane>
+  <ModelCombo cursor="0" data="qTypes" displayField="ptype" displayList="qPsyTypes" field="cursor.psyhosophytypes_id" name="modelCombo" parent="panel4" prefHeight="30px" prefWidth="450px">
+    <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
+  </ModelCombo>
+  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.socionicstypes_id" name="modelCombo1" parent="panel4" prefHeight="30px" prefWidth="450px">
+    <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
+  </ModelCombo>
   <ModelFormattedField cursor="0" data="human" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
     <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
   </ModelFormattedField>
@@ -110,8 +110,8 @@
   <ModelFormattedField cursor="0" data="human" field="cursor.middlename" format="" name="modelFormattedField2" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
     <AnchorsPaneConstraints height="30px" left="270px" top="160px" width="320px"/>
   </ModelFormattedField>
-  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="button3">
-    <AnchorsPaneConstraints bottom="6px" height="30px" right="76px" width="100px"/>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="21px" height="30px" right="76px" width="100px"/>
   </Button>
   <Label cursor="0" horizontalAlignment="4" name="label1111" parent="view" prefHeight="30px" prefWidth="200px" text="Дата рождения">
     <font family="Monospaced" size="14" style="0"/>
@@ -125,4 +125,7 @@
   </MenuBar>
   <Menu cursor="0" name="menu" parent="menuBar" prefHeight="28px" prefWidth="45px" text="menu"/>
   <Menu cursor="0" name="menu1" parent="menuBar" prefHeight="28px" prefWidth="53px" text="menu1"/>
+  <Button cursor="0" name="button3" parent="view" prefHeight="30px" prefWidth="100px" text="Сброс">
+    <AnchorsPaneConstraints bottom="21px" height="30px" left="550px" width="100px"/>
+  </Button>
 </layout>

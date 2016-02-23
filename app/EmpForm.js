@@ -18,6 +18,11 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 if (model.human.length===0){
                     model.human.push({});
                     model.qContacts.push({});
+                    model.qTypes.push({});
+                    model.qSocTypes.push({});
+                    model.qPsyTypes.push({});
+                    
+                    
                 }
             });
 
