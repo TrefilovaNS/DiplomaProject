@@ -1,9 +1,9 @@
 /**
  *
  * @author Пользователь
- * @name qEdu
+ * @name qEduName
  * @public
  */ 
-Select * 
+Select *
 From EDUCATION t1
- Where :human_id = t1.human_id
+ Where :education_id = t1.education_id

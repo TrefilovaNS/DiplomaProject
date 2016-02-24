@@ -8,7 +8,10 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
-        
+        var education = arguments[0];
+        form.name.data = education;
+        form.name.field = "eduname";
+
         self.show = function () {
            
             form.show();
@@ -23,6 +26,12 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             // TODO : place your code here
         });
         
+        form.name.onValueChange = function(event) {
+            console.log(education.eduname);
+        };
+
+
+
     }
     return module_constructor;
 });

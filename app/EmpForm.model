@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qSocTypes" Title="" entityHeight="200" entityIconified="false" entityId="145625667504493" entityLocationX="291" entityLocationY="310" entityWidth="150" queryId="qSocTypes" tableName="" tableSchemaName=""/>
   <entity Name="human" Title="" entityHeight="200" entityIconified="false" entityId="145597047302417" entityLocationX="66" entityLocationY="8" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
-  <entity Name="qTypes" Title="" entityHeight="200" entityIconified="false" entityId="145625668810979" entityLocationX="458" entityLocationY="89" entityWidth="150" queryId="qTypes" tableName="" tableSchemaName=""/>
   <entity Name="qContacts" Title="" entityHeight="200" entityIconified="false" entityId="145600672014160" entityLocationX="279" entityLocationY="38" entityWidth="150" queryId="qContacts" tableName="" tableSchemaName=""/>
-  <entity Name="qPsyTypes" Title="" entityHeight="200" entityIconified="false" entityId="145625668068825" entityLocationX="87" entityLocationY="301" entityWidth="150" queryId="qPsyTypes" tableName="" tableSchemaName=""/>
+  <entity Name="qEdu" Title="" entityHeight="200" entityIconified="false" entityId="145632149544374" entityLocationX="678" entityLocationY="92" entityWidth="150" queryId="qEdu" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145632149544374" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
   <referenceRelation leftEntityFieldName="contacts_id" leftEntityId="145597047302417" rightEntityFieldName="contacts_id" rightEntityId="145600672014160"/>
-  <referenceRelation leftEntityFieldName="psyhosophytypes_id" leftEntityId="145625668810979" rightEntityFieldName="psyhosophytypes_id" rightEntityId="145625668068825"/>
-  <referenceRelation leftEntityFieldName="psyhotypes_id" leftEntityId="145597047302417" rightEntityFieldName="psyhotypes_id" rightEntityId="145625668810979"/>
-  <referenceRelation leftEntityFieldName="socionicstypes_id" leftEntityId="145625668810979" rightEntityFieldName="socionicstypes_id" rightEntityId="145625667504493"/>
 </datamodel>

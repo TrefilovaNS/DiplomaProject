@@ -28,8 +28,14 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
 
             form.show();
             require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
-                var edu = new Edu();
-                edu.showOn(form.panel2);
+                model.qEdu.params.human_id=model.human[0].human_id;
+                model.qEdu.requery(function(){
+                    for (var i=0;i<=model.qEdu.length;i++){
+                    var edu = new Edu(model.qEdu[i]);
+                    edu.showOn(form.panel2);    
+                }
+                });
+                
 
 
                 var pnlDiv = new Bp();
@@ -67,7 +73,10 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 pnlDiv.height = 1;
                 pnlDiv.background = Ui.Color.BLACK;
                 form.panel2.add(pnlDiv);
-                var edu = new Edu();
+                var index = model.qEdu.push({});
+                model.qEdu[index-1].human_id= model.human[0].human_id
+                model.qEdu[index-1].eduname="ISUCT"; 
+                var edu = new Edu(model.qEdu[index-1]);
                 edu.showOn(form.panel2);
             });
         };
