@@ -10,17 +10,17 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 , form = Forms.loadForm(ModuleName, model);
 
         self.show = function () {
-            form.maximizable = true;
-            form.undecorated = true;
+//            form.maximizable = true;
+//            form.undecorated = true;
             //form.maximize();
             model.human.params.human_id = 1;
             model.requery(function(){
                 if (model.human.length===0){
                     model.human.push({});
                     model.qContacts.push({});
-                    model.qTypes.push({});
-                    model.qSocTypes.push({});
-                    model.qPsyTypes.push({});
+//                    model.qTypes.push({});
+//                    model.qSocTypes.push({});
+//                    model.qPsyTypes.push({});
                     
                     
                 }
@@ -74,7 +74,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 pnlDiv.background = Ui.Color.BLACK;
                 form.panel2.add(pnlDiv);
                 var index = model.qEdu.push({});
-                model.qEdu[index-1].human_id= model.human[0].human_id
+                model.qEdu[index-1].human_id= model.human[0].human_id;
                 model.qEdu[index-1].eduname="ISUCT"; 
                 var edu = new Edu(model.qEdu[index-1]);
                 edu.showOn(form.panel2);
