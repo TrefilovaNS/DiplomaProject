@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qEmpList" Title="" entityHeight="200" entityIconified="false" entityId="145633764822732" entityLocationX="192" entityLocationY="46" entityWidth="150" queryId="qEmpList" tableName="" tableSchemaName=""/>
+  <entity Name="qEmpList" Title="" entityHeight="200" entityIconified="false" entityId="145633764822732" entityLocationX="75" entityLocationY="15" entityWidth="150" queryId="qEmpList" tableName="" tableSchemaName=""/>
+  <entity Name="qContacts" Title="" entityHeight="200" entityIconified="false" entityId="145649048582196" entityLocationX="286" entityLocationY="15" entityWidth="150" queryId="qContacts" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="contacts_id" leftEntityId="145633764822732" rightEntityFieldName="contacts_id" rightEntityId="145649048582196"/>
 </datamodel>

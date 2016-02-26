@@ -3,34 +3,25 @@
  * @author Наталья
  * @module EmpList
  */
-define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define(['orm', 'forms', 'ui','EmpForm'], function (Orm, Forms, Ui, EmpForm, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
-        
-        self.show = function (aCallback, hID) {
-
-            callback = aCallback;
-            if (hID) {
-                model.qEmpList.params.human_id = hID;
-                model.requery();
-            } else {
-                model.qEmpList.push({});
-            }
-
-            
+          
+        self.show = function () {
             form.show();
         };
+      
         
-        require(['EmpForm'], function (EmpForm) {
-            var empForm = new EmpForm();
+      
             form.modelGrid.onMouseClicked = function (event) {
                 if (event.clickCount > 1) {
-                    empForm.show(refresh, self.show());
+                    var empForm = new EmpForm(form.modelGrid.selected[0].human_id);
+                    empForm.show();
                 }
             };
-        });
+     
         // TODO : place your code here
         function refresh() {
         model.requery();

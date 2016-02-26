@@ -12,8 +12,8 @@
   <fieldsEntity entityHeight="99" entityIconified="false" entityId="145511509607923" entityLocationX="48" entityLocationY="285" entityWidth="150" tableName="SetSkills"/>
   <fieldsEntity entityHeight="68" entityIconified="false" entityId="145519094664952" entityLocationX="876" entityLocationY="344" entityWidth="180" tableName="PsyhosophyTypes"/>
   <fieldsEntity entityHeight="152" entityIconified="false" entityId="145519140901113" entityLocationX="193" entityLocationY="110" entityWidth="150" tableName="Career"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="145511478363899" entityLocationX="453" entityLocationY="182" entityWidth="150" tableName="Human"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="145511478363899" entityLocationX="454" entityLocationY="184" entityWidth="150" tableName="Human"/>
   <fieldsEntity entityHeight="84" entityIconified="false" entityId="145518951430150" entityLocationX="860" entityLocationY="135" entityWidth="150" tableName="EduCourses"/>
-  <fieldsEntity entityHeight="99" entityIconified="false" entityId="145519044443987" entityLocationX="260" entityLocationY="316" entityWidth="150" tableName="Contacts"/>
+  <fieldsEntity entityHeight="99" entityIconified="false" entityId="145519044443987" entityLocationX="261" entityLocationY="314" entityWidth="150" tableName="Contacts"/>
   <fieldsEntity entityHeight="81" entityIconified="false" entityId="145519067715924" entityLocationX="638" entityLocationY="355" entityWidth="150" tableName="Psyhotypes"/>
 </datamodel>

@@ -4,18 +4,18 @@
  * @module EmpForm
  */
 define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
-    function module_constructor() {
+    function module_constructor(userId) {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
-
+        var  aUserId = userId;       
         self.show = function () {
 //            form.maximizable = true;
 //            form.undecorated = true;
             //form.maximize();
-            model.human.params.human_id = 1;
+           model.human.params.human_id = aUserId;
             model.requery(function(){
-                if (model.human.length===0){
+                if (!model.human){
                     model.human.push({});
                     model.qContacts.push({});
 //                    model.qTypes.push({});
