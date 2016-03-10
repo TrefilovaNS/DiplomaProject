@@ -26,9 +26,28 @@ define(['orm', 'forms', 'ui','EmpForm'], function (Orm, Forms, Ui, EmpForm, Modu
         function refresh() {
         model.requery();
        }
+        form.Add.onActionPerformed = function (event) {
+                              
+            var addEmp = new EmpForm();
+            addEmp.show();
+            model.requery();
+//            
+        form.Delete.onActionPerformed = function (event) {
+                if (confirm("Удалить?")) {
+                    for (var i in form.modelGrid.selected) {
+                        model.qEmpList.splice(model.qEmpList.indexOf(form.modelGrid.selected[i]), 1);  //Удаляемлишнее
+                        model.save(); 
+}
+        }
+    };
 
-        
+//            var addEmp = new EmpForm();    
+//		addEmp. = self.qEmpList.human_id;
+//		artst.showModal(refresh);
 
+        };
+
+     
         model.requery(function () {
             // TODO : place your code here
         });

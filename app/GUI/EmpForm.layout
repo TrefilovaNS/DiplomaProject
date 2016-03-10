@@ -31,13 +31,13 @@
   <Label cursor="0" name="label311" parent="panel" prefHeight="30px" prefWidth="220px" text="Страница в соц. сети">
     <AnchorsPaneConstraints height="30px" left="40px" top="110px" width="220px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="qContacts" field="cursor.phonenumber" format="" name="modelFormattedField3" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+  <ModelFormattedField cursor="0" data="qContacts" emptyText="+9 (425) 555-0100" field="cursor.phonenumber" format="" name="modelFormattedField3" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qContacts" field="cursor.email" format="" name="modelFormattedField31" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+  <ModelFormattedField cursor="0" data="qContacts" emptyText="test@test.ru" field="cursor.email" format="" name="modelFormattedField31" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qContacts" field="cursor.socialpage" format="" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px" text="modelFormattedField3">
+  <ModelFormattedField cursor="0" data="qContacts" emptyText="http://vk.com/id23343" field="cursor.socialpage" format="" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="110px" width="450px"/>
   </ModelFormattedField>
   <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
@@ -95,19 +95,19 @@
   <BoxPane background="#ffffff" cursor="0" name="panel82" orientation="1" parent="panel4" prefHeight="210px" prefWidth="1px">
     <AnchorsPaneConstraints height="210px" left="370px" top="120px" width="1px"/>
   </BoxPane>
-  <ModelCombo cursor="0" data="qTypes" displayField="ptype" displayList="qPsyTypes" field="cursor.psyhosophytypes_id" name="modelCombo" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" displayField="ptype" field="cursor.psyhosophytypes_id" name="modelCombo" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelCombo>
-  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.socionicstypes_id" name="modelCombo1" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" displayField="stype" field="cursor.socionicstypes_id" name="modelCombo1" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
-  <ModelFormattedField cursor="0" data="human" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="human" field="cursor.surname" format="" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иванов" field="cursor.surname" format="" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="80px" width="320px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="human" field="cursor.middlename" format="" name="modelFormattedField2" parent="view" prefHeight="30px" prefWidth="320px" text="modelFormattedField">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иванович" field="cursor.middlename" format="" name="modelFormattedField2" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="160px" width="320px"/>
   </ModelFormattedField>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
@@ -120,11 +120,6 @@
   <ModelDate cursor="0" data="human" field="cursor.birthdate" name="modelDate" parent="view" prefHeight="30px" prefWidth="160px">
     <AnchorsPaneConstraints height="30px" left="380px" top="200px" width="160px"/>
   </ModelDate>
-  <MenuBar cursor="0" name="menuBar" parent="view" prefHeight="30px" prefWidth="830px">
-    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="830px"/>
-  </MenuBar>
-  <Menu cursor="0" name="menu" parent="menuBar" prefHeight="28px" prefWidth="45px" text="menu"/>
-  <Menu cursor="0" name="menu1" parent="menuBar" prefHeight="28px" prefWidth="53px" text="menu1"/>
   <Button cursor="0" name="button3" parent="view" prefHeight="30px" prefWidth="100px" text="Сброс">
     <AnchorsPaneConstraints bottom="21px" height="30px" left="550px" width="100px"/>
   </Button>

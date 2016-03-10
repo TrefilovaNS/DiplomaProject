@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="511px" prefWidth="784px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="633px" prefWidth="784px"/>
   <Label cursor="0" horizontalAlignment="0" horizontalTextPosition="0" name="label" parent="view" prefHeight="40px" prefWidth="170px" text="СОТРУДНИКИ">
     <font family="Monospaced" size="22" style="0"/>
     <AnchorsPaneConstraints height="40px" left="290px" top="10px" width="170px"/>
   </Label>
-  <ModelGrid cursor="0" data="qEmpList" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="330px" prefWidth="630px" rowsHeight="20">
-    <AnchorsPaneConstraints height="330px" left="80px" top="80px" width="630px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="480px" prefWidth="670px">
+    <AnchorsPaneConstraints height="480px" left="60px" top="80px" width="670px"/>
+  </TabbedPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="450px" prefWidth="665px">
+    <TabbedPaneConstraints tabTitle="Панель редактирования"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qEmpList" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel" prefHeight="330px" prefWidth="630px" rowsHeight="20">
+    <AnchorsPaneConstraints height="330px" left="20px" top="60px" width="630px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="fullName" name="colFullName" title="colFullName" width="293px">
+    <ModelGridColumn field="fullName" name="colFullName" title="ФИО" width="293px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="birthdate" name="colBirthdate" title="colBirthdate" width="292px">
+    <ModelGridColumn field="birthdate" name="colBirthdate" title="Дата рождения" width="292px">
       <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
     </ModelGridColumn>
   </ModelGrid>
+  <Label cursor="0" horizontalAlignment="0" name="label2" parent="panel" prefHeight="30px" prefWidth="540px" text="Дважды щелкните по строке, чтобы редактировать данные">
+    <font family="Calibri Light" size="12" style="0"/>
+    <AnchorsPaneConstraints height="30px" left="70px" top="20px" width="540px"/>
+  </Label>
+  <Button cursor="0" name="Delete" parent="panel" prefHeight="30px" prefWidth="190px" text="Удалить сотрудника">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="230px" width="190px"/>
+  </Button>
+  <Button cursor="0" name="Add" parent="panel" prefHeight="30px" prefWidth="190px" text="Добавить сотрудника">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="30px" width="190px"/>
+  </Button>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="450px" prefWidth="665px" visible="false">
+    <TabbedPaneConstraints tabTitle="Панель просмотра"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qEmpList" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="panel1" prefHeight="330px" prefWidth="630px" rowsHeight="20">
+    <AnchorsPaneConstraints height="330px" left="20px" top="60px" width="630px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="fullName" name="colFullName" title="ФИО" width="293px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="birthdate" name="colBirthdate" title="Дата рождения" width="292px">
+      <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Label cursor="0" horizontalAlignment="0" name="label21" parent="panel1" prefHeight="30px" prefWidth="540px" text="Дважды щелкните по строке, чтобы перейти к просмотру">
+    <font family="Calibri Light" size="12" style="0"/>
+    <AnchorsPaneConstraints height="30px" left="70px" top="20px" width="540px"/>
+  </Label>
 </layout>
