@@ -31,24 +31,24 @@
   <Label cursor="0" name="label311" parent="panel" prefHeight="30px" prefWidth="220px" text="Страница в соц. сети">
     <AnchorsPaneConstraints height="30px" left="40px" top="110px" width="220px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="qContacts" emptyText="+9 (425) 555-0100" field="cursor.phonenumber" format="" name="modelFormattedField3" parent="panel" prefHeight="30px" prefWidth="450px">
+  <ModelFormattedField cursor="0" emptyText="+9 (425) 555-0100" format="" name="modelFormattedField3" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qContacts" emptyText="test@test.ru" field="cursor.email" format="" name="modelFormattedField31" parent="panel" prefHeight="30px" prefWidth="450px">
+  <ModelFormattedField cursor="0" emptyText="test@test.ru" format="" name="modelFormattedField31" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qContacts" emptyText="http://vk.com/id23343" field="cursor.socialpage" format="" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px">
+  <ModelFormattedField cursor="0" emptyText="http://vk.com/id23343" format="" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="110px" width="450px"/>
   </ModelFormattedField>
   <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Образование" tabToolTip=""/>
   </AnchorsPane>
   <ScrollPane cursor="0" name="scrollPane" parent="panel1" prefHeight="290px" prefWidth="730px">
-    <AnchorsPaneConstraints height="290px" left="10px" top="10px" width="730px"/>
+    <AnchorsPaneConstraints height="290px" left="10px" top="50px" width="730px"/>
   </ScrollPane>
   <BoxPane background="#ffffff" cursor="0" name="panel2" orientation="1" parent="scrollPane" prefHeight="288px" prefWidth="728px"/>
   <Button cursor="0" name="button" opaque="false" parent="panel1" prefHeight="30px" prefWidth="210px" text="Добавить образование">
-    <AnchorsPaneConstraints bottom="10px" height="30px" right="15px" width="210px"/>
+    <AnchorsPaneConstraints height="30px" right="15px" top="10px" width="210px"/>
   </Button>
   <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Трудовая деятельность" tabToolTip=""/>

@@ -8,35 +8,23 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
-        var  aUserId = userId;       
-        self.show = function () {
-//            form.maximizable = true;
-//            form.undecorated = true;
-            //form.maximize();
-           model.human.params.human_id = aUserId;
-            model.requery(function(){
-                if (!model.human){
-                    model.human.push({});
-                    model.qContacts.push({});
-//                    model.qTypes.push({});
-//                    model.qSocTypes.push({});
-//                    model.qPsyTypes.push({});
-                    
-                    
-                }
-            });
-
-            form.show();
+        var aUserId = userId;
+        var onSucsess;
+        function onShow() {
             require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
-                model.qEdu.params.human_id=model.human[0].human_id;
-                model.qEdu.requery(function(){
-                    for (var i=0;i<=model.qEdu.length;i++){
-                    var edu = new Edu(model.qEdu[i]);
-                    edu.showOn(form.panel2);    
-                }
+                model.qEdu.params.human_id = model.human[0].human_id;
+                model.qEdu.requery(function () {
+                    for (var i = 0; i < model.qEdu.length; i++) {
+                        var edu = new Edu(model.qEdu[i]);
+                        edu.showOn(form.panel2);
+                    }
                 });
-                
-
+                form.modelFormattedField31.data = model.human[0].contact;
+                form.modelFormattedField31.field = "email";
+                form.modelFormattedField3.data = model.human[0].contact;
+                form.modelFormattedField3.field = "phonenumber";
+                form.modelFormattedField32.data = model.human[0].contact;
+                form.modelFormattedField32.field = "socialpage";
 
                 var pnlDiv = new Bp();
                 pnlDiv.height = 1;
@@ -59,7 +47,48 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 career.showOn(form.panel5);
 
             });
+        }
+        self.show = function () {
+//            form.maximizable = true;
+//            form.undecorated = true;
+            //form.maximize();
+            model.human.params.human_id = aUserId;
+            model.requery(function () {
+                if (!model.human) {
+                    model.human.push({});
+                    model.qContacts.push({});
+//                    model.qTypes.push({});
+//                    model.qSocTypes.push({});
+//                    model.qPsyTypes.push({});
+                }
+                onShow();
+            });
+
+            form.show();
+
         };
+        self.showModal = function (callback) {
+//            form.maximizable = true;
+//            form.undecorated = true;
+            //form.maximize();
+            onSucsess = callback;
+            model.human.params.human_id = aUserId;
+            model.requery(function () {
+                 
+                if (!model.human) {
+                    model.human.push({});
+                    model.qContacts.push({});
+//                    model.qTypes.push({});
+//                    model.qSocTypes.push({});
+//                    model.qPsyTypes.push({});
+                }
+                onShow();
+            });
+
+            form.showModal();
+            onShow();
+        };
+
 
         // TODO : place your code here
 
@@ -74,9 +103,8 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 pnlDiv.background = Ui.Color.BLACK;
                 form.panel2.add(pnlDiv);
                 var index = model.qEdu.push({});
-                model.qEdu[index-1].human_id= model.human[0].human_id;
-                model.qEdu[index-1].eduname="ISUCT"; 
-                var edu = new Edu(model.qEdu[index-1]);
+                model.qEdu[index - 1].human_id = model.human[0].human_id;
+                var edu = new Edu(model.qEdu[index - 1]);
                 edu.showOn(form.panel2);
             });
         };
@@ -109,10 +137,14 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 career.showOn(form.panel5);
             });
         };
-        
-        form.btnSave.onActionPerformed = function(event) {
+
+        form.btnSave.onActionPerformed = function (event) {
 //             model.human.schema.human_id = 1;
             model.save();
+        };
+
+        form.onWindowClosed = function (event) {
+            onSucsess();
         };
 
     }
