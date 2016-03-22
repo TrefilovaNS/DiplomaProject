@@ -142,6 +142,11 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
 //             model.human.schema.human_id = 1;
             model.save();
         };
+        
+        form.btnClose.onActionPerformed = function(event) {
+           
+        };
+
 
         form.onWindowClosed = function (event) {
             onSucsess();

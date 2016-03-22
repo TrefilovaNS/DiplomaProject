@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="human" Title="" entityHeight="200" entityIconified="false" entityId="145597047302417" entityLocationX="43" entityLocationY="17" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
   <entity Name="qContacts" Title="" entityHeight="200" entityIconified="false" entityId="145600672014160" entityLocationX="260" entityLocationY="120" entityWidth="150" queryId="qContacts" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDegree" Title="" entityHeight="200" entityIconified="false" entityId="145857093174219" entityLocationX="440" entityLocationY="115" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
   <entity Name="qEdu" Title="" entityHeight="200" entityIconified="false" entityId="145632149544374" entityLocationX="627" entityLocationY="0" entityWidth="150" queryId="qEdu" tableName="" tableSchemaName=""/>
   <referenceRelation leftEntityFieldName="human_id" leftEntityId="145632149544374" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
+  <referenceRelation leftEntityFieldName="edudegree_id" leftEntityId="145632149544374" rightEntityFieldName="edudegree_id" rightEntityId="145857093174219"/>
   <referenceRelation collectionPropertyName="Contacts" leftEntityFieldName="contacts_id" leftEntityId="145597047302417" rightEntityFieldName="contacts_id" rightEntityId="145600672014160" scalarPropertyName="contact"/>
 </datamodel>

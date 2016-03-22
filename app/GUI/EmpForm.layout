@@ -19,7 +19,7 @@
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="390px" prefWidth="760px" selectedComponent="panel">
     <AnchorsPaneConstraints height="390px" left="40px" top="240px" width="760px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="362px" prefWidth="755px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="360px" prefWidth="755px">
     <TabbedPaneConstraints tabTitle="Контактные данные" tabToolTip=""/>
   </AnchorsPane>
   <Label cursor="0" name="label3" parent="panel" prefHeight="30px" prefWidth="240px" text="Телефон">
@@ -40,7 +40,7 @@
   <ModelFormattedField cursor="0" emptyText="http://vk.com/id23343" format="" name="modelFormattedField32" parent="panel" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="110px" width="450px"/>
   </ModelFormattedField>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Образование" tabToolTip=""/>
   </AnchorsPane>
   <ScrollPane cursor="0" name="scrollPane" parent="panel1" prefHeight="290px" prefWidth="730px">
@@ -50,7 +50,7 @@
   <Button cursor="0" name="button" opaque="false" parent="panel1" prefHeight="30px" prefWidth="210px" text="Добавить образование">
     <AnchorsPaneConstraints height="30px" right="15px" top="10px" width="210px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Трудовая деятельность" tabToolTip=""/>
   </AnchorsPane>
   <ScrollPane cursor="0" name="scrollPane14" parent="panel3" prefHeight="290px" prefWidth="730px">
@@ -60,7 +60,7 @@
   <Button cursor="0" name="button1" opaque="false" parent="panel3" prefHeight="30px" prefWidth="210px" text="Добавить работу">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="15px" width="210px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="360px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Личностные аспекты" tabToolTip=""/>
   </AnchorsPane>
   <Label cursor="0" name="label31" parent="panel4" prefHeight="30px" prefWidth="240px" text="Соционический тип">
@@ -122,5 +122,8 @@
   </ModelDate>
   <Button cursor="0" name="button3" parent="view" prefHeight="30px" prefWidth="100px" text="Сброс">
     <AnchorsPaneConstraints bottom="21px" height="30px" left="550px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="Закрыть">
+    <AnchorsPaneConstraints bottom="21px" height="30px" left="440px" width="100px"/>
   </Button>
 </layout>

@@ -11,6 +11,12 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         var education = arguments[0];
         form.name.data = education;
         form.name.field = "eduname";
+        
+        form.entDate.data = education;
+        form.entDate.field = "entrydate";
+        
+        form.endDate.data = education;
+        form.endDate.field = "graduationdate";
 
         self.show = function () {
            

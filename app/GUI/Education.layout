@@ -10,13 +10,13 @@
   <Label cursor="0" name="label311" parent="view" prefHeight="30px" prefWidth="220px" text="Направление подготовки">
     <AnchorsPaneConstraints height="30px" left="20px" top="100px" width="220px"/>
   </Label>
-  <ModelDate cursor="0" name="EntDate" parent="view" prefHeight="30px" prefWidth="120px">
+  <ModelDate cursor="0" name="entDate" parent="view" prefHeight="30px" prefWidth="120px">
     <AnchorsPaneConstraints bottom="28px" height="30px" left="200px" width="120px"/>
   </ModelDate>
   <Label cursor="0" horizontalAlignment="4" name="label312" parent="view" prefHeight="30px" prefWidth="100px" text="Дата окончания">
     <AnchorsPaneConstraints height="30px" left="340px" top="190px" width="100px"/>
   </Label>
-  <ModelDate cursor="0" name="EndDate" parent="view" prefHeight="30px" prefWidth="120px">
+  <ModelDate cursor="0" name="endDate" parent="view" prefHeight="30px" prefWidth="120px">
     <AnchorsPaneConstraints height="30px" left="450px" top="190px" width="120px"/>
   </ModelDate>
   <Label cursor="0" name="label3111" parent="view" prefHeight="30px" prefWidth="210px" text="Уровень подготовки">
@@ -28,7 +28,7 @@
   <ModelFormattedField cursor="0" format="" name="name" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qEduDegree" field="cursor.degree" format="" name="degree" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" format="" name="degree" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" data="qEduCourses" field="cursor.coursename" format="" name="course" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
