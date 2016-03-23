@@ -14,10 +14,18 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         
         form.entDate.data = education;
         form.entDate.field = "entrydate";
-        
+       
         form.endDate.data = education;
         form.endDate.field = "graduationdate";
-
+                  
+//        form.course.data = model.qEdu.course;
+//        form.course.field = "coursename";
+////        
+//        form.degree.data = education;
+//        form.degree.displayField = "degree";
+//        form.degree.displayList = "qEduDegree";
+//        form.degree.field = "human_id";
+        
         self.show = function () {
            
             form.show();
@@ -25,7 +33,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         
         self.showOn = function(aPanel){
             aPanel.add(form.view);
-        }
+        };
         // TODO : place your code here
         
         model.requery(function () {

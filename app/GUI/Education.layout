@@ -28,13 +28,13 @@
   <ModelFormattedField cursor="0" format="" name="name" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" format="" name="degree" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
-    <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
-  </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qEduCourses" field="cursor.coursename" format="" name="course" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qEdu" field="cursor.course" format="" name="course" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="100px" width="350px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" data="qEduDirections" field="cursor.dirname" format="" name="direction" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="350px"/>
   </ModelFormattedField>
+  <ModelCombo cursor="0" data="qEdu" displayField="degree" displayList="qEduDegree" field="degree" name="degree" parent="view" prefHeight="30px" prefWidth="350px">
+    <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
+  </ModelCombo>
 </layout>

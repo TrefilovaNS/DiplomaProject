@@ -72,10 +72,12 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
 //            form.undecorated = true;
             //form.maximize();
             onSucsess = callback;
-            model.human.params.human_id = aUserId;
+            if (aUserId){
+                model.human.params.human_id = aUserId;
+            }
             model.requery(function () {
                  
-                if (!model.human) {
+                if (model.human.length===0) {
                     model.human.push({});
                     model.qContacts.push({});
 //                    model.qTypes.push({});
@@ -86,7 +88,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             });
 
             form.showModal();
-            onShow();
+            //onShow();
         };
 
 
@@ -144,7 +146,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         };
         
         form.btnClose.onActionPerformed = function(event) {
-           
+           form.close();
         };
 
 
