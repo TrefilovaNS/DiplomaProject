@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="human" Title="" entityHeight="200" entityIconified="false" entityId="145857124065918" entityLocationX="576" entityLocationY="272" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
-  <entity Name="qEduCourses" Title="" entityHeight="200" entityIconified="false" entityId="145632013512309" entityLocationX="397" entityLocationY="102" entityWidth="150" queryId="qEduCourses" tableName="" tableSchemaName=""/>
-  <entity Name="qEduDirections" Title="" entityHeight="200" entityIconified="false" entityId="145632006417514" entityLocationX="230" entityLocationY="159" entityWidth="150" queryId="qEduDirections" tableName="" tableSchemaName=""/>
-  <entity Name="qEduDegree" Title="" entityHeight="200" entityIconified="false" entityId="145632007432556" entityLocationX="587" entityLocationY="5" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
-  <entity Name="qEdu" Title="" entityHeight="200" entityIconified="false" entityId="145632034200662" entityLocationX="51" entityLocationY="7" entityWidth="150" queryId="qEdu" tableName="" tableSchemaName=""/>
-  <referenceRelation collectionPropertyName="degrees" leftEntityFieldName="edudegree_id" leftEntityId="145632034200662" rightEntityFieldName="edudegree_id" rightEntityId="145632007432556" scalarPropertyName="degree"/>
-  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145632034200662" rightEntityFieldName="human_id" rightEntityId="145857124065918"/>
-  <referenceRelation collectionPropertyName="courses" leftEntityFieldName="educourses_id" leftEntityId="145632034200662" rightEntityFieldName="educourses_id" rightEntityId="145632013512309" scalarPropertyName="course"/>
-  <referenceRelation leftEntityFieldName="edudirections_id" leftEntityId="145632034200662" rightEntityFieldName="edudirections_id" rightEntityId="145632006417514"/>
+  <entity Name="qEduByID" Title="" entityHeight="200" entityIconified="false" entityId="145950196397409" entityLocationX="69" entityLocationY="43" entityWidth="150" queryId="qEduByID" tableName="" tableSchemaName=""/>
+  <entity Name="human" Title="" entityHeight="175" entityIconified="false" entityId="145857124065918" entityLocationX="578" entityLocationY="115" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
+  <entity Name="qEduCourses" Title="" entityHeight="82" entityIconified="false" entityId="145632013512309" entityLocationX="362" entityLocationY="109" entityWidth="150" queryId="qEduCourses" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDirections" Title="" entityHeight="72" entityIconified="false" entityId="145632006417514" entityLocationX="292" entityLocationY="225" entityWidth="150" queryId="qEduDirections" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDegree" Title="" entityHeight="78" entityIconified="false" entityId="145632007432556" entityLocationX="583" entityLocationY="1" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="edudegree_id" leftEntityId="145950196397409" rightEntityFieldName="edudegree_id" rightEntityId="145632007432556"/>
+  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145950196397409" rightEntityFieldName="human_id" rightEntityId="145857124065918"/>
+  <referenceRelation leftEntityFieldName="educourses_id" leftEntityId="145950196397409" rightEntityFieldName="educourses_id" rightEntityId="145632013512309"/>
+  <referenceRelation leftEntityFieldName="edudirections_id" leftEntityId="145950196397409" rightEntityFieldName="edudirections_id" rightEntityId="145632006417514"/>
 </datamodel>
