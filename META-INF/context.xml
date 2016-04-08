@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><Context path="">
-  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc:h2:tcp://localhost/~/db [123 на INFORMATION_SCHEMA]" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="DiplomaDb" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
   <Resource driverClassName="org.apache.derby.jdbc.ClientDriver" name="jdbc:derby://localhost:1527/sample [app на APP]" password="app" schema="APP" type="javax.sql.DataSource" url="jdbc:derby://localhost:1527/sample" username="app"/>
-  <Resource driverClassName="org.h2.Driver" name="jdbc:h2:tcp://localhost/~/db [123 на INFORMATION_SCHEMA]" password="123" schema="INFORMATION_SCHEMA" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/db" username="123"/>
-  <Resource driverClassName="org.h2.Driver" name="petHotel" password="" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/pet_hotel" username="test"/>
+  <Resource driverClassName="org.h2.Driver" name="test_db" password="sa" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/test_db" username="sa"/>
+  <Resource driverClassName="org.h2.Driver" name="gameProjectDB" password="test" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/workspace/gameProject/db/game" username="test"/>
+  <Resource driverClassName="org.h2.Driver" name="petHotel" password="test" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/workspace/pethotel/db/pet_hotel" username="test"/>
+  <Resource driverClassName="org.h2.Driver" name="database" password="123" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/workspace/OOP_Coursework_2015/database" username="test"/>
+  <Resource driverClassName="org.h2.Driver" name="DiplomaDb" password="123" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/workspace/DiplomaProject/db" username="123"/>
+  <Resource driverClassName="com.mysql.jdbc.Driver" name="mPetHotel" password="1stCAjFL" type="javax.sql.DataSource" url="jdbc:mysql://78.24.222.87:3306/demoDB?zeroDateTimeBehavior=convertToNull" username="demoDBUser"/>
 </Context>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
-    <parameter description="" name="edu_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+    <parameter description="" name="human_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="145632030764265" entityLocationX="255" entityLocationY="19" entityWidth="150" tableAlias="t1" tableName="EDUCATION" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="edu_id" rightEntityFieldName="education_id" rightEntityId="145632030764265"/>
+  <relation leftEntityId="-1" leftEntityParameterName="human_id" rightEntityFieldName="human_id" rightEntityId="145632030764265"/>
 </datamodel>

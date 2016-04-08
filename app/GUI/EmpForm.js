@@ -3,15 +3,21 @@
  * @author Пользователь
  * @module EmpForm
  */
-define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, ModuleName) {
     function module_constructor(userId) {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
         var aUserId = userId;
         var onSucsess;
+        
+        function saveCallback(){
+            model.save();
+        }
+        
         function onShow() {
-            require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
+//            require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
+            require(['Education'], function (Edu) {
                 model.qEdu.params.human_id = model.human[0].human_id;
                 model.qEdu.requery(function () {
                     for (var i = 0; i < model.qEdu.length; i++) {
@@ -26,25 +32,25 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
                 form.modelFormattedField32.data = model.human[0].contact;
                 form.modelFormattedField32.field = "socialpage";
 
-                var pnlDiv = new Bp();
-                pnlDiv.height = 1;
-                pnlDiv.background = Ui.Color.BLACK;
-                form.panel8.add(pnlDiv);
+//                var pnlDiv = new Bp();
+//                pnlDiv.height = 1;
+//                pnlDiv.background = Ui.Color.BLACK;
+//                form.panel8.add(pnlDiv);
+//
+//                var pnlDiv2 = new Bp();
+//                pnlDiv2.height = 300;
+//                pnlDiv2.width = 1;
+//                pnlDiv2.background = Ui.Color.BLACK;
+//                form.panel82.add(pnlDiv2);
 
-                var pnlDiv2 = new Bp();
-                pnlDiv2.height = 300;
-                pnlDiv2.width = 1;
-                pnlDiv2.background = Ui.Color.BLACK;
-                form.panel82.add(pnlDiv2);
-
-                var intrst = new Intrst();
-                intrst.showOn(form.panel7);
-
-                var skll = new Skll();
-                skll.showOn(form.panel6);
-
-                var career = new Career();
-                career.showOn(form.panel5);
+//                var intrst = new Intrst();
+//                intrst.showOn(form.panel7);
+//
+//                var skll = new Skll();
+//                skll.showOn(form.panel6);
+//
+//                var career = new Career();
+//                career.showOn(form.panel5);
 
             });
         }
@@ -68,16 +74,19 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
 
         };
         self.showModal = function (callback) {
-//            form.maximizable = true;
+            form.maximizable = true;
 //            form.undecorated = true;
-            //form.maximize();
+            Invoke.later(function () {
+                form.maximize();
+            });
+
             onSucsess = callback;
-            if (aUserId){
+            if (aUserId) {
                 model.human.params.human_id = aUserId;
             }
             model.requery(function () {
-                 
-                if (model.human.length===0) {
+
+                if (model.human.length === 0) {
                     model.human.push({});
                     model.qContacts.push({});
 //                    model.qTypes.push({});
@@ -144,9 +153,9 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
 //             model.human.schema.human_id = 1;
             model.save();
         };
-        
-        form.btnClose.onActionPerformed = function(event) {
-           form.close();
+
+        form.btnClose.onActionPerformed = function (event) {
+            form.close();
         };
 
 
