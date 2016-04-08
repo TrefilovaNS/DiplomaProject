@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qEduByID" Title="" entityHeight="200" entityIconified="false" entityId="145950196397409" entityLocationX="69" entityLocationY="43" entityWidth="150" queryId="qEduByID" tableName="" tableSchemaName=""/>
-  <entity Name="human" Title="" entityHeight="175" entityIconified="false" entityId="145857124065918" entityLocationX="578" entityLocationY="115" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
-  <entity Name="qEduCourses" Title="" entityHeight="82" entityIconified="false" entityId="145632013512309" entityLocationX="362" entityLocationY="109" entityWidth="150" queryId="qEduCourses" tableName="" tableSchemaName=""/>
-  <entity Name="qEduDirections" Title="" entityHeight="72" entityIconified="false" entityId="145632006417514" entityLocationX="292" entityLocationY="225" entityWidth="150" queryId="qEduDirections" tableName="" tableSchemaName=""/>
-  <entity Name="qEduDegree" Title="" entityHeight="78" entityIconified="false" entityId="145632007432556" entityLocationX="583" entityLocationY="1" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="edudegree_id" leftEntityId="145950196397409" rightEntityFieldName="edudegree_id" rightEntityId="145632007432556"/>
-  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145950196397409" rightEntityFieldName="human_id" rightEntityId="145857124065918"/>
-  <referenceRelation leftEntityFieldName="educourses_id" leftEntityId="145950196397409" rightEntityFieldName="educourses_id" rightEntityId="145632013512309"/>
-  <referenceRelation leftEntityFieldName="edudirections_id" leftEntityId="145950196397409" rightEntityFieldName="edudirections_id" rightEntityId="145632006417514"/>
+  <entity Name="qEduDirections" Title="" entityHeight="73" entityIconified="false" entityId="145632006417514" entityLocationX="292" entityLocationY="225" entityWidth="131" queryId="qEduDirections" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDegree" Title="" entityHeight="78" entityIconified="false" entityId="145632007432556" entityLocationX="461" entityLocationY="37" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
+  <entity Name="qEduCourcesById" Title="" entityHeight="95" entityIconified="false" entityId="145995421150642" entityLocationX="585" entityLocationY="217" entityWidth="150" queryId="qEduCourcesById" tableName="" tableSchemaName=""/>
 </datamodel>

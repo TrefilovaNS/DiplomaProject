@@ -6,4 +6,4 @@
  */ 
 Select * 
 From EDUCATION t1
- Where :edu_id = t1.education_id
+ Where :human_id = t1.human_id

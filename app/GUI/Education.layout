@@ -22,22 +22,19 @@
   <Label cursor="0" name="label3111" parent="view" prefHeight="30px" prefWidth="210px" text="Уровень подготовки">
     <AnchorsPaneConstraints height="30px" left="20px" top="60px" width="210px"/>
   </Label>
-  <Label cursor="0" name="label3112" parent="view" prefHeight="30px" prefWidth="230px" text="Профиль">
-    <AnchorsPaneConstraints height="30px" left="20px" top="140px" width="230px"/>
+  <Label cursor="0" name="label3112" parent="view" prefHeight="30px" prefWidth="80px" text="Профиль">
+    <AnchorsPaneConstraints height="30px" left="20px" top="140px" width="80px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="qEdu" field="cursor.eduname" format="" name="name" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qEduById" field="cursor.eduname" format="" name="name" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qEduCourses" field="cursor.coursename" format="" name="course" parent="view" prefHeight="30px" prefWidth="350px">
+  <ModelFormattedField cursor="0" data="qEduCourcesById" field="cursor.coursename" format="" name="course" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="100px" width="350px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" format="" name="direction" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="350px"/>
   </ModelFormattedField>
-  <ModelCombo cursor="0" name="degree" parent="view" prefHeight="30px" prefWidth="350px">
+  <ModelCombo cursor="0" data="qEduDegree" displayField="degree" displayList="qEduDegree" field="cursor.edudegree_id" name="degree" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
   </ModelCombo>
-  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="100px" text="button">
-    <AnchorsPaneConstraints bottom="-2px" height="30px" left="10px" width="100px"/>
-  </Button>
 </layout>

@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Skills
  */
-define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define('Skills',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
