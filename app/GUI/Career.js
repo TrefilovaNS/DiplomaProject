@@ -3,15 +3,20 @@
  * @author Наталья
  * @module Career
  */
-define('Career',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
                 , form = Forms.loadForm(ModuleName, model);
+                
+        var career = arguments[0];
+        model.qJobById.params.job_id = career.job_id;
+                
+        
         
         self.show = function () {
             form.show();
-             require(['CaRew'],function(caRew){
+             require(['CaRew','Jobs'],function(caRew, Jobs){
                var carew = new caRew();
                carew.showOn(form.panel);                              
                
@@ -27,7 +32,18 @@ define('Career',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         model.requery(function () {
             // TODO : place your code here
         });
+       
+       function callback(job) {
+            model.qJobById.cursor = job;
+            career.job_id = job.job_id;
+
+        }
         
+        form.jobname.onSelect = function () {
+            var jobs = new Jobs();
+            jobs.showModal(callback);
+        };
+                
         form.button.onActionPerformed = function(event) {
             require(['CaRew'],function(caRew){
                

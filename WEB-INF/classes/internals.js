@@ -23,10 +23,10 @@
             };
         };
     }
-    var LpcTransientClass = Java.type('com.eas.script.LpcTransient');
-    var ScriptsClass = Java.type('com.eas.script.Scripts');
-    var ScriptedResourceClass = Java.type('com.eas.client.scripts.ScriptedResource');
-    var JavaStringArrayClass = Java.type('java.lang.String[]');
+    var ReportClass = Java.type("com.eas.client.report.Report");
+    var ScriptsClass = Java.type("com.eas.script.Scripts");
+    var ScriptedResourceClass = Java.type("com.eas.client.scripts.ScriptedResource");
+    var JavaStringArrayClass = Java.type("java.lang.String[]");
     var apiPath = ScriptsClass.getAbsoluteApiPath();
     var appPath = ScriptedResourceClass.getAbsoluteAppPath();
     var space = ScriptsClass.getSpace();
@@ -94,11 +94,10 @@
      */
     function define() {
         if (arguments.length === 1 ||
-                arguments.length === 2 || arguments.length === 3) {
+                arguments.length === 2) {
             var calledFromFile = lookupCallerFile();
-            var aModuleName = arguments.length === 3 ? arguments[0] : calledFromFile.substring(0, calledFromFile.length - 3);
-            var aDeps = arguments.length === 3 ? arguments[1] : arguments.length === 2 ? arguments[0] : [];
-            var aModuleDefiner = arguments.length === 3 ? arguments[2] : arguments.length === 2 ? arguments[1] : arguments[0];
+            var aDeps = arguments.length > 1 ? arguments[0] : [];
+            var aModuleDefiner = arguments.length > 1 ? arguments[1] : arguments[0];
             if (!Array.isArray(aDeps))
                 aDeps = [aDeps];
             var sDeps = new JavaStringArrayClass(aDeps.length);
@@ -110,7 +109,7 @@
                 sDep = ScriptedResourceClass.toModuleId(apiPath, appPath, sDep, calledFromFile);
                 sDeps[s] = sDep;
             }
-            space.addAmdDefine(aModuleName, sDeps, function (aModuleName) {
+            space.setAmdDefine(sDeps, function (aModuleName) {
                 var defined = space.getDefined();
                 var resolved = [];
                 for (var d = 0; d < sDeps.length; d++) {
@@ -129,6 +128,7 @@
     define.amd = {};
     Object.defineProperty(global, 'define', {value: define});
     Object.defineProperty(global, 'require', {value: require});
+    var Report = require('core/report');
     space.setGlobal(global);
     space.setLookupInGlobalFunc(
             function (aPropertyName) {
@@ -206,13 +206,12 @@
     space.setLoadFunc(function (aSourceLocation) {
         return load(aSourceLocation);
     });
-    var Report = require('core/report');
-    var EngineUtilsClass = Java.type('jdk.nashorn.api.scripting.ScriptUtils');
+    var EngineUtilsClass = Java.type("jdk.nashorn.api.scripting.ScriptUtils");
     var HashMapClass = Java.type('java.util.HashMap');
     var DateCopyClass = Java.type('com.eas.script.copies.DateCopy');
     var RegExpCopyClass = Java.type('com.eas.script.copies.RegExpCopy');
     var ArrayCopyClass = Java.type('com.eas.script.copies.ArrayCopy');
-    var ObjectCopyClass = Java.type('com.eas.script.copies.ObjectCopy');
+    var ObjectCopyClass = HashMapClass;
     function copy(aValue, aMapping) {
         aValue = EngineUtilsClass.unwrap(aValue);
         if (!aMapping)
@@ -276,7 +275,7 @@
         if (aValue instanceof Report) {
             aValue = aValue.unwrap();
         }
-        if (aValue instanceof LpcTransientClass) {
+        if (aValue instanceof ReportClass) {
             return aValue;
         } else {
             return copy(aValue);
@@ -313,9 +312,7 @@
                     aMapping.put(aValue, restored);
                     if(isList){
                         for(var i = 0; i < aValue.size(); i++){
-                            var pValue = aValue.get(i);
-                            var val = aMapping.containsKey(pValue) ? aMapping.get(pValue) : restore(pValue, aMapping);
-                            restored.push(val);
+                            restored.push(aValue.get(i));
                         }
                     }
                     for each (var p in aValue.keySet()) {
@@ -332,7 +329,7 @@
         if (aValue instanceof Report) {
             aValue = aValue.unwrap();
         }
-        if (aValue instanceof LpcTransientClass) {
+        if (aValue instanceof ReportClass) {
             return aValue;
         } else {
             return restore(aValue);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qEduDirections" Title="" entityHeight="73" entityIconified="false" entityId="145632006417514" entityLocationX="292" entityLocationY="225" entityWidth="131" queryId="qEduDirections" tableName="" tableSchemaName=""/>
-  <entity Name="qEduDegree" Title="" entityHeight="78" entityIconified="false" entityId="145632007432556" entityLocationX="461" entityLocationY="37" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
-  <entity Name="qEduCourcesById" Title="" entityHeight="95" entityIconified="false" entityId="145995421150642" entityLocationX="585" entityLocationY="217" entityWidth="150" queryId="qEduCourcesById" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDirections" Title="" entityHeight="73" entityIconified="false" entityId="145632006417514" entityLocationX="126" entityLocationY="112" entityWidth="131" queryId="qEduDirections" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDegree" Title="" entityHeight="78" entityIconified="false" entityId="145632007432556" entityLocationX="285" entityLocationY="108" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
+  <entity Name="qEduCourcesById" Title="" entityHeight="95" entityIconified="false" entityId="145995421150642" entityLocationX="459" entityLocationY="102" entityWidth="150" queryId="qEduCourcesById" tableName="" tableSchemaName=""/>
+  <entity Name="qEduDirById" Title="" entityHeight="95" entityIconified="false" entityId="146013395146863" entityLocationX="623" entityLocationY="104" entityWidth="150" queryId="qEduDirById" tableName="" tableSchemaName=""/>
 </datamodel>

@@ -1,9 +1,10 @@
 /**
  * 
  * @author Пользователь
+ * @module Education
  */
-define('Education', ['orm', 'forms', 'ui', 'Courses']
-        , function (Orm, Forms, Ui, Courses, ModuleName) {
+define(['orm', 'forms', 'ui', 'Courses', 'Directions']
+        , function (Orm, Forms, Ui, Courses, Directions, ModuleName) {
             function module_constructor() {
                 var self = this
                         , model = Orm.loadModel(ModuleName)
@@ -11,8 +12,16 @@ define('Education', ['orm', 'forms', 'ui', 'Courses']
 
                 var education = arguments[0];
                 model.qEduCourcesById.params.cource_id = education.educourses_id;
+                model.qEduDirById.params.dir_id = education.edudirections_id;
+                
                 form.name.data = education;
                 form.name.field = "eduname";
+                
+                form.entDate.data = education;
+                form.entDate.field = "entrydate";
+                
+                form.endDate.data = education;
+                form.endDate.field = "graduationdate";
 
                 self.show = function () {
                     form.show();
@@ -39,6 +48,12 @@ define('Education', ['orm', 'forms', 'ui', 'Courses']
                 function callback(cource) {
                     model.qEduCourcesById.cursor = cource;
                     education.educourses_id = cource.educourses_id;
+                    
+                }
+                
+                function callbackDir (direction){
+                    model.qEduDirById.cursor = direction;
+                    education.edudirections_id = direction.edudirections_id;
                 }
 
                 form.course.onSelect = function () {
@@ -46,6 +61,10 @@ define('Education', ['orm', 'forms', 'ui', 'Courses']
                     cources.showModal(callback);
                 };
 
+                 form.direction.onSelect = function () {
+                    var directions = new Directions();
+                    directions.showModal(callbackDir);
+                };
             }
             return module_constructor;
         });

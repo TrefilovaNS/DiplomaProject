@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="391px"/>
-  <ModelGrid cursor="0" data="qEduCourses" name="modelGrid" parent="view" prefHeight="230px" prefWidth="370px">
+  <ModelGrid cursor="0" data="qEduCourses" name="modelGrid" parent="view" prefHeight="230px" prefWidth="370px" rowsHeight="20">
     <AnchorsPaneConstraints height="230px" left="10px" right="11px" top="20px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="educourses_id" name="colEducourses_id" title="colEducourses_id" width="168px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="coursename" name="colCoursename" title="colCoursename" width="167px">
-      <ModelFormattedField/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="coursename" name="colCoursename" title="Направления подготовки" width="325px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">

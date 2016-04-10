@@ -3,7 +3,7 @@
  * @author Пользователь
  * @module EmpForm
  */
-define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, ModuleName) {
+define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, ModuleName) {
     function module_constructor(userId) {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -17,7 +17,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, In
         
         function onShow() {
 //            require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
-            require(['Education'], function (Edu) {
+            require(['Education','Career'], function (Edu, Career) {
                 model.qEdu.params.human_id = model.human[0].human_id;
                 model.qEdu.requery(function () {
                     for (var i = 0; i < model.qEdu.length; i++) {
@@ -25,12 +25,21 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, In
                         edu.showOn(form.panel2);
                     }
                 });
-                form.modelFormattedField31.data = model.human[0].contact;
-                form.modelFormattedField31.field = "email";
-                form.modelFormattedField3.data = model.human[0].contact;
-                form.modelFormattedField3.field = "phonenumber";
-                form.modelFormattedField32.data = model.human[0].contact;
-                form.modelFormattedField32.field = "socialpage";
+                
+                model.qCarrer.params.human_id = model.human[0].human_id;
+                model.qCarrer.requery(function(){
+                    for (var j = 0; j < model.qCarrer.length; j++) {
+                        var career = new Career(model.qCarrer[j]);
+                        career.showOn(form.panel5);
+                    }
+                });
+                        
+                form.email.data = model.human[0].contact;
+                form.email.field = "email";
+                form.phone.data = model.human[0].contact;
+                form.phone.field = "phonenumber";
+                form.socpage.data = model.human[0].contact;
+                form.socpage.field = "socialpage";
 
 //                var pnlDiv = new Bp();
 //                pnlDiv.height = 1;
@@ -109,14 +118,15 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, In
 
         form.button.onActionPerformed = function (event) {
             require(['Education', 'forms/box-pane'], function (Edu, Bp) {
-                var pnlDiv = new Bp();
-                pnlDiv.height = 1;
-                pnlDiv.background = Ui.Color.BLACK;
-                form.panel2.add(pnlDiv);
+                
                 var index = model.qEdu.push({});
                 model.qEdu[index - 1].human_id = model.human[0].human_id;
                 var edu = new Edu(model.qEdu[index - 1]);
                 edu.showOn(form.panel2);
+                var pnlDiv = new Bp();
+                pnlDiv.height = 1;
+                pnlDiv.background = Ui.Color.BLACK;
+                form.panel2.add(pnlDiv);
             });
         };
 
@@ -138,14 +148,19 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, In
             });
         };
 
-        form.button1.onActionPerformed = function (event) {
+        form.addCareer.onActionPerformed = function (event) {
             require(['Career', 'forms/box-pane'], function (Career, Bp) {
                 var pnlDiv = new Bp();
                 pnlDiv.height = 1;
                 pnlDiv.background = Ui.Color.BLACK;
                 form.panel5.add(pnlDiv);
-                var career = new Career();
+                var index = model.qCareer.push({});
+                model.qCareer[index - 1].human_id = model.human[0].human_id;
+                var career = new Career(model.qCarrer[index - 1]);
                 career.showOn(form.panel5);
+                
+//                var career = new Career();
+//                career.showOn(form.panel5);
             });
         };
 

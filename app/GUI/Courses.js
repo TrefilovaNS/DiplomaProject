@@ -1,8 +1,9 @@
 /**
  * 
  * @author jskonst
+ * @module Courses
  */
-define('Courses', ['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -25,6 +26,12 @@ define('Courses', ['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) 
             callback(form.modelGrid.selected[0]);
             form.close();
         };
+        
+        form.btnSave.onActionPerformed = function () {
+            
+            model.save();
+        };
+        
     }
     return module_constructor;
 });

@@ -1,8 +1,9 @@
 /**
  * 
  * @author Наталья
+ * @module EmpList
  */
-define('EmpList',['orm', 'forms', 'ui', 'EmpForm', 'logger'],
+define(['orm', 'forms', 'ui', 'EmpForm', 'logger'],
         function (Orm, Forms, Ui, EmpForm, Logger, ModuleName) {
             function module_constructor() {
                 var self = this
