@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parameters>
-    <parameter description="" name="education_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
-  </parameters>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="145631941306552" entityLocationX="235" entityLocationY="7" entityWidth="150" tableAlias="t1" tableName="EDUCATION" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="education_id" rightEntityFieldName="education_id" rightEntityId="145631941306552"/>
-</datamodel>

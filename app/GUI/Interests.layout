@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="37px" prefWidth="360px"/>
-  <TextField cursor="0" emptyText="Отечественный кинематограф" name="textField2" parent="view" prefHeight="30px" prefWidth="310px">
-    <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="310px"/>
-  </TextField>
-</layout>
