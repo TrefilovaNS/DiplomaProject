@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qEduCourses" Title="" entityHeight="200" entityIconified="false" entityId="145994734141262" entityLocationX="136" entityLocationY="115" entityWidth="150" queryId="qEduCourses" tableName="" tableSchemaName=""/>
+  <entity Name="qEduCourses" Title="" entityHeight="200" entityIconified="false" entityId="145994734141262" entityLocationX="109" entityLocationY="20" entityWidth="150" queryId="qEduCourses" tableName="" tableSchemaName=""/>
 </datamodel>

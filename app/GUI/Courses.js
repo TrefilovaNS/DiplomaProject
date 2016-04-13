@@ -20,6 +20,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         };
 
         model.requery(function () {
+            
         });
 
         form.btnOK.onActionPerformed = function () {

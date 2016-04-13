@@ -13,15 +13,18 @@ define(['orm', 'forms', 'ui', 'Courses', 'Directions']
                 var education = arguments[0];
                 model.qEduCourcesById.params.cource_id = education.educourses_id;
                 model.qEduDirById.params.dir_id = education.edudirections_id;
-                
+
                 form.name.data = education;
                 form.name.field = "eduname";
-                
+
                 form.entDate.data = education;
                 form.entDate.field = "entrydate";
-                
+
                 form.endDate.data = education;
                 form.endDate.field = "graduationdate";
+
+                form.degree.displayList = model.qEduDegree;
+                form.degree.displayField = 'degree';
 
                 self.show = function () {
                     form.show();
@@ -34,24 +37,23 @@ define(['orm', 'forms', 'ui', 'Courses', 'Directions']
                 model.requery(function () {
                     if (education.edudegree_id) {
                         form.degree.value = model.qEduDegree.find({edudegree_id: education.edudegree_id})[0];
-                          console.log(form.degree.value);
+                        console.log(form.degree.value);
                     }
                 });
 
                 form.degree.onValueChange = function () {
-                    console.log(model);
-                    console.log(form.degree.value);
-                    console.log(education);
-                    education.edudegree_id = form.degree.value.edudegree_id;
+                    if (form.degree.value) {
+                        education.edudegree_id = form.degree.value.edudegree_id;
+                    }
                 };
 
                 function callback(cource) {
                     model.qEduCourcesById.cursor = cource;
                     education.educourses_id = cource.educourses_id;
-                    
+
                 }
-                
-                function callbackDir (direction){
+
+                function callbackDir(direction) {
                     model.qEduDirById.cursor = direction;
                     education.edudirections_id = direction.edudirections_id;
                 }
@@ -61,7 +63,7 @@ define(['orm', 'forms', 'ui', 'Courses', 'Directions']
                     cources.showModal(callback);
                 };
 
-                 form.direction.onSelect = function () {
+                form.direction.onSelect = function () {
                     var directions = new Directions();
                     directions.showModal(callbackDir);
                 };

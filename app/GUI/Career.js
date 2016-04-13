@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Career
  */
-define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define(['orm', 'forms', 'ui', 'Jobs'], function (Orm, Forms, Ui, Jobs, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -16,7 +16,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         
         self.show = function () {
             form.show();
-             require(['CaRew','Jobs'],function(caRew, Jobs){
+             require(['CaRew'],function(caRew){
                var carew = new caRew();
                carew.showOn(form.panel);                              
                
@@ -26,7 +26,7 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         };
          self.showOn = function(aPanel){
             aPanel.add(form.view);
-        }
+        };
         // TODO : place your code here
         
         model.requery(function () {

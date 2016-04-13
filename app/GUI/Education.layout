@@ -34,7 +34,7 @@
   <ModelFormattedField cursor="0" data="qEduDirById" field="cursor.dirname" format="" name="direction" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="350px"/>
   </ModelFormattedField>
-  <ModelCombo cursor="0" data="qEduDegree" displayField="degree" displayList="qEduDegree" field="cursor.edudegree_id" name="degree" parent="view" prefHeight="30px" prefWidth="350px">
+  <ModelCombo cursor="0" name="degree" nullable="false" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
   </ModelCombo>
 </layout>

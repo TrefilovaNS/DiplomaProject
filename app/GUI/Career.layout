@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <ModelFormattedField name="modelFormattedField" prefHeight="22px" prefWidth="141px" text="modelFormattedField"/>
+  <ModelFormattedField cursor="0" format="" name="modelFormattedField" prefHeight="0px" prefWidth="0px" text="modelFormattedField"/>
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="417px" prefWidth="710px"/>
   <Label cursor="0" name="label3" parent="view" prefHeight="30px" prefWidth="240px" text="Название учреждения">
     <AnchorsPaneConstraints height="30px" left="20px" top="20px" width="240px"/>
@@ -32,13 +32,13 @@
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Добавить">
     <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="110px"/>
   </Button>
-  <ModelFormattedField cursor="0" name="jobname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qJobById" field="cursor.jobname" format="" name="jobname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" name="postname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" format="" name="postname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" name="reason" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" format="" name="reason" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
     <AnchorsPaneConstraints bottom="87px" height="30px" left="260px" width="350px"/>
   </ModelFormattedField>
 </layout>

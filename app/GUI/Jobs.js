@@ -13,7 +13,12 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             form.show();
         };
         
-        // TODO : place your code here
+     var callback;
+        self.showModal = function (aCallback) {
+            callback = aCallback;
+            form.showModal();
+        };
+
         
         model.requery(function () {
             // TODO : place your code here
