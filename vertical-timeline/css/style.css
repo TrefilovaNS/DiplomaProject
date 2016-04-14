@@ -280,7 +280,80 @@ Education
   
 }
 
+/* -------------------------------- 
 
+Skills block
+
+-------------------------------- */
+.skills-block{
+  /*width: 50%;*/
+  background-color: #fff;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}
+.skill{
+ /* height: 50px;*/
+ width: 700px;
+margin: auto;
+ padding: 10px 10px 10px 10px;
+
+}
+
+.skill-name{
+ padding-left: 10px;
+  text-align: left;
+  
+}
+.skill-line{
+  height: 40px;
+ 
+  
+  margin-top: -15px;
+
+}
+/* -------------------------------- 
+
+Interests block
+
+-------------------------------- */
+.interests-container{
+
+    display: table;
+    margin: 0 auto;
+
+}
+.interests-block{
+  margin: 0 auto;
+  padding: 20px 10px 20px 10px;
+ }
+
+
+.interest{
+  display: inline-block;
+  width: 150px;
+  margin: auto;
+  float:left;
+}
+.int-img{
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+
+}
+.int-img img{
+
+  width: 80px;
+  padding-top: 15px;
+
+
+}
+
+.int-text{
+  text-align: center;
+}
 
 /* -------------------------------- 
 
@@ -332,6 +405,8 @@ header h1 {
   padding: 2em 0;
   margin-top: 2em;
   margin-bottom: 2em;
+  height: 100%;
+  overflow: hidden;
 }
 #cd-timeline::before {
   /* this is the vertical line */
@@ -604,7 +679,7 @@ header h1 {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: #ffdb56;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -636,7 +711,7 @@ header h1 {
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: white;
+    border-right-color: #ffdb56;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;

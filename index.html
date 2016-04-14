@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" href="vertical-timeline/css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="vertical-timeline/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="progress-bars/css/style.css">
 	<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
 	 <!-- <script src="vertical-timeline/js/data.js"></script> -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
@@ -25,6 +26,7 @@
 //         document.getElementById("demo").innerHTML=output;
 //   });
 //     </script>
+
   	
 	<title>Responsive Vertical Timeline</title>
 </head>
@@ -115,64 +117,81 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 18</span>
+				<h2>Название организации</h2>
+				<span class="cd-date">2010</span><br>
+				<p>
+					<span id="postname">Должность</span><br>
+					<span id="demo2">Достижение 1<br> Достижение 2</span><br>
+					Причина увольнения: <span id="dismis">причина</span>
+				</p>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-picture">
+			<div class="cd-timeline-img cd-location">
 				<img src="vertical-timeline/img/cd-icon-main.png" alt="Picture">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 24</span>
+				<h2>Название организации</h2>
+				<span class="cd-date">2010</span><br>
+				<p>
+					<span id="postname">Должность</span><br>
+					<span id="demo2">Достижение 1<br> Достижение 2</span><br>
+					Причина увольнения: <span id="dismis">причина</span>
+				</p>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="vertical-timeline/img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 4</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 14</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="vertical-timeline/img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 5</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 18</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="vertical-timeline/img/cd-icon-movie.svg" alt="Movie">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Final Section</h2>
-				<p>This is the content of the last section</p>
-				<span class="cd-date">Feb 26</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-	</section> <!-- cd-timeline -->
+	</section>
+<div class="section-name yellow" align="center" id="sn-skills"><div class="section-selfname">НАВЫКИ</div></div>
+<section id="skills" class="skills-container">
+	<div class="skills-block">
+		<div class="skill">
+			<div class="skill-name">Владение пакетом программ MS Office</div>
+			<div class="skill-line">
+				<div class="meter orange">
+					<span style="width: 76%"></span>
+				</div>
+			</div>
+		</div>
+		<div class="skill">
+			<div class="skill-name">Навык общения</div>
+			<div class="skill-line">
+				<div class="meter blue">
+					<span style="width: 60%"></span>
+				</div>
+			</div>
+		</div>
+		<div class="skill">
+			<div class="skill-name">Организаторский навык</div>
+			<div class="skill-line">
+				<div class="meter yellow">
+					<span style="width: 40%"></span>
+				</div>
+			</div>
+		</div>
+</section>
+<div class="section-name blue" align="center" id="sn-interests"><div class="section-selfname">ИНТЕРЕСЫ</div></div>
+<section id="interests" class="interests-container">
+	<div class="interests-block">
+		<div class="interest">
+			<div class="int-img orange" id="int-IT"><img src="icons/int-IT.png"></div>
+			<div class="int-text">Информационные технологии</div>
+		</div>
+		<div class="interest">
+			<div class="int-img yellow" id="int-Lan"><img src="icons/int-Lan.png"></div>
+			<div class="int-text">Иностранные языки</div>
+		</div>
+		<div class="interest">
+			<div class="int-img blue" id="int-Sports"><img src="icons/int-Sports.png"></div>
+			<div class="int-text">Спорт: лыжи</div>
+		</div>
+		<div class="interest">
+			<div class="int-img orange" id="int-Photo"><img src="icons/int-Photo.png"></div>
+			<div class="int-text">Фотография</div>
+		</div>
+	</div>
+</section>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="vertical-timeline/js/main.js"></script> <!-- Resource jQuery -->
 </body>

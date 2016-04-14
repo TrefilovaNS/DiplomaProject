@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
+		offset = 0.7;
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
@@ -10,6 +10,7 @@ jQuery(document).ready(function($){
 		(!window.requestAnimationFrame) 
 			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
 			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+		
 	});
 
 	function hideBlocks(blocks, offset) {
@@ -23,4 +24,5 @@ jQuery(document).ready(function($){
 			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
 		});
 	}
+
 });

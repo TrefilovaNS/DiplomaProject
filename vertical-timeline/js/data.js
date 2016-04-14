@@ -37,6 +37,16 @@ $(document).ready(function(){
 	$("#sn-main").slideDown(1000);
    	 $("#sn-edu").slideDown("slow");
      $("#sn-career").slideDown("slow");
-
-    
+      $("#sn-skills").slideDown("slow");
+ 		$("#sn-interests").slideDown("slow");
+$(function() {
+			$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 3000);
+			});
+		});
 });
