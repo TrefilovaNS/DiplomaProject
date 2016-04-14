@@ -15,5 +15,5 @@
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="145511478363899" entityLocationX="454" entityLocationY="183" entityWidth="150" tableName="Human"/>
   <fieldsEntity entityHeight="84" entityIconified="false" entityId="145518951430150" entityLocationX="859" entityLocationY="135" entityWidth="150" tableName="EduCourses"/>
   <fieldsEntity entityHeight="99" entityIconified="false" entityId="145519044443987" entityLocationX="265" entityLocationY="314" entityWidth="150" tableName="Contacts"/>
-  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145519067715924" entityLocationX="638" entityLocationY="355" entityWidth="150" tableName="Psyhotypes"/>
+  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145519067715924" entityLocationX="638" entityLocationY="351" entityWidth="150" tableName="Psyhotypes"/>
 </datamodel>

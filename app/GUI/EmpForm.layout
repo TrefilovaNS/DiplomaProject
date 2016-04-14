@@ -95,10 +95,10 @@
   <BoxPane background="#ffffff" cursor="0" name="panel82" orientation="1" parent="panel4" prefHeight="210px" prefWidth="1px">
     <AnchorsPaneConstraints height="210px" left="370px" top="120px" width="1px"/>
   </BoxPane>
-  <ModelCombo cursor="0" displayField="ptype" field="cursor.psyhosophytypes_id" name="modelCombo" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" displayField="ptype" field="cursor.psyhosophytypes_id" name="ptypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelCombo>
-  <ModelCombo cursor="0" displayField="stype" field="cursor.socionicstypes_id" name="modelCombo1" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.soctype" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
   <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">

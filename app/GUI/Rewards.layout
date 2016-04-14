@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" data="qJobs" name="modelGrid" parent="view" prefHeight="230px" prefWidth="379px" rowsHeight="20">
+  <ModelGrid cursor="0" data="qDismissions" name="modelGrid1" parent="view" prefHeight="230px" prefWidth="379px" rowsHeight="20">
     <AnchorsPaneConstraints height="230px" left="10px" top="10px" width="379px"/>
-    <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="jobname" name="colJobname" title="Название учреждения" width="334px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="109px" text="Сохранить">
     <AnchorsPaneConstraints bottom="20px" height="30px" left="170px" width="109px"/>
   </Button>
-  <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">
+  <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="ОК">
     <AnchorsPaneConstraints bottom="20px" height="30px" right="10px" width="100px"/>
   </Button>
 </layout>

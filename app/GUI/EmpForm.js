@@ -10,6 +10,10 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
                 , form = Forms.loadForm(ModuleName, model);
         var aUserId = userId;
         var onSucsess;
+        var types = arguments[0];
+        //соц
+        model.qSocTypesById.params.socionicstypes_id = types.socionicstypes_id;
+       
         
         function saveCallback(){
             model.save();
@@ -40,6 +44,11 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
                 form.phone.field = "phonenumber";
                 form.socpage.data = model.human[0].contact;
                 form.socpage.field = "socialpage";
+                
+                //соц
+                form.soctypes.displayList = model.qSocTypes;
+                form.soctypes.displayField = 'stype';
+
 
 //                var pnlDiv = new Bp();
 //                pnlDiv.height = 1;
@@ -75,6 +84,11 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
 //                    model.qTypes.push({});
 //                    model.qSocTypes.push({});
 //                    model.qPsyTypes.push({});
+                      //соц
+                    if (types.socionicstypes_id) {
+                        form.soctypes.value = model.qSocTypesById.find({socionicstypes_id: types.socionicstypes_id})[0];
+                        console.log(form.soctypes.value);
+                    }
                 }
                 onShow();
             });
@@ -82,6 +96,13 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
             form.show();
 
         };
+           //соц
+        form.soctypes.onValueChange = function () {
+                    if (form.soctypes.value) {
+                        types.socionicstypes_id = form.soctypes.value.socionicstypes_id;
+                    }
+                };
+                
         self.showModal = function (callback) {
             form.maximizable = true;
 //            form.undecorated = true;
