@@ -11,9 +11,12 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
         var aUserId = userId;
         var onSucsess;
         var types = arguments[0];
+        
+        var saveCareer=[];
         //соц
         model.qSocTypesById.params.socionicstypes_id = types.socionicstypes_id;
        
+        
         
         function saveCallback(){
             model.save();
@@ -34,6 +37,7 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
                 model.qCarrer.requery(function(){
                     for (var j = 0; j < model.qCarrer.length; j++) {
                         var career = new Career(model.qCarrer[j]);
+                        saveCareer.push(career.save);
                         career.showOn(form.panel5);
                     }
                 });
@@ -175,8 +179,8 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
                 pnlDiv.height = 1;
                 pnlDiv.background = Ui.Color.BLACK;
                 form.panel5.add(pnlDiv);
-                var index = model.qCareer.push({});
-                model.qCareer[index - 1].human_id = model.human[0].human_id;
+                var index = model.qCarrer.push({});
+               model.qCarrer[index - 1].human_id = model.human[0].human_id;
                 var career = new Career(model.qCarrer[index - 1]);
                 career.showOn(form.panel5);
                 
@@ -184,10 +188,13 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
 //                career.showOn(form.panel5);
             });
         };
-
         form.btnSave.onActionPerformed = function (event) {
 //             model.human.schema.human_id = 1;
             model.save();
+            for (var i = 0; i <saveCareer.length ; i++) {
+              var fn =   saveCareer[i];
+              fn();
+            }
         };
 
         form.btnClose.onActionPerformed = function (event) {

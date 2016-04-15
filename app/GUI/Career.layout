@@ -19,7 +19,7 @@
   <ModelDate cursor="0" format="MM.yyyy" name="entryDate" parent="view" prefHeight="30px" prefWidth="150px">
     <AnchorsPaneConstraints height="30px" left="260px" top="100px" width="150px"/>
   </ModelDate>
-  <ModelDate cursor="0" format="MM.yyyy" name="dismisDate" parent="view" prefHeight="30px" prefWidth="160px">
+  <ModelDate cursor="0" data="qDismisById" field="cursor.dismisdate" format="MM.yyyy" name="dismisDate" parent="view" prefHeight="30px" prefWidth="160px">
     <AnchorsPaneConstraints bottom="47px" height="30px" left="260px" width="160px"/>
   </ModelDate>
   <Label cursor="0" name="label31121" parent="view" prefHeight="30px" prefWidth="230px" text="Награды, поощрения">
