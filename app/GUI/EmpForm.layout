@@ -83,10 +83,10 @@
   <Label cursor="0" name="label321" parent="panel4" prefHeight="30px" prefWidth="150px" text="Интересы">
     <AnchorsPaneConstraints height="30px" right="95px" top="130px" width="150px"/>
   </Label>
-  <Button cursor="0" name="button2" parent="panel4" prefHeight="30px" prefWidth="160px" text="Добавить интерес">
+  <Button cursor="0" name="btnInt" parent="panel4" prefHeight="30px" prefWidth="160px" text="Выбрать интерес(ы)">
     <AnchorsPaneConstraints height="30px" left="460px" top="160px" width="160px"/>
   </Button>
-  <Button cursor="0" name="button21" parent="panel4" prefHeight="30px" prefWidth="160px" text="Добавить навык">
+  <Button cursor="0" name="btnSkill" parent="panel4" prefHeight="30px" prefWidth="160px" text="Выбрать навык(и)">
     <AnchorsPaneConstraints height="30px" left="110px" top="160px" width="160px"/>
   </Button>
   <BoxPane background="#ffffff" cursor="0" name="panel8" orientation="1" parent="panel4" prefHeight="10px" prefWidth="710px">
@@ -98,7 +98,7 @@
   <ModelCombo cursor="0" displayField="ptype" field="cursor.psyhosophytypes_id" name="ptypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelCombo>
-  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.soctype" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
   <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">

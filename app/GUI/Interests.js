@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Interests
  */
-define('Interests',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -12,15 +12,29 @@ define('Interests',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName)
         self.show = function () {
             form.show();
         };
+        var callback;
+        self.showModal = function (aCallback) {
+            callback = aCallback;
+            form.showModal();
+        };
+       
          self.showOn = function(aPanel){
             aPanel.add(form.view);
         };
         // TODO : place your code here
+         form.btnAdd.onActionPerformed = function (event) {
+            model.qInterests.push({});
+        };
+         form.btnSave.onActionPerformed = function () {
+            
+            model.save();
+        };
         
         model.requery(function () {
             // TODO : place your code here
         });
         
     }
+       
     return module_constructor;
 });

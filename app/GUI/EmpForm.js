@@ -14,6 +14,7 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
         
         var saveCareer=[];
         //соц
+        model.qTypesById.params.psyhotypes_id = types.psyhotypes_id;
         model.qSocTypesById.params.socionicstypes_id = types.socionicstypes_id;
        
         
@@ -24,7 +25,7 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
         
         function onShow() {
 //            require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
-            require(['Education','Career'], function (Edu, Career) {
+            require(['Education','Career','forms/box-pane'], function (Edu, Career, Bp) {
                 model.qEdu.params.human_id = model.human[0].human_id;
                 model.qEdu.requery(function () {
                     for (var i = 0; i < model.qEdu.length; i++) {
@@ -50,20 +51,21 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
                 form.socpage.field = "socialpage";
                 
                 //соц
+                
                 form.soctypes.displayList = model.qSocTypes;
                 form.soctypes.displayField = 'stype';
 
 
-//                var pnlDiv = new Bp();
-//                pnlDiv.height = 1;
-//                pnlDiv.background = Ui.Color.BLACK;
-//                form.panel8.add(pnlDiv);
-//
-//                var pnlDiv2 = new Bp();
-//                pnlDiv2.height = 300;
-//                pnlDiv2.width = 1;
-//                pnlDiv2.background = Ui.Color.BLACK;
-//                form.panel82.add(pnlDiv2);
+                var pnlDiv = new Bp();
+                pnlDiv.height = 1;
+                pnlDiv.background = Ui.Color.BLACK;
+                form.panel8.add(pnlDiv);
+
+                var pnlDiv2 = new Bp();
+                pnlDiv2.height = 300;
+                pnlDiv2.width = 1;
+                pnlDiv2.background = Ui.Color.BLACK;
+                form.panel82.add(pnlDiv2);
 
 //                var intrst = new Intrst();
 //                intrst.showOn(form.panel7);
@@ -90,7 +92,7 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
 //                    model.qPsyTypes.push({});
                       //соц
                     if (types.socionicstypes_id) {
-                        form.soctypes.value = model.qSocTypesById.find({socionicstypes_id: types.socionicstypes_id})[0];
+                        form.soctypes.value = model.qSocTypes.find({socionicstypes_id: types.socionicstypes_id})[0];
                         console.log(form.soctypes.value);
                     }
                 }
@@ -111,7 +113,7 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
             form.maximizable = true;
 //            form.undecorated = true;
             Invoke.later(function () {
-                form.maximize();
+//                form.maximize();
             });
 
             onSucsess = callback;
@@ -155,19 +157,16 @@ define(['orm', 'forms', 'ui', 'invoke'], function (Orm, Forms, Ui, Invoke, Modul
             });
         };
 
-        form.button2.onActionPerformed = function (event) {
+        form.btnInt.onActionPerformed = function (event) {
             require(['Interests'], function (Intrst) {
                 var intrst = new Intrst();
                 intrst.showOn(form.panel7);
             });
         };
 
-        form.button21.onActionPerformed = function (event) {
-            require(['Skills', 'forms/box-pane'], function (Skll, Bp) {
-                var pnlDiv = new Bp();
-                pnlDiv.height = 1;
-                pnlDiv.background = Ui.Color.BLACK;
-                form.panel6.add(pnlDiv);
+        form.btnSkill.onActionPerformed = function (event) {
+            require(['Skills'], function (Skll) {
+               
                 var skll = new Skll();
                 skll.showOn(form.panel6);
             });

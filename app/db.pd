@@ -3,7 +3,7 @@
   <fieldsEntity entityHeight="82" entityIconified="false" entityId="145519203946607" entityLocationX="4" entityLocationY="163" entityWidth="150" tableName="Dismission"/>
   <fieldsEntity entityHeight="63" entityIconified="false" entityId="145518969961023" entityLocationX="677" entityLocationY="172" entityWidth="150" tableName="EduDirections"/>
   <fieldsEntity entityHeight="69" entityIconified="false" entityId="145519240637531" entityLocationX="360" entityLocationY="5" entityWidth="150" tableName="Promotion"/>
-  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145511531841205" entityLocationX="644" entityLocationY="247" entityWidth="150" tableName="SetInterests"/>
+  <fieldsEntity entityHeight="81" entityIconified="false" entityId="145511531841205" entityLocationX="653" entityLocationY="245" entityWidth="150" tableName="SetInterests"/>
   <fieldsEntity entityHeight="63" entityIconified="false" entityId="145519179852020" entityLocationX="18" entityLocationY="78" entityWidth="150" tableName="Post"/>
   <fieldsEntity entityHeight="70" entityIconified="false" entityId="145519085946653" entityLocationX="827" entityLocationY="250" entityWidth="150" tableName="SocionicsTypes"/>
   <fieldsEntity entityHeight="83" entityIconified="false" entityId="145518850737788" entityLocationX="854" entityLocationY="29" entityWidth="150" tableName="EduDegree"/>

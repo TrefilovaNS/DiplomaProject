@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="37px" prefWidth="360px"/>
-  <TextField cursor="0" emptyText="Отечественный кинематограф" name="textField2" parent="view" prefHeight="30px" prefWidth="310px">
-    <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="310px"/>
-  </TextField>
+  <ButtonGroup name="buttonGroup"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="237px" prefWidth="331px"/>
+  <ModelGrid cursor="0" data="qInterests" name="modelGrid" parent="view" prefHeight="200px" prefWidth="330px">
+    <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="330px"/>
+    <CheckGridColumn name="column"/>
+    <ModelGridColumn field="interest" name="colInterest" title="Интересы" width="285px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnAdd" parent="view" prefHeight="20px" prefWidth="180px" text="Добавить новый интерес">
+    <AnchorsPaneConstraints bottom="7px" height="20px" left="0px" width="180px"/>
+  </Button>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="130px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="7px" height="20px" left="200px" width="130px"/>
+  </Button>
 </layout>

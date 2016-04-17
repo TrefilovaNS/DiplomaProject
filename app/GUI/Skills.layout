@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <ModelFormattedField name="modelFormattedField" prefHeight="22px" prefWidth="141px" text="modelFormattedField"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="84px" prefWidth="341px"/>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="190px" text="Уровень навыка (от 1 до 10)">
-    <AnchorsPaneConstraints height="20px" left="10px" top="50px" width="190px"/>
-  </Label>
-  <ModelSpin cursor="0" max="10.0" min="1.0" name="modelSpin" parent="view" prefHeight="22px" prefWidth="100px">
-    <AnchorsPaneConstraints height="22px" left="210px" top="50px" width="100px"/>
-  </ModelSpin>
-  <ModelFormattedField cursor="0" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="310px" text="modelFormattedField1">
-    <AnchorsPaneConstraints height="30px" left="10px" top="10px" width="310px"/>
-  </ModelFormattedField>
+  <ModelFormattedField cursor="0" format="" name="modelFormattedField" prefHeight="0px" prefWidth="0px" text="modelFormattedField"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="241px" prefWidth="331px"/>
+  <ModelGrid cursor="0" data="qSkills" name="modelGrid" parent="view" prefHeight="200px" prefWidth="330px">
+    <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="330px"/>
+    <CheckGridColumn name="column"/>
+    <ModelGridColumn field="skill" name="colSkill" title="Навыки" width="143px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="level" name="colLevel" title="Уровень" width="142px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnAdd" parent="view" prefHeight="20px" prefWidth="180px" text="Добавить новый навык">
+    <AnchorsPaneConstraints bottom="11px" height="20px" left="0px" width="180px"/>
+  </Button>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="130px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="11px" height="20px" left="200px" width="130px"/>
+  </Button>
 </layout>

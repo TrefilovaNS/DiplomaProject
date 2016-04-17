@@ -1,1 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel/>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qSkills" Title="" entityHeight="200" entityIconified="false" entityId="146092372094315" entityLocationX="111" entityLocationY="1" entityWidth="150" queryId="qSkills" tableName="" tableSchemaName=""/>
+</datamodel>
