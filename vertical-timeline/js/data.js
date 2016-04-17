@@ -39,6 +39,7 @@ $(document).ready(function(){
      $("#sn-career").slideDown("slow");
       $("#sn-skills").slideDown("slow");
  		$("#sn-interests").slideDown("slow");
+ 		$("#sn-rec").slideDown("slow");
 $(function() {
 			$(".meter > span").each(function() {
 				$(this)
