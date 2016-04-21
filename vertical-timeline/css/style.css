@@ -65,7 +65,7 @@ Main block
   float: right;
   margin-top: -25px;
   color: #fff;
-  font-weight: bold;
+  /*font-weight: bold;*/
   padding-right: 15px;
   font-size: 20px;
 }
@@ -191,6 +191,25 @@ Section`s name
 .yellow{
   background-color: #ffdb56; 
 }
+
+
+.bor-orange{
+  border: 1px solid #ff9742;
+}
+
+.bor-blue{
+  border: 1px solid #bee5dd; 
+}
+
+.bor-yellow{
+  border: 1px solid #ffdb56; 
+}
+
+.bor-gray{
+  border: 1px solid #898383; 
+}
+
+
 
 .gray{
   background-color: #898383;
@@ -361,34 +380,42 @@ Types
 
 -------------------------------- */
 .rec-block{
-  
+
   margin: 0 auto;
  
 }
+
+/*.wrapper{
+
+   width: 55%;
+   margin-left: 3%;
+   float: left;
+}*/
 .socionics{
   margin: 0 auto;
-  padding: 20px 10px 20px 10px;
-  width: 90%;
+  padding: 20px 10px 20px 0px;
+  width: 900px;
 }
 
-.soc-line-name{
+.psy-line-name{
   padding: 0 0 10px 0;
   /*margin-left: 10%;*/
   display: inline-block;
   margin-bottom: 10px;
 }
 .type{
-  width: 100%;
+ 
   text-align: left;
+/*  margin-left: 10%;*/
 }
 
-.soc-line-selfname{
+.psy-line-selfname{
   /*height: 25px;*/
   background-color: #fff;
   padding: 0 0 2px 0;
 }
 
-.soc-line-selfname img{
+.psy-line-selfname img{
   width: 23px;
   padding: 2px 2px 0 2px;
 }
@@ -431,7 +458,70 @@ Types
 /*  top: 50%; */
 
 }
+.psyhosophy{
+   margin: 0 auto;
+  padding: 0 5px 10px 5px;
+  width: 900px;
+}
 
+/*.wrapp{
+  width: 863px;
+}
+*/
+.ps-block{
+  
+  display: table;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+/*
+  margin-left: 20px;*/
+/*  width: 863px;*/
+ 
+}
+
+/*.psyhosophy{
+  margin: 0 auto;
+  padding: 0 5px 10px 5px;
+  width: 90%;
+}
+*/
+
+
+ .ps-square{
+  width: 170px;
+  height: 300px;
+  border-radius: 0 0 10px 10px;
+  margin-top: 10px; 
+ }
+
+.ps-header{
+  padding: 3px 3px 3px 3px;
+  color: #fff;
+  text-align: center;
+}
+.ps-text{
+  padding: 2px 5px 5px 5px;
+  font-size: 14px;
+  text-align: justify;
+}
+.func{
+  display: inline-block;
+  margin: 0 auto;
+  float:left;
+  margin: 0 15px 0 15px;
+}
+.ps-circle{
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px; 
+  padding: 10px 7px 0 8px;
+  margin: -5px 0 0 -25px;
+  background-color: #fff;
+  z-index: 5;
+}
 /**
  * Tooltip Styles
  */
@@ -459,9 +549,9 @@ Types
   bottom: 150%;
   left: 50%;
   margin-bottom: 5px;
-  margin-left: -80px;
+  margin-left: -155px;
   padding: 7px;
-  width: 160px;
+  width: 310px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -469,7 +559,7 @@ Types
   background-color: hsla(0, 0%, 20%, 0.9);
   color: #fff;
   content: attr(data-tooltip);
-  text-align: center;
+  text-align: justify;
   font-size: 14px;
   line-height: 1.2;
 }
@@ -774,7 +864,11 @@ header h1 {
     width: 80%;
 
 }
-
+.psyhosophy{
+  width: 900px;
+  padding-left: 0;
+}
+ 
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
@@ -800,6 +894,21 @@ header h1 {
     margin-left: 10px;
   
   }
+
+
+@media only screen and (min-width: 600px) {
+  .soc-ego-text{
+  width: 400px;
+  margin-bottom: 5px;
+}
+.socionics{
+  width: 600px;
+}
+
+.psyhosophy{
+  width: 600px;
+  padding-left: 12%;
+}
 @media only screen and (min-width: 1170px) {
 
   #postname{
@@ -811,6 +920,17 @@ header h1 {
   max-width: 70%;
   
   
+}
+.soc-ego-text{
+  width: 700px;
+}
+
+.socionics{
+  width: 900px;
+}
+.psyhosophy{
+  width: 900px;
+  padding-left: 0;
 }
 
   .cd-timeline-content {
