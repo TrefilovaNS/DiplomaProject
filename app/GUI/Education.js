@@ -3,7 +3,7 @@
  * @author Пользователь
  * @module Education
  */
-define(['orm', 'forms', 'ui', 'Courses', 'Directions']
+define('Education',['orm', 'forms', 'ui', 'Courses', 'Directions']
         , function (Orm, Forms, Ui, Courses, Directions, ModuleName) {
             function module_constructor() {
                 var self = this

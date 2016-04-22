@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="691px" prefWidth="836px"/>
   <Label cursor="0" horizontalAlignment="0" horizontalTextPosition="0" name="label" parent="view" prefHeight="30px" prefWidth="100px" text="АНКЕТА">
-    <font family="Monospaced" size="22" style="0"/>
+    <font family="Arial" size="22" style="0"/>
     <AnchorsPaneConstraints height="30px" left="340px" right="396px" top="30px"/>
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label1" parent="view" prefHeight="30px" prefWidth="100px" text="Фамилия">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="80px" width="100px"/>
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label11" parent="view" prefHeight="30px" prefWidth="100px" text="Имя">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="120px" width="100px"/>
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label111" parent="view" prefHeight="30px" prefWidth="100px" text="Отчество">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="160px" top="160px" width="100px"/>
   </Label>
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="390px" prefWidth="760px" selectedComponent="panel">
@@ -63,8 +63,8 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="362px" prefWidth="755px" visible="false">
     <TabbedPaneConstraints tabTitle="Личностные аспекты" tabToolTip=""/>
   </AnchorsPane>
-  <Label cursor="0" name="label31" parent="panel4" prefHeight="30px" prefWidth="240px" text="Соционический тип">
-    <AnchorsPaneConstraints height="30px" left="40px" top="30px" width="240px"/>
+  <Label cursor="0" name="label31" parent="panel4" prefHeight="30px" prefWidth="170px" text="Соционический тип">
+    <AnchorsPaneConstraints height="30px" left="40px" top="30px" width="170px"/>
   </Label>
   <Label cursor="0" name="label31111" parent="panel4" prefHeight="30px" prefWidth="210px" text="ПЙ-тип (психософия)">
     <AnchorsPaneConstraints height="30px" left="40px" top="70px" width="210px"/>
@@ -98,7 +98,7 @@
   <ModelCombo cursor="0" displayField="ptype" field="cursor.psyhosophytypes_id" name="ptypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="70px" width="450px"/>
   </ModelCombo>
-  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.soctype" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
+  <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.soctypes" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
   <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">
@@ -114,7 +114,7 @@
     <AnchorsPaneConstraints bottom="21px" height="30px" right="76px" width="100px"/>
   </Button>
   <Label cursor="0" horizontalAlignment="4" name="label1111" parent="view" prefHeight="30px" prefWidth="200px" text="Дата рождения">
-    <font family="Monospaced" size="14" style="0"/>
+    <font family="Arial" size="14" style="0"/>
     <AnchorsPaneConstraints height="30px" left="170px" top="200px" width="200px"/>
   </Label>
   <ModelDate cursor="0" data="human" field="cursor.birthdate" format="dd.MM.yyyy" name="modelDate" parent="view" prefHeight="30px" prefWidth="160px">
