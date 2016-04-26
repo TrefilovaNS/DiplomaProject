@@ -403,7 +403,7 @@ Types
   display: inline-block;
   margin-bottom: 10px;
 }
-.type{
+.headtext{
  
   text-align: left;
 /*  margin-left: 10%;*/
@@ -521,6 +521,14 @@ Types
   margin: -5px 0 0 -25px;
   background-color: #fff;
   z-index: 5;
+}
+
+.row{
+  width: 135px;
+  float: left;
+  vertical-align: middle;
+  height: 100%;
+  margin-top: -5px;
 }
 /**
  * Tooltip Styles

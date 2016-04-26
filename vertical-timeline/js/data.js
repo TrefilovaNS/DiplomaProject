@@ -40,7 +40,8 @@ $(document).ready(function(){
       $("#sn-skills").slideDown("slow");
  		$("#sn-interests").slideDown("slow");
  		$("#sn-rec").slideDown("slow");
-$(function() {
+		
+		$(function() {
 			$(".meter > span").each(function() {
 				$(this)
 					.data("origWidth", $(this).width())
@@ -50,6 +51,8 @@ $(function() {
 					}, 3000);
 			});
 		});
+
+		
 });
 // if(document.getElementById("soc-type")=='ЛСЭ "Штирлиц"'){
 // 	var textEgo =  document.getElementById("demo");

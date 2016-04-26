@@ -11,9 +11,12 @@
 	<link rel="stylesheet" href="progress-bars/css/style.css">
 	<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
 	 <!-- <script src="vertical-timeline/js/data.js"></script> -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-</script>
+	<link href="jquery-plugin-circliful/css/circliful.css" rel="stylesheet" type="text/css" />
+	<script src="jquery-plugin-circliful/js/circliful.min.js"></script>
+
+
 <script src="vertical-timeline/js/data.js"></script> 
 <script>
 //   $.getJSON('timeline.json', function(data) {
@@ -150,7 +153,7 @@
 			<div class="skill-name">Владение пакетом программ MS Office</div>
 			<div class="skill-line">
 				<div class="meter orange">
-					<span style="width: 76%"></span>
+					<span style="width: 40%"></span>
 				</div>
 			</div>
 		</div>
@@ -166,7 +169,7 @@
 			<div class="skill-name">Организаторский навык</div>
 			<div class="skill-line">
 				<div class="meter yellow">
-					<span style="width: 40%"></span>
+					<span style="width: 76%"></span>
 				</div>
 			</div>
 		</div>
@@ -196,7 +199,7 @@
 <section id="recomendations" class="rec-container">
 	<div class="rec-block">
 		<div class="socionics">
-			<div class="type">
+			<div class="headtext">
 					<div class="psy-line-name orange">
 					<div class="psy-line-selfname"><span data-tooltip="Соционический тип - это тип информационного метаболизма, который определяется функционированием психических функций человека, обрабатывающих информацию. Соционика рассматривает 16 типов информационного метаболизма, или социотипов."><img src="icons/question.png"> </span>Соционический тип: <span id="soc-type">ЛСЭ "Штирлиц"</span></div></div>
 				</div>
@@ -213,7 +216,7 @@
 			
 		</div>
 		<div class="psyhosophy">
-				<div class="type">
+				<div class="headtext">
 						<div class="psy-line-name orange">
 						<div class="psy-line-selfname"><span data-tooltip="ПЙ-тип - это"><img src="icons/question.png"> </span>ПЙ-тип: <span id="soc-type">ФВЭЛ "Чехов"</span></div></div>
 				</div>
@@ -249,9 +252,48 @@
 			</div>
 			</div>
 		</div>
+
+		<div class="socionics">
+			<div class="headtext">
+					<div class="psy-line-name orange">
+					<div class="psy-line-selfname"><span data-tooltip="Справочная информация"><img src="icons/question.png"> </span>Потенциал роста в рамках дожности</div></div>
+				</div>
+			
+			<div class="soc-kid-block">
+				<div class="soc-ego-text" id="kid-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</div>
+				<div class="row">
+    				<div class="col-lg-2">
+        				<div id="test-circle"></div>
+    				</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+
 	</div>
 </section>
+
+			
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="vertical-timeline/js/main.js"></script> <!-- Resource jQuery -->
+<script src="jquery-plugin-circliful/js/circliful.js"></script>
+<script>
+$(document).ready(function() {
+        $("#test-circle").circliful({
+           animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 15,
+            backgroundBorderWidth: 15,
+            percent: 38,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#666',
+            multiPercentage: 1,
+            percentages: [10, 20, 30]
+    });
+    });
+</script>
 </body>
 </html>
