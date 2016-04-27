@@ -3,12 +3,9 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="241px" prefWidth="331px"/>
   <ModelGrid cursor="0" data="qSkills" name="modelGrid" parent="view" prefHeight="200px" prefWidth="330px">
     <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="330px"/>
-    <CheckGridColumn name="column" resizable="true"/>
-    <ModelGridColumn field="skill" name="colSkill" preferredWidth="140px" title="Навыки" width="177px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
-    <ModelGridColumn field="level" name="colLevel" title="Уровень" width="112px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="skillname" name="colSkillname" title="colSkillname" width="289px">
+      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnAdd" parent="view" prefHeight="20px" prefWidth="180px" text="Добавить новый навык">

@@ -73,10 +73,10 @@
     <AnchorsPaneConstraints height="140px" left="380px" top="210px" width="350px"/>
   </ScrollPane>
   <BoxPane background="#ffffff" cursor="0" name="panel7" orientation="1" parent="scrollPane15" prefHeight="138px" prefWidth="348px"/>
-  <ScrollPane cursor="0" name="scrollPane151" parent="panel4" prefHeight="150px" prefWidth="350px">
-    <AnchorsPaneConstraints height="150px" left="20px" top="200px" width="350px"/>
+  <ScrollPane cursor="0" name="scrollPane151" parent="panel4" prefHeight="20px" prefWidth="350px">
+    <AnchorsPaneConstraints height="20px" left="20px" top="330px" width="350px"/>
   </ScrollPane>
-  <BoxPane background="#ffffff" cursor="0" name="panel6" orientation="1" parent="scrollPane151" prefHeight="148px" prefWidth="348px"/>
+  <BoxPane background="#ffffff" cursor="0" name="panel6" orientation="1" parent="scrollPane151" prefHeight="18px" prefWidth="348px"/>
   <Label cursor="0" name="label32" parent="panel4" prefHeight="30px" prefWidth="220px" text="Навыки (в т.ч. знания)">
     <AnchorsPaneConstraints height="30px" left="120px" top="130px" width="220px"/>
   </Label>
@@ -101,6 +101,22 @@
   <ModelCombo cursor="0" data="qTypes" displayField="stype" displayList="qSocTypes" field="cursor.soctypes" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
+  <ModelGrid cursor="0" data="qSkillsByHuman" name="modelGrid" parent="panel4" prefHeight="100px" prefWidth="350px">
+    <AnchorsPaneConstraints height="100px" left="20px" top="210px" width="350px"/>
+    <ServiceGridColumn name="colService1"/>
+    <ModelGridColumn field="skill" name="colSkills_id" title="colSkills_id" width="77px">
+      <ModelCombo displayField="skillname" displayList="qSkills"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="setskills_id" name="colSetskills_id" title="colSetskills_id" width="77px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="human_id" name="colHuman_id" title="colHuman_id" width="78px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="level" name="colLevel" title="colLevel" width="77px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+  </ModelGrid>
   <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
   </ModelFormattedField>

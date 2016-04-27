@@ -1,8 +1,8 @@
 /**
  *
- * @author Наталья
+ * @author Пользователь
  * @name qSkills
  * @public
  */ 
 Select * 
-From SETSKILLS t1
+From SKILLS t
