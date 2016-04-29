@@ -14,6 +14,10 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
                 var saveCareer = [];
 
+                
+                var setSkills = arguments[0];
+                model.qSkillsById.params.skills_id = setSkills.skills_id;
+        
 
 
                 function saveCallback() {
@@ -155,12 +159,19 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         intrst.showOn(form.panel7);
                     });
                 };
+                
+                 function callbackSkill(skill) {
+                    model.qSkills.cursor = skill;
+                    setSkills.skills_id = skill.skills_id;
+
+                }
 
                 form.btnSkill.onActionPerformed = function (event) {
                     require(['Skills'], function (Skll) {
 
                         var skll = new Skll();
-                        skll.showOn(form.panel6);
+//                        skll.showOn(form.panel6);
+                        skll.showModal(callbackSkill);;
                     });
                 };
 

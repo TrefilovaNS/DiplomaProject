@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <ModelFormattedField cursor="0" format="" name="modelFormattedField" prefHeight="0px" prefWidth="0px" text="modelFormattedField"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="241px" prefWidth="331px"/>
-  <ModelGrid cursor="0" data="qSkills" name="modelGrid" parent="view" prefHeight="200px" prefWidth="330px">
-    <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="330px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="skillname" name="colSkillname" title="colSkillname" width="289px">
-      <ModelFormattedField/>
+  <Button cursor="0" name="button" prefHeight="20px" prefWidth="100px" text="button"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="272px" prefWidth="359px"/>
+  <ModelGrid cursor="0" data="qSkills" name="modelGrid" parent="view" prefHeight="200px" prefWidth="360px">
+    <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="360px"/>
+    <CheckGridColumn name="column"/>
+    <ModelGridColumn field="skillname" name="colSkillname" title="colSkillname" width="315px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="btnAdd" parent="view" prefHeight="20px" prefWidth="180px" text="Добавить новый навык">
-    <AnchorsPaneConstraints bottom="11px" height="20px" left="0px" width="180px"/>
+  <Button cursor="0" name="btnAdd" parent="view" prefHeight="30px" prefWidth="80px" text="Внести">
+    <AnchorsPaneConstraints bottom="12px" height="30px" left="10px" width="80px"/>
   </Button>
-  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="130px" text="Сохранить">
-    <AnchorsPaneConstraints bottom="11px" height="20px" left="200px" width="130px"/>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="130px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="12px" height="30px" left="100px" width="130px"/>
+  </Button>
+  <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">
+    <AnchorsPaneConstraints bottom="12px" height="30px" right="9px" width="100px"/>
   </Button>
 </layout>

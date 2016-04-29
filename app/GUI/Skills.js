@@ -35,6 +35,13 @@ define('Skills',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             model.save();
         };
         
+        form.btnOK.onActionPerformed = function () {
+            for(var j = 0; j < model.qSkills.length; j++){
+                callback(form.modelGrid.selected[j]);
+            }
+            form.close();
+        };
+        
         // TODO : place your code here
         
         model.requery(function () {
