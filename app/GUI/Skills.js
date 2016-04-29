@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Skills
  */
-define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
+define('Skills',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -33,6 +33,13 @@ define(['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         form.btnSave.onActionPerformed = function () {
             
             model.save();
+        };
+        
+        form.btnOK.onActionPerformed = function () {
+            for(var j = 0; j < model.qSkills.length; j++){
+                callback(form.modelGrid.selected[j]);
+            }
+            form.close();
         };
         
         // TODO : place your code here

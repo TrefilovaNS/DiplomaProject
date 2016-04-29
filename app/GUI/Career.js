@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Career
  */
-define(['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], function (Orm, Forms, Ui, Jobs, Posts, Dismissions, ModuleName) {
+define('Career',['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], function (Orm, Forms, Ui, Jobs, Posts, Dismissions, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)

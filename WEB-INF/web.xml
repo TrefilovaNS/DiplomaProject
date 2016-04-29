@@ -8,6 +8,10 @@
     <param-name>appelement</param-name>
     <param-value>start.js</param-value>
   </context-param>
+  <context-param>
+    <param-name>source-path</param-name>
+    <param-value>app</param-value>
+  </context-param>
   <listener>
     <listener-class>com.eas.server.httpservlet.PlatypusSessionsSynchronizer</listener-class>
   </listener>
@@ -16,7 +20,7 @@
     <servlet-class>com.eas.server.httpservlet.PlatypusHttpServlet</servlet-class>
     <async-supported>true</async-supported>
     <multipart-config>
-      <location>C:/Workspace/DiplomaProject/pub</location>
+      <location>D:/Projects/DiplomaProject/DiplomaProject/pub</location>
       <max-file-size>2097152</max-file-size>
       <max-request-size>2165824</max-request-size>
       <file-size-threshold>1048576</file-size-threshold>
@@ -27,20 +31,14 @@
     <url-pattern>/application/*</url-pattern>
   </servlet-mapping>
   <resource-ref>
-    <description>jdbc:derby://localhost:1527/sample [app на APP]</description>
-    <res-ref-name>jdbc:derby://localhost:1527/sample [app на APP]</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-  </resource-ref>
-  <resource-ref>
     <description>jdbc:h2:tcp://localhost/~/db [123 на INFORMATION_SCHEMA]</description>
     <res-ref-name>jdbc:h2:tcp://localhost/~/db [123 на INFORMATION_SCHEMA]</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
   <resource-ref>
-    <description>jdbc:h2:tcp://localhost/~/pet_hotel [test на PUBLIC]</description>
-    <res-ref-name>petHotel</res-ref-name>
+    <description>jdbc:h2:tcp://localhost/~/test_db [sa на PUBLIC]</description>
+    <res-ref-name>test_db</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
