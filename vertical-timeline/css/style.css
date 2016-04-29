@@ -391,7 +391,7 @@ Types
    margin-left: 3%;
    float: left;
 }*/
-.socionics{
+.recom-block{
   margin: 0 auto;
   padding: 20px 10px 20px 0px;
   width: 900px;
@@ -529,6 +529,52 @@ Types
   vertical-align: middle;
   height: 100%;
   margin-top: -5px;
+}
+
+.tasks img{
+  width: 30px;
+ 
+float: left;
+
+}
+
+.task{
+display: inline-block;
+  margin-bottom: 15px;
+  padding-top: 8px;
+}
+
+.tasks{
+  padding-left: 5%;
+
+
+}
+.motivation{
+   display: inline-block;
+  width: 140px;
+  margin: auto;
+  float:left;
+
+}
+
+.motivation-numb{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 25px 5px 5px 5px;
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    font-family: "Sleepy Time";
+    font-weight: bold;
+}
+.motivations{
+   
+  display: table;
+  margin: 0 auto;
+  padding: 5px 0 5px 0;
+  margin-left: 22px;
 }
 /**
  * Tooltip Styles
@@ -909,7 +955,7 @@ header h1 {
   width: 400px;
   margin-bottom: 5px;
 }
-.socionics{
+.recom-block{
   width: 600px;
 }
 
@@ -933,7 +979,7 @@ header h1 {
   width: 700px;
 }
 
-.socionics{
+.recom-block{
   width: 900px;
 }
 .psyhosophy{
