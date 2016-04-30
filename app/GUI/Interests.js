@@ -34,7 +34,7 @@ define('Interests',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName)
             // TODO : place your code here
         });
          form.btnOK1.onActionPerformed = function () {
-            callback(form.modelGrid.selected[0]);
+            callback(form.modelGrid.selected);
             form.close();
         };
         

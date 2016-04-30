@@ -5,4 +5,3 @@
  * @public
  */ 
 Select * 
-From PSYHOTYPES t1

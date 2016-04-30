@@ -118,12 +118,26 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     }
 
                 }
+                
+                 function callbackIntrst(interests) {
+                    for (var i = 0; i < interests.length; i++) {
+                        model.qInterestsByHuman.push({setinterests_id: interests[i].setinterests_id,
+                            human_id: userId});
+                    }
+
+                }
 
                 form.btnSkill.onActionPerformed = function (event) {
                     require(['Skills'], function (Skll) {
                         var skll = new Skll();
 //                        skll.showOn(form.panel6);
                         skll.showModal(callbackSkill);
+                    });
+                };
+                   form.btnInt.onActionPerformed = function (event) {
+                    require(['Interests'], function (Intrst) {
+                        var intrst = new Intrst();
+                        intrst.showModal(callbackIntrst);
                     });
                 };
 
