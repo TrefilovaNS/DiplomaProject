@@ -14,35 +14,25 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
                 var saveCareer = [];
 
-                
-                var setSkills = arguments[0];
-                model.qSkillsById.params.skills_id = setSkills.skills_id;
-        
 
+//                var setSkills = arguments[0];
+//                model.qSkillsById.params.skills_id = setSkills.skills_id;
 
                 function saveCallback() {
                     model.save();
                 }
 
                 function onShow() {
-//            require(['Education', 'Interests', 'Skills', 'forms/box-pane', 'Career'], function (Edu, Intrst, Skll, Bp, Career) {
                     require(['Education', 'Career', 'forms/box-pane'], function (Edu, Career, Bp) {
-                        model.qEdu.params.human_id = model.human[0].human_id;
-                        model.qEdu.requery(function () {
-                            for (var i = 0; i < model.qEdu.length; i++) {
-                                var edu = new Edu(model.qEdu[i]);
-                                edu.showOn(form.panel2);
-                            }
-                        });
-
-                        model.qCarrer.params.human_id = model.human[0].human_id;
-                        model.qCarrer.requery(function () {
-                            for (var j = 0; j < model.qCarrer.length; j++) {
-                                var career = new Career(model.qCarrer[j]);
-                                saveCareer.push(career.save);
-                                career.showOn(form.panel5);
-                            }
-                        });
+                        for (var i = 0; i < model.qEdu.length; i++) {
+                            var edu = new Edu(model.qEdu[i]);
+                            edu.showOn(form.panel2);
+                        }
+                        for (var j = 0; j < model.qCarrer.length; j++) {
+                            var career = new Career(model.qCarrer[j]);
+                            saveCareer.push(career.save);
+                            career.showOn(form.panel5);
+                        }
 
                         form.email.data = model.human[0].contact;
                         form.email.field = "email";
@@ -50,10 +40,6 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         form.phone.field = "phonenumber";
                         form.socpage.data = model.human[0].contact;
                         form.socpage.field = "socialpage";
-
-
-
-
 
                         var pnlDiv = new Bp();
                         pnlDiv.height = 1;
@@ -71,75 +57,40 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                             model.human[0].psyhotypes_id = model.qTypes.cursor.psyhotypes_id;
                         }
 
-//                var intrst = new Intrst();
-//                intrst.showOn(form.panel7);
-//
-//                var skll = new Skll();
-//                skll.showOn(form.panel6);
-//
-//                var career = new Career();
-//                career.showOn(form.panel5);
-
                     });
                 }
-                self.show = function () {
-//            form.maximizable = true;
-//            form.undecorated = true;
-                    //form.maximize();
-                    model.human.params.human_id = aUserId;
+
+
+                //Названия бы получше придумать
+                function preShow() {
+                    if (aUserId) {
+                        model.human.params.human_id = aUserId;
+                    }
                     model.requery(function () {
-                        if (!model.human) {
+                        if (model.human.length === 0) {
                             model.human.push({});
                             model.qContacts.push({});
-//                    model.qTypes.push({});
-//                    model.qSocTypes.push({});
-//                    model.qPsyTypes.push({});
-
                         }
                         onShow();
                     });
+                }
 
+
+                self.show = function () {
+                    preShow();
                     form.show();
-
                 };
 
 
 
                 self.showModal = function (callback) {
-                    form.maximizable = true;
-//            form.undecorated = true;
-                    Invoke.later(function () {
-//                form.maximize();
-                    });
-
                     onSucsess = callback;
-                    if (aUserId) {
-                        model.human.params.human_id = aUserId;
-                    }
-                    model.requery(function () {
-
-                        if (model.human.length === 0) {
-                            model.human.push({});
-                            model.qContacts.push({});
-//                    model.qTypes.push({});
-//                    model.qSocTypes.push({});
-//                    model.qPsyTypes.push({});
-                        }
-                        onShow();
-                    });
-
+                    preShow();
                     form.showModal();
-                    //onShow();
                 };
 
 
-                // TODO : place your code here
-
-                model.requery(function () {
-                    // TODO : place your code here
-                });
-
-                form.button.onActionPerformed = function (event) {
+                form.btnAddEducation.onActionPerformed = function (event) {
                     require(['Education', 'forms/box-pane'], function (Edu, Bp) {
 
                         var index = model.qEdu.push({});
@@ -159,19 +110,20 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         intrst.showOn(form.panel7);
                     });
                 };
-                
-                 function callbackSkill(skill) {
-                    model.qSkills.cursor = skill;
-                    setSkills.skills_id = skill.skills_id;
+
+                function callbackSkill(skills) {
+                    for (var i = 0; i < skills.length; i++) {
+                        model.qSkillsByHuman.push({skills_id: skills[i].skills_id,
+                            human_id: userId});
+                    }
 
                 }
 
                 form.btnSkill.onActionPerformed = function (event) {
                     require(['Skills'], function (Skll) {
-
                         var skll = new Skll();
 //                        skll.showOn(form.panel6);
-                        skll.showModal(callbackSkill);;
+                        skll.showModal(callbackSkill);
                     });
                 };
 
@@ -185,13 +137,10 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         model.qCarrer[index - 1].human_id = model.human[0].human_id;
                         var career = new Career(model.qCarrer[index - 1]);
                         career.showOn(form.panel5);
-
-//                var career = new Career();
-//                career.showOn(form.panel5);
                     });
                 };
+
                 form.btnSave.onActionPerformed = function (event) {
-//             model.human.schema.human_id = 1;
                     model.save();
                     for (var i = 0; i < saveCareer.length; i++) {
                         var fn = saveCareer[i];
