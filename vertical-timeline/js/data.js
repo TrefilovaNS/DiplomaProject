@@ -64,33 +64,122 @@ window.onload = function (){
 var socType = 'ЛСЭ "Штирлиц"';
 var textEgo =  document.getElementById("ego-text");
 var textKid = document.getElementById("kid-text");
-// //ЧЛ
-// var egoChL = "";
-// //БЭ
-// var egoBE = "";
-// //ЧИ
-// var egoCHI = "";
-// //ЧС
-// var egoCHS = "";
-// //БС
-// var egoBS = "";
-// //ЧЭ
-// var egoChE = "";
-// //БЛ
-// var egoBL = "";
-// //БИ
-// var egoBI = "";
+//СИЛЬНЫЕ ФУНКЦИИ
+//ЧЛ
+var egoChL = "Смысл жизни — оптимизация всего. Главное — чтобы было эффективнее, быстрее, дешевле. Склонен к высокому КПД.";
+//БЭ
+var egoBE = "Умение понять желания и интересы людей, отношения между ними. Глубокое понимание нравственных и этических сторон жизни.";
+//ЧИ
+var egoCHI = "Понимание сути явлений, потенциала способностей людей. Генерирование альтернативных решений.";
+//ЧС
+var egoCHS = "Умение оценить внешний вид объектов, физическую силу, волевые качества людей. Настойчивость, целеустремленность.";
+//БС
+var egoBS = "Понимание гармонии форм и положений, стремление к удобству, комфорту и уюту, изысканным удовольствиям.";
+//ЧЭ
+var egoChE = "Понимание эмоционального состояния человека, управление настроением людей, выражение чувств и эмоций.";
+//БЛ
+var egoBL = "Способности к анализу и систематизация информации, понимание и оценка причинно-следственных связей, формальных правил.";
+//БИ
+var egoBI = "Понимание взаимосвязи времен, видение тенденций развития событий, способности к прогнозированию, оценка затрат времени.";
+
+//ДЕТСКИЙ БЛОК (слабые функции)
+var kidChL = "Благодарность за конкретную и исчерпывающую помощь в вопросах эффективного выполнения какой-либо работы.";
+//БЭ
+var kidBE = "Интерес к информации о людях и об отношениях между ними. Подсознательный настрой на честные и порядочные отношения со всеми людьми.";
+//ЧИ
+var kidCHI = "Любит все интересное и необычное, положительно реагирует на интересные предложения.";
+//ЧС
+var kidCHS = "Слабый волевой импульс, недостаточная требовательность и целеустремленность. Подспудное желание следовать чужой сильной воле.";
+//БС
+var kidBS = "Плохо чувствует свое тело и его потребности. Благодарность за создание комфортных условий уюта, заботы.";
+//ЧЭ
+var kidChE = "Нуждается в активной эмоциональной поддержке, легко заряжается атмосферой веселья, рядом с эмоциональными людьми и сам раскрепощается.";
+//БЛ
+var kidBL = "Хорошо воспринимает информацию, если она подается в систематизированном виде. Склонен доверять подробным, аргументированным объяснениям.";
+//БИ
+var kidBI = "Слабое чувство времени. Подсознательная уверенность в том, что все окружающие должны предупреждать его о возможных неприятностях.";
 //Switch-case для отображения рекомендательного текста в зависимости от соционического типа человека
 switch(socType){
 	case 'ЛСЭ "Штирлиц"':
-		textEgo.innerHTML = "Смысл жизни — оптимизация всего. Главное — чтобы было эффективнее, быстрее, дешевле. Склонен к высокому КПД. Обладает хорошо развитым чувством комфорта и уюта, как правило, любит чистоту и порядок.";
-		textKid.innerHTML = "Интерес к информации о людях и об отношениях между ними. Подсознательный настрой на честные и порядочные отношения со всеми людьми. Любит все интересное и необычное, положительно реагирует на интересные предложения.";
+		textEgo.innerHTML = egoChL + " " + egoBS;
+		textKid.innerHTML = kidBE + " " + kidCHI;
 		break;
 
 	case 'ИЭЭ "Гексли"':
-		textEgo.innerHTML = "Этот текст будет отображен, если выбран ТИМ Гексли";
-		textKid.innerHTML = "Этот текст будет отображен, если выбран ТИМ Гексли";
+		textEgo.innerHTML = egoCHI + " " + egoBE;
+		textKid.innerHTML = kidBS + " " + kidChL;
 		break;
+
+	case 'СЛИ "Габен"':
+		textEgo.innerHTML = egoCHI + " " + egoBE;
+		textKid.innerHTML = kidBS + " " + kidChL;
+		break;
+
+	case 'ЭИИ "Достоевский"':
+		textEgo.innerHTML = egoBE + " " + egoCHI;
+		textKid.innerHTML = kidChL + " " + kidBS;
+		break;
+
+	case 'ЭСИ "Драйзер"':
+		textEgo.innerHTML = egoBE + " " + egoCHS;
+		textKid.innerHTML = kidChL + " " + kidBI;
+		break;
+
+	case 'ЛИЭ "Джек Лондон"':
+		textEgo.innerHTML = egoChL + " " + egoBI;
+		textKid.innerHTML = kidBE + " " + kidCHS;
+		break;
+
+	case 'СЭЭ "Наполеон"':
+		textEgo.innerHTML = egoCHS + " " + egoBE;
+		textKid.innerHTML = kidBI + " " + kidChL;
+		break;
+
+	case 'ИЛИ "Бальзак"':
+		textEgo.innerHTML = egoBI + " " + egoChL;
+		textKid.innerHTML = kidCHS + " " + kidBE;
+		break;
+
+	case 'ИЭИ "Есенин"':
+		textEgo.innerHTML = egoBI + " " + egoChE;
+		textKid.innerHTML = kidCHS + " " + kidBL;
+		break;
+
+	case 'СЛЭ "Жуков"':
+		textEgo.innerHTML = egoCHS + " " + egoBL;
+		textKid.innerHTML = kidBI + " " + kidChE;
+		break;
+
+	case 'ЭИЭ "Гамлет"':
+		textEgo.innerHTML = egoChE + " " + egoBI;
+		textKid.innerHTML = kidBL + " " + kidCHS;
+		break;
+
+	case 'ЛСИ "Максим Горький"':
+		textEgo.innerHTML = egoBL + " " + egoCHS;
+		textKid.innerHTML = kidChE + " " + kidBI;
+		break;
+
+	case 'ЛИИ "Робеспьер"':
+		textEgo.innerHTML = egoBL + " " + egoCHI;
+		textKid.innerHTML = kidChE + " " + kidBS;
+		break;
+
+	case 'ЭСЭ "Гюго"':
+		textEgo.innerHTML = egoChE + " " + egoBS;
+		textKid.innerHTML = kidBL + " " + kidCHI;
+		break;
+
+	case 'ИЛЭ "Дон Кихот"':
+		textEgo.innerHTML = egoCHI + " " + egoBL;
+		textKid.innerHTML = kidBS + " " + kidChE;
+		break;
+
+	case 'СЭИ "Дюма"':
+		textEgo.innerHTML = egoBS + " " + egoChE;
+		textKid.innerHTML = kidCHI + " " + kidBL;
+		break;
+
 
 	default:
     	textEgo.innerHTML = "ТИМ не определен";
@@ -167,7 +256,7 @@ switch(res[1]){
 //Switch-case для отображения текста в ТРЕТЬЕМ из ЧЕТЫРЕХ блоков в зависимости от ПЙ-типа
 switch(res[2]){
 	case "Ф":
-		threeContent.innerHTML = "Текст первофизика Текст первофизика Текст первофизика";
+		threeContent.innerHTML = F + " " + recForThree;
 		break;
 
 	case "Э":
