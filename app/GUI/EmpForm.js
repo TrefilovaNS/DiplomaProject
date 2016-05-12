@@ -118,8 +118,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     }
 
                 }
-                
-                 function callbackIntrst(interests) {
+
+                function callbackIntrst(interests) {
                     for (var i = 0; i < interests.length; i++) {
                         model.qInterestsByHuman.push({setinterests_id: interests[i].setinterests_id,
                             human_id: userId});
@@ -134,7 +134,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         skll.showModal(callbackSkill);
                     });
                 };
-                   form.btnInt.onActionPerformed = function (event) {
+                form.btnInt.onActionPerformed = function (event) {
                     require(['Interests'], function (Intrst) {
                         var intrst = new Intrst();
                         intrst.showModal(callbackIntrst);
@@ -169,6 +169,18 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
                 form.onWindowClosed = function (event) {
                     onSucsess();
+                };
+                form.export.onActionPerformed = function () {
+
+                    var pnl = document.getElementById("Main");
+//                  pnl.innerHTML = "<h1>" +form.modelFormattedField1.value + "</h1>";
+                    form.view.showOn(pnl);
+                    form.view.element.innerHTML = "<h1>" + form.modelFormattedField1.value + "</h1>";
+                    Invoke.later(function(){
+                       form.undecorated = true;
+                       
+                       form.maximize(); 
+                    });
                 };
 
             }

@@ -105,11 +105,11 @@
   </ModelGrid>
   <ModelGrid cursor="0" data="qInterestsByHuman" name="modelGrid1" parent="panel4" prefHeight="140px" prefWidth="330px">
     <AnchorsPaneConstraints height="140px" left="390px" top="210px" width="330px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="setinterests_id" name="colSetinterests_id" title="colSetinterests_id" width="96px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn name="colInterest" title="colInterest" width="97px">
+    <ModelGridColumn field="interest" name="colInterest" title="colInterest" width="97px">
       <ModelCombo displayField="interest" displayList="qInterestsByHuman"/>
     </ModelGridColumn>
     <ModelGridColumn field="human_id" name="colHuman_id" title="colHuman_id" width="96px">
@@ -140,5 +140,8 @@
   </Button>
   <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="Закрыть">
     <AnchorsPaneConstraints bottom="21px" height="30px" left="440px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="export" parent="view" prefHeight="40px" prefWidth="150px" text="Вывести на экран">
+    <AnchorsPaneConstraints height="40px" right="26px" top="10px" width="150px"/>
   </Button>
 </layout>
