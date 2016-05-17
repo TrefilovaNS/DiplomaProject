@@ -2,9 +2,9 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ModelGrid cursor="0" data="qPosts" name="modelGrid" parent="view" prefHeight="230px" prefWidth="379px" rowsHeight="20">
     <AnchorsPaneConstraints height="230px" left="10px" top="10px" width="379px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="postname" name="colPostname" title="colPostname" width="334px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="109px" text="Сохранить">
@@ -12,5 +12,8 @@
   </Button>
   <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">
     <AnchorsPaneConstraints bottom="20px" height="30px" right="10px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnAdd" parent="view" prefHeight="30px" prefWidth="100px" text="Добавить">
+    <AnchorsPaneConstraints bottom="20px" height="30px" left="60px" width="100px"/>
   </Button>
 </layout>

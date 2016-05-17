@@ -182,6 +182,14 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                        form.maximize(); 
                     });
                 };
+                
+                
+                form.btnRecoms.onActionPerformed = function (event) {
+                    require(['Recoms'], function (Recom) {
+                        var recom = new Recom();
+                        recom.show();
+                    });
+                };
 
             }
             return module_constructor;

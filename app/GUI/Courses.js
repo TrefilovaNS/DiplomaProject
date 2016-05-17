@@ -28,6 +28,10 @@ define('Courses',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             form.close();
         };
         
+        form.btnAdd.onActionPerformed = function () {
+            model.qEduCourses.push({});
+        };
+        
         form.btnSave.onActionPerformed = function () {
             
             model.save();

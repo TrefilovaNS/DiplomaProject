@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qRecoms" Title="" entityHeight="200" entityIconified="false" entityId="146351617331893" entityLocationX="205" entityLocationY="5" entityWidth="150" queryId="qRecoms" tableName="" tableSchemaName=""/>
+  <entity Name="qMotivations" Title="" entityHeight="92" entityIconified="false" entityId="146351616701089" entityLocationX="0" entityLocationY="0" entityWidth="150" queryId="qMotivations" tableName="" tableSchemaName=""/>
+  <entity Name="qTasks" Title="" entityHeight="85" entityIconified="false" entityId="146351618583385" entityLocationX="432" entityLocationY="56" entityWidth="150" queryId="qTasks" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146351616701089" rightEntityFieldName="recommendations_id" rightEntityId="146351617331893"/>
+  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146351618583385" rightEntityFieldName="recommendations_id" rightEntityId="146351617331893"/>
+</datamodel>

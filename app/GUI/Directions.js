@@ -26,6 +26,10 @@ define('Directions',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName
             form.close();
         };
         
+        form.btnAdd.onActionPerformed = function () {
+            model.qEduDirections.push({});
+        };
+        
         form.btnSave.onActionPerformed = function () {
             
             model.save();

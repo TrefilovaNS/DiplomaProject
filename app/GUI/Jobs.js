@@ -28,6 +28,10 @@ define('Jobs',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             form.close();
         };
         
+         form.btnAdd.onActionPerformed = function () {
+            model.qJobs.push({});
+        };
+        
         form.btnSave.onActionPerformed = function () {
             
             model.save();

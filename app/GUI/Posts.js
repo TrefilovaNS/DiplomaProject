@@ -35,6 +35,10 @@ define('Posts',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
             model.save();
         };
         
+         form.btnAdd.onActionPerformed = function () {
+            model.qPosts.push({});
+        };
+        
     }
     return module_constructor;
 });

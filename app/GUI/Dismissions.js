@@ -30,6 +30,10 @@ define('Dismissions',['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleNam
             form.close();
         };
         
+         form.btnAdd.onActionPerformed = function () {
+            model.qDismissions.push({});
+        };
+        
         form.btnSave.onActionPerformed = function () {
             
             model.save();

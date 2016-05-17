@@ -13,4 +13,7 @@
   <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">
     <AnchorsPaneConstraints bottom="20px" height="30px" right="10px" width="100px"/>
   </Button>
+  <Button cursor="0" name="btnAdd" parent="view" prefHeight="30px" prefWidth="100px" text="Добавить">
+    <AnchorsPaneConstraints bottom="20px" height="30px" left="60px" width="100px"/>
+  </Button>
 </layout>

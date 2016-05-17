@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="655px" prefWidth="681px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="640px" text="Потенциал роста в рамках должности">
+    <AnchorsPaneConstraints height="30px" left="20px" top="50px" width="640px"/>
+  </Label>
+  <ScrollPane cursor="0" name="scrollPane" parent="view" prefHeight="100px" prefWidth="630px">
+    <AnchorsPaneConstraints height="100px" left="20px" top="80px" width="630px"/>
+  </ScrollPane>
+  <ModelTextArea cursor="0" name="modelTextArea" parent="scrollPane" prefHeight="98px" prefWidth="628px" text="modelTextArea"/>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="60px" text="Процент:">
+    <AnchorsPaneConstraints height="20px" left="20px" top="190px" width="60px"/>
+  </Label>
+  <ModelSpin cursor="0" name="modelSpin" parent="view" prefHeight="22px" prefWidth="100px">
+    <AnchorsPaneConstraints height="22px" left="80px" top="190px" width="100px"/>
+  </ModelSpin>
+  <Label cursor="0" name="label2" parent="view" prefHeight="30px" prefWidth="630px" text="Задачи, которые способен решать">
+    <AnchorsPaneConstraints height="30px" left="20px" top="230px" width="630px"/>
+  </Label>
+  <ModelGrid cursor="0" data="qTasks" name="modelGrid" parent="view" prefHeight="100px" prefWidth="630px">
+    <AnchorsPaneConstraints height="100px" left="20px" top="300px" width="630px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="tasks_id" name="colTasks_id" title="colTasks_id" width="195px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="task" name="colTask" title="colTask" width="195px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="195px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="130px" text="Выбрать задачи">
+    <AnchorsPaneConstraints height="30px" left="20px" top="260px" width="130px"/>
+  </Button>
+  <Label cursor="0" name="label21" parent="view" prefHeight="30px" prefWidth="630px" text="Способы мотивации">
+    <AnchorsPaneConstraints height="30px" left="20px" top="410px" width="630px"/>
+  </Label>
+  <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="130px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="185px" height="30px" left="20px" width="130px"/>
+  </Button>
+  <ModelGrid cursor="0" data="qMotivations" name="modelGrid1" parent="view" prefHeight="100px" prefWidth="630px">
+    <AnchorsPaneConstraints bottom="75px" height="100px" left="20px" width="630px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="motivations_id" name="colMotivations_id" title="colMotivations_id" width="195px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="motivation" name="colMotivation" title="colMotivation" width="195px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="195px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="Закрыть">
+    <AnchorsPaneConstraints bottom="15px" height="30px" left="440px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="15px" height="30px" right="31px" width="100px"/>
+  </Button>
+</layout>
