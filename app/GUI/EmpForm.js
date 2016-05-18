@@ -13,7 +13,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                 var onSucsess;
 
                 var saveCareer = [];
-
+                var user = {name: form.modelFormattedField1.value};
+                user.career = [];
 
 //                var setSkills = arguments[0];
 //                model.qSkillsById.params.skills_id = setSkills.skills_id;
@@ -31,6 +32,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         for (var j = 0; j < model.qCarrer.length; j++) {
                             var career = new Career(model.qCarrer[j]);
                             saveCareer.push(career.save);
+                            user.career.push(career.getInfo);
                             career.showOn(form.panel5);
                         }
 
@@ -172,18 +174,23 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                 };
                 form.export.onActionPerformed = function () {
 
-                    var pnl = document.getElementById("Main");
-//                  pnl.innerHTML = "<h1>" +form.modelFormattedField1.value + "</h1>";
-                    form.view.showOn(pnl);
-                    form.view.element.innerHTML = "<h1>" + form.modelFormattedField1.value + "</h1>";
-                    Invoke.later(function(){
-                       form.undecorated = true;
-                       
-                       form.maximize(); 
+//                    var pnl = document.getElementById("Main");
+////                  pnl.innerHTML = "<h1>" +form.modelFormattedField1.value + "</h1>";
+//                    form.view.showOn(pnl);
+//                    form.view.element.innerHTML = "<h1>" + form.modelFormattedField1.value + "</h1>";
+//                    Invoke.later(function(){
+//                       form.undecorated = true;
+//                       
+//                       form.maximize(); 
+//                    });
+
+                    require(['temp'], function (Temp) {
+                        var temp = new Temp(user);
+                        temp.show();
                     });
                 };
-                
-                
+
+
                 form.btnRecoms.onActionPerformed = function (event) {
                     require(['Recoms'], function (Recom) {
                         var recom = new Recom();

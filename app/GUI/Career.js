@@ -3,7 +3,7 @@
  * @author Наталья
  * @module Career
  */
-define('Career',['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], function (Orm, Forms, Ui, Jobs, Posts, Dismissions, ModuleName) {
+define('Career', ['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], function (Orm, Forms, Ui, Jobs, Posts, Dismissions, ModuleName) {
     function module_constructor() {
         var self = this
                 , model = Orm.loadModel(ModuleName)
@@ -19,6 +19,10 @@ define('Career',['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], function
         form.entryDate.field = "entrydate";
         self.save = function () {
             model.save();
+        };
+
+        self.getInfo = function () {
+            return {uchr:}
         };
 //        form.dismisDate.data = career;
 //        form.dismisDate.field = "dismisdate";

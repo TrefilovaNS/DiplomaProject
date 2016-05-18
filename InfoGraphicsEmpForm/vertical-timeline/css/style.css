@@ -49,13 +49,13 @@ h1, h2 {
 Main block
 
 -------------------------------- */
-.main-block{
+.emp-main-block{
   width: 75%;
   background-color: #fff;
   margin: auto;
   padding: 10px 10px 10px 10px;
   height: 230px;
-    display: none;
+  /*  display: none;*/
 }
 
 .main-info{
@@ -176,7 +176,7 @@ Section`s name
   height: 30px;
   margin: auto;
   margin-top: 10px;
-  display: none;
+/*  display: none;*/
 
 }
 
