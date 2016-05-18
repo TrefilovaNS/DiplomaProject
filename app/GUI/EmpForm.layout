@@ -116,13 +116,13 @@
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="modelFormattedField" parent="view" prefHeight="30px" prefWidth="320px">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="name" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="human" emptyText="Иванов" field="cursor.surname" format="" name="modelFormattedField1" parent="view" prefHeight="30px" prefWidth="320px">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иванов" field="cursor.surname" format="" name="surname" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="80px" width="320px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="human" emptyText="Иванович" field="cursor.middlename" format="" name="modelFormattedField2" parent="view" prefHeight="30px" prefWidth="320px">
+  <ModelFormattedField cursor="0" data="human" emptyText="Иванович" field="cursor.middlename" format="" name="middlename" parent="view" prefHeight="30px" prefWidth="320px">
     <AnchorsPaneConstraints height="30px" left="270px" top="160px" width="320px"/>
   </ModelFormattedField>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">

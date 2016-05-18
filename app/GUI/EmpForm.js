@@ -13,7 +13,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                 var onSucsess;
 
                 var saveCareer = [];
-                var user = {name: form.modelFormattedField1.value};
+                var user = {name: form.name.value};
                 user.career = [];
 
 //                var setSkills = arguments[0];

@@ -22,7 +22,14 @@ define('Career', ['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], functio
         };
 
         self.getInfo = function () {
-            return {uchr:}
+            
+//            for (var i = 0; i < career.length; i++) {
+//                var fn = career[i];
+//                fn();
+//            }
+//            
+            return {jobname:form.jobname.value, postname:form.postname.value, entrydate:form.entryDate.value, reason:form.reason.value,
+            dismisdate:form.dismisDate.value};
         };
 //        form.dismisDate.data = career;
 //        form.dismisDate.field = "dismisdate";

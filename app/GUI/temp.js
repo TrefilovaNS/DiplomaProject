@@ -24,8 +24,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
             form.undecorated = true;
             form.maximize();
             
-              var surname = document.getElementById("surname");
-                surname.innerHTML = user.name;
+              var name = document.getElementById("name");
+                name.innerHTML = user.name;
                console.log(user.name);
         });
 
