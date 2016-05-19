@@ -21,13 +21,7 @@ define('Career', ['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], functio
             model.save();
         };
 
-        self.getInfo = function () {
-            
-//            for (var i = 0; i < career.length; i++) {
-//                var fn = career[i];
-//                fn();
-//            }
-//            
+        self.getInfo = function () {    
             return {jobname:form.jobname.value, postname:form.postname.value, entrydate:form.entryDate.value, reason:form.reason.value,
             dismisdate:form.dismisDate.value};
         };
