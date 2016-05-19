@@ -13,8 +13,9 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                 var onSucsess;
 
                 var saveCareer = [];
-                var user = {name: form.name.value};
+                var user = {};
                 user.career = [];
+                user.education = [];
 
 //                var setSkills = arguments[0];
 //                model.qSkillsById.params.skills_id = setSkills.skills_id;
@@ -174,15 +175,9 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                 };
                 form.export.onActionPerformed = function () {
 
-//                    var pnl = document.getElementById("Main");
-////                  pnl.innerHTML = "<h1>" +form.modelFormattedField1.value + "</h1>";
-//                    form.view.showOn(pnl);
-//                    form.view.element.innerHTML = "<h1>" + form.modelFormattedField1.value + "</h1>";
-//                    Invoke.later(function(){
-//                       form.undecorated = true;
-//                       
-//                       form.maximize(); 
-//                    });
+                    user.surname=form.surname.value;
+                    user.name=form.name.value;
+                    user.middlename=form.middlename.value;
 
                     require(['temp'], function (Temp) {
                         var temp = new Temp(user);
