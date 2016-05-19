@@ -29,9 +29,34 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                 console.log(fn());
             }
             
-              var name = document.getElementById("name");
-                name.innerHTML = user.name;
-               console.log(user.name);
+            var name = document.getElementById("name");
+            name.innerHTML = user.name;
+//            console.log(user.name);
+               
+            var surname = document.getElementById("surname");
+            surname.innerHTML = user.surname;
+               
+            var middlename = document.getElementById("middlename");
+            middlename.innerHTML = user.middlename;
+            
+            var age = document.getElementById("age");
+            age.innerHTML = user.age;
+            
+            var phone = document.getElementById("phonenumber");
+            phone.innerHTML = user.phone;
+            
+            var email = document.getElementById("email");
+            email.innerHTML = user.email;
+            
+            var socpage = document.getElementById("socpage");
+            socpage.innerHTML = user.socpage;
+       
+            //Блок подкидывания соцтипа
+            var socType = user.soctype;
+            var socTypeInner = document.getElementById("soc-type");
+            socTypeInner.innerHTML = socType;
+            
+            
         });
 
 
@@ -64,7 +89,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 				<div class="age">\
 					<div class="age-annotation">лет</div>\
 					<div class="age-line">\
-						<div class="age-self"><span id="age">30</span></div>\
+						<div class="age-self"><span id="age">28</span></div>\
 					</div>\
 				</div>\
 			</div>\
@@ -387,5 +412,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 
            
     }
+    
+
+
     return module_constructor;
 });
