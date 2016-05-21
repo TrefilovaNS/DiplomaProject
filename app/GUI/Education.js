@@ -3,7 +3,7 @@
  * @author Пользователь
  * @module Education
  */
-define('Education',['orm', 'forms', 'ui', 'Courses', 'Directions']
+define('Education', ['orm', 'forms', 'ui', 'Courses', 'Directions']
         , function (Orm, Forms, Ui, Courses, Directions, ModuleName) {
             function module_constructor() {
                 var self = this
@@ -66,6 +66,11 @@ define('Education',['orm', 'forms', 'ui', 'Courses', 'Directions']
                 form.direction.onSelect = function () {
                     var directions = new Directions();
                     directions.showModal(callbackDir);
+                };
+
+                self.getInfo = function () {
+//                    console.log(education.degree);
+                    return {name:form.name.value,degree:form.degree.text ,course:form.course.value,direction:form.direction.value,entDate:form.entDate.value,endDate:form.endDate.value};
                 };
             }
             return module_constructor;

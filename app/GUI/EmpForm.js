@@ -28,6 +28,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     require(['Education', 'Career', 'forms/box-pane'], function (Edu, Career, Bp) {
                         for (var i = 0; i < model.qEdu.length; i++) {
                             var edu = new Edu(model.qEdu[i]);
+                            user.education.push(edu.getInfo);
                             edu.showOn(form.panel2);
                         }
                         for (var j = 0; j < model.qCarrer.length; j++) {
@@ -191,7 +192,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     user.email = form.email.value;
                     user.socpage = form.socpage.value;
                     
-                    user.soctype = form.soctypes.value;
+                    user.soctype = form.soctypes.text;
+                    user.psytype = form.ptypes.text;
                     
                     require(['temp'], function (Temp) {
                         var temp = new Temp(user);
