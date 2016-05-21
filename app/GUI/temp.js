@@ -24,19 +24,66 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
             form.undecorated = true;
             form.maximize();
             
+            var orange = "orange";
+                var blue = "blue";
+                var yellow = "yellow";
+            
             for (var i = 0; i < user.career.length; i++) {
-                var fn = user.career[i];
-                console.log(fn());
+                var career = user.career[i]();
+                console.log(career);
+                
+                addCareer(career.jobname, career.postname, career.entrydate, career.reason, career.dismisdate);
+                
+                 function addCareer(carJobname, carPostname, carEntryDate, carReason, carDismisDate){
+                    var parentDiv = document.getElementById('cd-timeline');
+                    var div = document.createElement('div');
+                    div.className = 'cd-timeline-block';
+                    div.id = 'timelineBlockID' + i;
+                    parentDiv.appendChild(div);
+                    
+                    var divImg = document.createElement('div');
+                    divImg.className = 'cd-timeline-img cd-picture';
+                    divImg.id = 'timelineImageID' + i;
+                    div.appendChild(divImg);
+                    
+                    var divContent = document.createElement('div');
+                    divContent.className = 'cd-timeline-content';
+                    divContent.id = 'timelineContentID' + i;
+                    div.appendChild(divContent);
+                    
+                    var spanDate = document.createElement('span');
+                    spanDate.className = 'cd-date';
+                    spanDate.id = 'spanDateID' + i;
+                    divContent.appendChild(spanDate);
+                    var spanDateId = document.getElementById('spanDateID' + i);
+                    
+                    var spanPostName = document.createElement('span');
+                    spanPostName.id = 'spanPostNameID' + i;
+                    divContent.appendChild(spanPostName);
+                    var spanPostNameId = document.getElementById('spanPostNameID' + i);
+                    
+                    var spanReason = document.createElement('span');
+                    spanReason.id = 'spanReasonID' + i;
+                    divContent.appendChild(spanReason);
+                    var spanReasonId = document.getElementById('spanReasonID' + i);
+                    
+                    var textReason = "Причина увольнения: ";
+                    
+                    spanDateId.innerHTML = carEntryDate + "-" + carDismisDate;
+                    divContent.innerHTML = "<h2>" + carJobname + "</h2>";
+                    spanPostNameId.innerHTML = carPostname;
+                    spanReasonId.innerHTML = textReason + carReason;
+                    
+                                      
+                };
+                
             }
             
              for (var i = 0; i < user.education.length; i++) {
                 var edu = user.education[i]();
                 console.log(edu);
                             
-                var orange = "orange";
-                var blue = "blue";
-                var yellow = "yellow";
-                
+                 
                 addEdu(edu.name, edu.course, edu.direction,edu.degree, edu.entDate, edu.endDate); 
                 //, eduDegree, eduCourse, eduDir, eduEntDate, eduEndDate
                 
@@ -338,9 +385,9 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 
 
         var F = "Физика - мир всего материального. Физика отвечает за отношение к собственному телу и его потребностям, за желание обладать материальными благами, за отношение к физическому труду и работе вообще.";
-        var V = "Воля - это ощущения цели, смысла существования человека, восприятие жизненных задач, а также собственных желаний. Воля - это стержень личности, уверенность в своем праве на что-либо."
+        var V = "Воля - это ощущения цели, смысла существования человека, восприятие жизненных задач, а также собственных желаний. Воля - это стержень личности, уверенность в своем праве на что-либо.";
         var E = "Эмоция - мир внутренних переживаний человека: чувств, эмоций. Кроме этого, Эмоция отвечает за отношение к искусству и красоте окружающего мира вообще.";
-        var L = "Логика — мир идей. Логика определяет степень субъективной ценности умозаключений, красоты и завершенности идей и концепций, вне зависимости от того, имеют ли они материальное воплощение или нет."
+        var L = "Логика — мир идей. Логика определяет степень субъективной ценности умозаключений, красоты и завершенности идей и концепций, вне зависимости от того, имеют ли они материальное воплощение или нет.";
         var recForOne = "Функция избыточна. Человек не считается с чужим мнением, склонен к доминированию по данному аспекту.";
         var recForTwo = "Функция сильная, но гибкая и подстраивающаяся. Настроена на диалог и обсуждение вопросов по данному аспекту.";
         var recForThree = "Функция слабая, но доминирующая. Человеку хочется быть лучше по данному аспекту, но критика болезненна.";
@@ -771,21 +818,6 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 			</div> <!-- cd-timeline-content -->\
 		</div> <!-- cd-timeline-block -->\
 \
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-location">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Picture">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
 	</section>';
 
 

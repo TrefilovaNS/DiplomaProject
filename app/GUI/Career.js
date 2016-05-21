@@ -22,8 +22,15 @@ define('Career', ['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], functio
         };
 
         self.getInfo = function () {    
-            return {jobname:form.jobname.value, postname:form.postname.value, entrydate:form.entryDate.value, reason:form.reason.value,
-            dismisdate:form.dismisDate.value};
+            
+            var entryDate = form.entryDate.value;
+            var entryYear = entryDate.getFullYear();
+            
+            var dismisDate = form.dismisDate.value;
+            var dismisYear = dismisDate.getFullYear();
+            
+            return {jobname:form.jobname.value, postname:form.postname.value, entrydate:entryYear, reason:form.reason.value,
+            dismisdate:dismisYear};
         };
 //        form.dismisDate.data = career;
 //        form.dismisDate.field = "dismisdate";

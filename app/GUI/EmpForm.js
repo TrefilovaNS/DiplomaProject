@@ -195,6 +195,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     user.soctype = form.soctypes.text;
                     user.psytype = form.ptypes.text;
                     
+                    
                     require(['temp'], function (Temp) {
                         var temp = new Temp(user);
                         temp.show();
