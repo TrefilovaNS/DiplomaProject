@@ -32,32 +32,134 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
              for (var i = 0; i < user.education.length; i++) {
                 var edu = user.education[i]();
                 console.log(edu);
+                            
+                var orange = "orange";
+                var blue = "blue";
+                var yellow = "yellow";
                 
-//                var node = document.createElement("DIV");
+                addEdu(edu.name, edu.course, edu.direction,edu.degree, edu.entDate, edu.endDate); 
+                //, eduDegree, eduCourse, eduDir, eduEntDate, eduEndDate
                 
-                var parentDiv = document.getElementById('edu');
-                var div = document.createElement('div');
-                div.className = 'edu-block';
-                div.id = 'ID_etogo_DIVa_' + i;
-                parentDiv.appendChild(div);  
                 
-                var parentBlockDiv = document.getElementById('ID_etogo_DIVa_' + i);
-                var divBlock = document.createElement('div');
-                divBlock.className = 'edu-line-name orange';
-                divBlock.id = 'NEW_ID_etogo_DIVa_' + i;
-                parentBlockDiv.appendChild(divBlock);
+                function createEduLineName(color){
+                    var parentBlockDiv = document.getElementById('eduBlockID' + i);
+                    var divBlock = document.createElement('div');
+                    divBlock.className = 'edu-line-name ' + color;
+                    divBlock.id = 'eduLineNameID' + i;
+                    parentBlockDiv.appendChild(divBlock);
+
+                    var parentLineDiv = document.getElementById('eduLineNameID' + i);
+                    var divLine = document.createElement('div');
+                    divLine.className = 'edu-line-selfname';
+                    divLine.id = 'eduSelfNameID' + i;
+                    parentLineDiv.appendChild(divLine); 
+                }
                 
-                var parentLineDiv = document.getElementById('NEW_ID_etogo_DIVa_' + i);
-                var divLine = document.createElement('div');
-                divLine.className = 'edu-line-selfname';
-                divLine.id = 'NEW_NEW_ID_etogo_DIVa_' + i;
-                parentLineDiv.appendChild(divLine);  
+                function createEduLineCourse(color){
+                    var parentBlockDiv = document.getElementById('eduBlockID' + i);
+                    var divBlock = document.createElement('div');
+                    divBlock.className = 'edu-line-name ' + color;
+                    divBlock.id = 'eduLineCourseID' + i;
+                    parentBlockDiv.appendChild(divBlock);
+
+                    var parentLineDiv = document.getElementById('eduLineCourseID' + i);
+                    var divLine = document.createElement('div');
+                    divLine.className = 'edu-line-selfname';
+                    divLine.id = 'eduSelfCourseID' + i;
+                    parentLineDiv.appendChild(divLine); 
+                }
+                
+                function createEduLineDir(color){
+                    var parentBlockDiv = document.getElementById('eduBlockID' + i);
+                    var divBlock = document.createElement('div');
+                    divBlock.className = 'edu-line-name ' + color;
+                    divBlock.id = 'eduLineDirID' + i;
+                    parentBlockDiv.appendChild(divBlock);
+
+                    var parentLineDiv = document.getElementById('eduLineDirID' + i);
+                    var divLine = document.createElement('div');
+                    divLine.className = 'edu-line-selfname';
+                    divLine.id = 'eduSelfDirID' + i;
+                    parentLineDiv.appendChild(divLine); 
+                }
+                
+                function addEduLogo(eduName){
+                    var parentBlockDiv = document.getElementById('eduBlockID' + i);
+                    var logoId = document.createElement("div");
+                    logoId.className = 'edu-logo';
+                    logoId.id = 'edu-logoID' + i;
+                    logoId.innerHTML = '<img src="' + imgSrc + '">';
+                    var imgSrc;
+                    parentBlockDiv.appendChild(logoId);
+                    
+                    switch(eduName){
+                        case 'МГУ':
+                            imgSrc = "InfoGraphicsEmpForm/img/mgu_logo.jpg";
+                            break;
+                            
+                        default:
+                            console.log("Лого не найдено");
+                    }
+                }
+                
+                function addYearsDegree(eduDegree,eduEntDate, eduEndDate){
+                    var parentBlockDiv = document.getElementById('eduBlockID' + i);
+                    var eduYearsId = document.createElement("div");
+                    eduYearsId.className = 'edu-years';
+                    eduYearsId.id = 'eduYearsID' + i;
+                    parentBlockDiv.appendChild(eduYearsId);
+                    
+                    var eduLineYearsId = document.createElement("div");
+                    eduLineYearsId.className = 'edu-line-years orange';
+                    eduLineYearsId.id = 'eduLineYearsID' + i;
+                    
+                    var eduSelfYearsId = document.createElement("div");
+                    eduSelfYearsId.className = 'edu-selfyears';
+                    eduSelfYearsId.id = 'eduSelfYearsID' + i;
+                    
+                    var eduSelfDegreeId = document.createElement("div");
+                    eduSelfDegreeId.className = 'edu-selfdegree';
+                    eduSelfYearsId.id = 'eduSelfDegreeID' + i;
+                    
+                    parentBlockDiv.appendChild(eduYearsId);
+                    eduYearsId.appendChild(eduLineYearsId);
+                    eduLineYearsId.appendChild(eduSelfYearsId);
+                    eduYearsId.appendChild(eduSelfDegreeId);
+                    
+                    eduSelfYearsId.innerHTML = eduEntDate + "-" + eduEndDate;
+                    eduSelfDegreeId.innerHTML = eduDegree;
+                    
+                }
+                
+                function addEdu(eduName, eduCourse, eduDir, eduDegree, eduEntDate, eduEndDate){
+                    var parentDiv = document.getElementById('edu');
+                    var div = document.createElement('div');
+                    div.className = 'edu-block';
+                    div.id = 'eduBlockID' + i;
+                    parentDiv.appendChild(div);
+                    addEduLogo(eduName);
+                    createEduLineName(orange);
+                    createEduLineCourse(yellow);
+                    createEduLineDir(blue);
+                    
+                    var textUniversity = "ВУЗ: ";
+                    var textCourse = "Специальность: ";
+                    var textDirection = "Профиль: ";
+                    
+                    var eduNameID = document.getElementById('eduSelfNameID' + i);
+                    var eduCourseID = document.getElementById('eduSelfCourseID' + i);
+                    var eduDirID = document.getElementById('eduSelfDirID' + i);
+                    
+                    eduNameID.innerHTML = textUniversity + eduName;
+                    eduCourseID.innerHTML = textCourse + eduCourse;
+                    eduDirID.innerHTML = textDirection + eduDir;
+//                    console.log(edu.name);
+                    addYearsDegree(eduDegree, eduEntDate, eduEndDate);
+
+                };
+
                                     
-                var eduName = document.getElementById('NEW_NEW_ID_etogo_DIVa_' + i);
-                var textUniversity = "ВУЗ: ";
-                eduName.innerHTML = textUniversity + edu.name;  
-                console.log(edu.name);
-                   
+                
                 
             }
             
@@ -221,12 +323,18 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 
 //1 функция
         var oneContent = document.getElementById("one-content");
+        var oneCircle = document.getElementById("one-circle");
 //2 функция
         var twoContent = document.getElementById("two-content");
+        var twoCircle = document.getElementById("two-circle");
 //3 функция
         var threeContent = document.getElementById("three-content");
+        var threeCircle = document.getElementById("three-circle");
 //4 функция
         var fourContent = document.getElementById("four-content");
+        var fourCircle = document.getElementById("four-circle");
+        
+        
 
 
         var F = "Физика - мир всего материального. Физика отвечает за отношение к собственному телу и его потребностям, за желание обладать материальными благами, за отношение к физическому труду и работе вообще.";
@@ -241,18 +349,22 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
         switch (res[0]) {
             case "Ф":
                 oneContent.innerHTML = F + " " + recForOne;
+                oneCircle.innerHTML = "1Ф";
                 break;
 
             case "Э":
                 oneContent.innerHTML = E + " " + recForOne;
+                oneCircle.innerHTML = "1Э";
                 break;
 
             case "В":
                 oneContent.innerHTML = V + " " + recForOne;
+                oneCircle.innerHTML = "1В";
                 break;
 
             case "Л":
                 oneContent.innerHTML = L + " " + recForOne;
+                oneCircle.innerHTML = "1Л";
                 break;
 
             default:
@@ -265,18 +377,22 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
         switch (res[1]) {
             case "Ф":
                 twoContent.innerHTML = F + " " + recForTwo;
+                twoCircle.innerHTML = "2Ф";
                 break;
 
             case "Э":
                 twoContent.innerHTML = E + " " + recForTwo;
+                twoCircle.innerHTML = "2Э";
                 break;
 
             case "В":
                 twoContent.innerHTML = V + " " + recForTwo;
+                twoCircle.innerHTML = "2В";
                 break;
 
             case "Л":
                 twoContent.innerHTML = L + " " + recForTwo;
+                twoCircle.innerHTML = "2Л";
                 break;
 
             default:
@@ -288,18 +404,22 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
         switch (res[2]) {
             case "Ф":
                 threeContent.innerHTML = F + " " + recForThree;
+                threeCircle.innerHTML = "3Ф";
                 break;
 
             case "Э":
                 threeContent.innerHTML = E + " " + recForThree;
+                threeCircle.innerHTML = "3Э";
                 break;
 
             case "В":
                 threeContent.innerHTML = V + " " + recForThree;
+                threeCircle.innerHTML = "3В";
                 break;
 
             case "Л":
                 threeContent.innerHTML = L + " " + recForThree;
+                threeCircle.innerHTML = "3Л";
                 break;
 
             default:
@@ -311,18 +431,22 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
         switch (res[3]) {
             case "Ф":
                 fourContent.innerHTML = F + " " + recForFour;
+                fourCircle.innerHTML = "4Ф";
                 break;
 
             case "Э":
                 fourContent.innerHTML = E + " " + recForFour;
+                fourCircle.innerHTML = "4Э";
                 break;
 
             case "В":
                 fourContent.innerHTML = V + " " + recForFour;
+                fourCircle.innerHTML = "4В";
                 break;
 
             case "Л":
                 fourContent.innerHTML = L + " " + recForFour;
+                fourCircle.innerHTML = "4Л";
                 break;
 
             default:
@@ -372,26 +496,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
     \
 <div class="section-name blue" align="center" id="sn-edu"><div class="section-selfname">ОБРАЗОВАНИЕ</div></div>\
 		<section id="edu" class="edu-container">\
-		<div class="edu-block" id="edu-blockID">\
-			<div class="edu-logo">\
- 				 <img src="InfoGraphicsEmpForm/img/mgu_logo.jpg" alt="" />\
-			</div>\
-			<div class="edu-line-name orange">\
-				<div class="edu-line-selfname">ВУЗ: <span id="eduname">Название образовательного учреждения</span></div>\
-			</div>\
-			<div class="edu-line-name yellow">\
-				<div class="edu-line-selfname">Специальность: <span id="coursename">Название полученной специальности</span></div>\
-			</div>\
-			<div class="edu-line-name blue">\
-				<div class="edu-line-selfname">Профиль: <span id="dirname">Название профиля в рамках специальности</span></div>\
-			</div>\
-			<div class="edu-years">\
-				<div class="edu-line-years orange">\
-					<div class="edu-selfyears"><span id="entryDate">2003</span>-<span id="endDate">2007</span></div></div>\
-				<div class="edu-selfdegree"><span id="dirname">Специалитет</span></div>\
-			</div>\
-		</div>\
-	</section>\
+			</section>\
 <div class="section-name yellow" align="center" id="sn-skills"><div class="section-selfname">НАВЫКИ</div></div>\
 <section id="skills" class="skills-container">\
 	<div class="skills-block">\
@@ -481,21 +586,21 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 				</div>\
 			</div>\
 			<div class="func">\
-				<div class="ps-circle bor-yellow" id="one-circle">2В</div>\
+				<div class="ps-circle bor-yellow" id="two-circle">2В</div>\
 				<div class="ps-square bor-yellow">\
 					<div class="ps-header yellow">"РЕКА", <br>норма</div>\
 					<div class="ps-text"><span id ="two-content">Описание избыточно сильных аспектов с позиции 1Ф</span></div>\
 				</div>\
 			</div>\
 			<div class="func">\
-				<div class="ps-circle bor-blue" id="one-circle">3Э</div>\
+				<div class="ps-circle bor-blue" id="three-circle">3Э</div>\
 				<div class="ps-square bor-blue">\
 					<div class="ps-header blue">"ЯЗВА", <br>изъян</div>\
 					<div class="ps-text"><span id ="three-content">Описание избыточно сильных аспектов с позиции 1Ф</span></div>\
 				</div>\
 			</div>\
 			<div class="func">\
-				<div class="ps-circle bor-gray" id="one-circle">4Л</div>\
+				<div class="ps-circle bor-gray" id="four-circle">4Л</div>\
 				<div class="ps-square bor-gray">\
 					<div class="ps-header gray">"ПУСТЯК", безразличие</div>\
 					<div class="ps-text"><span id ="four-content">Описание избыточно сильных аспектов с позиции 1Ф</span></div>\

@@ -70,7 +70,15 @@ define('Education', ['orm', 'forms', 'ui', 'Courses', 'Directions']
 
                 self.getInfo = function () {
 //                    console.log(education.degree);
-                    return {name:form.name.value,degree:form.degree.text ,course:form.course.value,direction:form.direction.value,entDate:form.entDate.value,endDate:form.endDate.value};
+                   
+                    
+                    var entDateForm = form.entDate.value; 
+                    var entDate = entDateForm.getFullYear();
+                    
+                    var endDateForm = form.endDate.value; 
+                    var endDate = endDateForm.getFullYear();
+                                       
+                    return {name:form.name.value,degree:form.degree.text ,course:form.course.value,direction:form.direction.value,entDate:entDate,endDate:endDate};
                 };
             }
             return module_constructor;

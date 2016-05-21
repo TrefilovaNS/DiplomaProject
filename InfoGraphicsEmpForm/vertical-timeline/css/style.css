@@ -234,6 +234,7 @@ Education
 -------------------------------- */
 .edu-block{
   width: 50%;
+  height: 110px;
   background-color: #fff;
   margin: auto;
   padding: 10px 10px 10px 10px;
@@ -275,7 +276,7 @@ Education
   width: 20%;
   background-color: #fff;
   float: right;
-   margin-top:-98px;
+   margin-top:-94px;
   padding: 0 20px 0 20px;
   text-align: center;
 }
