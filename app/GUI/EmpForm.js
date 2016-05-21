@@ -56,10 +56,10 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         pnlDiv2.background = Ui.Color.BLACK;
                         form.panel82.add(pnlDiv2);
 
-                        if (!model.human[0].psyhotypes_id) {
-                            model.qTypes.push({});
-                            model.human[0].psyhotypes_id = model.qTypes.cursor.psyhotypes_id;
-                        }
+//                        if (!model.human[0].psyhotypes_id) {
+//                            model.qTypes.push({});
+//                            model.human[0].psyhotypes_id = model.qTypes.cursor.psyhotypes_id;
+//                        }
 
                     });
                 }

@@ -30,8 +30,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
             }
             
              for (var i = 0; i < user.education.length; i++) {
-                var fn = user.education[i];
-                console.log(fn());
+                var edu = user.education[i]();
+                console.log(edu);
                 
 //                var node = document.createElement("DIV");
                 
@@ -55,8 +55,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                                     
                 var eduName = document.getElementById('NEW_NEW_ID_etogo_DIVa_' + i);
                 var textUniversity = "ВУЗ: ";
-                eduName.innerHTML =  textUniversity; + user.education[i].course;  
-                console.log(user.education[i].name);
+                eduName.innerHTML = textUniversity + edu.name;  
+                console.log(edu.name);
                    
                 
             }
