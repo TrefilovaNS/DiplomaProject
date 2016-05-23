@@ -32,6 +32,12 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                 var career = user.career[i]();
                 console.log(career);
                 
+//                 
+                 
+                 
+                                    
+                 
+                
                 addCareer(career.jobname, career.postname, career.entrydate, career.reason, career.dismisdate);
                 
                  function addCareer(carJobname, carPostname, carEntryDate, carReason, carDismisDate){
@@ -50,18 +56,19 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     divContent.id = 'timelineContentID' + i;
                     div.appendChild(divContent);
                     
-                                   
-                                    
-                  
+                   
                     divContent.innerHTML = "<h2>" + carJobname + "</h2><br>" + "<span class='cd-date'>" + carEntryDate + "-" + carDismisDate + "</span>" +
                             "<p><span id='postname'>" + carPostname + "</span><br>Причина увольнения: <span>" + carReason + "</span></p>";
                   divImg.innerHTML = "<img src='InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png' alt='Picture'>";
                     
-                    
+                   var lastPostNameId = document.getElementById("lastpostname");
+                lastPostNameId.innerHTML = carPostname;
                                       
                 };
                 
             }
+            
+//                var lastPostName = career.postname[career.length - 1];
             
              for (var i = 0; i < user.education.length; i++) {
                 var edu = user.education[i]();
@@ -713,98 +720,13 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 				</div>\
 				</span>\
 			</div>\
-				\
-				\
 		</div>\
 \
 	</div>\
 </section>/\n\
-<div class="section-name orange" align="center" id="sn-career"><div class="section-selfname">ТРУДОВАЯ ДЕЯТЕЛЬНОСТЬ</div></div>\
-	<section id="cd-timeline" class="cd-container">\
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-picture">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Picture">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
-\
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-movie">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Movie">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
-\
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-location">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Picture">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
-	</section>\
         <div class="section-name orange" align="center" id="sn-career"><div class="section-selfname">ТРУДОВАЯ ДЕЯТЕЛЬНОСТЬ</div></div>\
 	<section id="cd-timeline" class="cd-container">\
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-picture">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Picture">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
-\
-		<div class="cd-timeline-block">\
-			<div class="cd-timeline-img cd-movie">\
-				<img src="InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png" alt="Movie">\
-			</div> <!-- cd-timeline-img -->\
-\
-			<div class="cd-timeline-content">\
-				<h2>Название организации</h2>\
-				<span class="cd-date">2010</span><br>\
-				<p>\
-					<span id="postname">Должность</span><br>\
-					<span id="demo2">Достижение 1<br> Достижение 2</span><br>\
-					Причина увольнения: <span id="dismis">причина</span>\
-				</p>\
-			</div> <!-- cd-timeline-content -->\
-		</div> <!-- cd-timeline-block -->\
-\
+		\
 	</section>';
 
 
