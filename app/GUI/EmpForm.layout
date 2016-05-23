@@ -93,7 +93,7 @@
   <ModelCombo cursor="0" data="human" displayField="stype" displayList="qSocTypes" field="cursor.soctype" name="soctypes" parent="panel4" prefHeight="30px" prefWidth="450px">
     <AnchorsPaneConstraints height="30px" left="250px" top="30px" width="450px"/>
   </ModelCombo>
-  <ModelGrid cursor="0" data="qSkillsByHuman" name="modelGrid" parent="panel4" prefHeight="140px" prefWidth="370px">
+  <ModelGrid cursor="0" data="qSkillsByHuman" name="modelGridSkills" parent="panel4" prefHeight="140px" prefWidth="370px">
     <AnchorsPaneConstraints height="140px" left="0px" top="210px" width="370px"/>
     <ServiceGridColumn name="colService1" resizable="true"/>
     <ModelGridColumn field="skill" name="colSkills_id" title="Навык" width="163px">
@@ -103,7 +103,7 @@
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qInterestsByHuman" name="modelGrid1" parent="panel4" prefHeight="140px" prefWidth="370px">
+  <ModelGrid cursor="0" data="qInterestsByHuman" name="modelGridInterests" parent="panel4" prefHeight="140px" prefWidth="370px">
     <AnchorsPaneConstraints height="140px" left="380px" top="210px" width="370px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="setinterests_id" name="colSetinterests_id" title="colSetinterests_id" width="108px">

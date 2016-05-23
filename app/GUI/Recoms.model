@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qRecoms" Title="" entityHeight="200" entityIconified="false" entityId="146351617331893" entityLocationX="205" entityLocationY="5" entityWidth="150" queryId="qRecoms" tableName="" tableSchemaName=""/>
-  <entity Name="qMotivations" Title="" entityHeight="92" entityIconified="false" entityId="146351616701089" entityLocationX="0" entityLocationY="0" entityWidth="150" queryId="qMotivations" tableName="" tableSchemaName=""/>
-  <entity Name="qTasks" Title="" entityHeight="85" entityIconified="false" entityId="146351618583385" entityLocationX="432" entityLocationY="56" entityWidth="150" queryId="qTasks" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146351616701089" rightEntityFieldName="recommendations_id" rightEntityId="146351617331893"/>
-  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146351618583385" rightEntityFieldName="recommendations_id" rightEntityId="146351617331893"/>
+  <entity Name="qTasksByRecom" Title="" entityHeight="200" entityIconified="false" entityId="146403190828810" entityLocationX="398" entityLocationY="45" entityWidth="150" queryId="qTasksByRecom" tableName="" tableSchemaName=""/>
+  <entity Name="human" Title="" entityHeight="200" entityIconified="false" entityId="146403255725906" entityLocationX="144" entityLocationY="250" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
+  <entity Name="qMotivationsByRecom" Title="" entityHeight="200" entityIconified="false" entityId="146403189829667" entityLocationX="25" entityLocationY="47" entityWidth="150" queryId="qMotivationsByRecom" tableName="" tableSchemaName=""/>
+  <entity Name="qRecomsById" Title="" entityHeight="200" entityIconified="false" entityId="146403399837486" entityLocationX="214" entityLocationY="14" entityWidth="150" queryId="qRecomsById" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146403189829667" rightEntityFieldName="recommendations_id" rightEntityId="146403399837486"/>
+  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146403190828810" rightEntityFieldName="recommendations_id" rightEntityId="146403399837486"/>
+  <referenceRelation leftEntityFieldName="recom_id" leftEntityId="146403255725906" rightEntityFieldName="recommendations_id" rightEntityId="146403399837486"/>
 </datamodel>

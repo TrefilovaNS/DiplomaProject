@@ -43,7 +43,6 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     
                     var divImg = document.createElement('div');
                     divImg.className = 'cd-timeline-img cd-picture';
-                    divImg.id = 'timelineImageID' + i;
                     div.appendChild(divImg);
                     
                     var divContent = document.createElement('div');
@@ -51,28 +50,13 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     divContent.id = 'timelineContentID' + i;
                     div.appendChild(divContent);
                     
-                    var spanDate = document.createElement('span');
-                    spanDate.className = 'cd-date';
-                    spanDate.id = 'spanDateID' + i;
-                    divContent.appendChild(spanDate);
-                    var spanDateId = document.getElementById('spanDateID' + i);
+                                   
+                                    
+                  
+                    divContent.innerHTML = "<h2>" + carJobname + "</h2><br>" + "<span class='cd-date'>" + carEntryDate + "-" + carDismisDate + "</span>" +
+                            "<p><span id='postname'>" + carPostname + "</span><br>Причина увольнения: <span>" + carReason + "</span></p>";
+                  divImg.innerHTML = "<img src='InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png' alt='Picture'>";
                     
-                    var spanPostName = document.createElement('span');
-                    spanPostName.id = 'spanPostNameID' + i;
-                    divContent.appendChild(spanPostName);
-                    var spanPostNameId = document.getElementById('spanPostNameID' + i);
-                    
-                    var spanReason = document.createElement('span');
-                    spanReason.id = 'spanReasonID' + i;
-                    divContent.appendChild(spanReason);
-                    var spanReasonId = document.getElementById('spanReasonID' + i);
-                    
-                    var textReason = "Причина увольнения: ";
-                    
-                    spanDateId.innerHTML = carEntryDate + "-" + carDismisDate;
-                    divContent.innerHTML = "<h2>" + carJobname + "</h2>";
-                    spanPostNameId.innerHTML = carPostname;
-                    spanReasonId.innerHTML = textReason + carReason;
                     
                                       
                 };
@@ -81,7 +65,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
             
              for (var i = 0; i < user.education.length; i++) {
                 var edu = user.education[i]();
-                console.log(edu);
+//                console.log(edu);
                             
                  
                 addEdu(edu.name, edu.course, edu.direction,edu.degree, edu.entDate, edu.endDate); 
@@ -135,18 +119,21 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     var logoId = document.createElement("div");
                     logoId.className = 'edu-logo';
                     logoId.id = 'edu-logoID' + i;
-                    logoId.innerHTML = '<img src="' + imgSrc + '">';
                     var imgSrc;
-                    parentBlockDiv.appendChild(logoId);
-                    
                     switch(eduName){
                         case 'МГУ':
-                            imgSrc = "InfoGraphicsEmpForm/img/mgu_logo.jpg";
+                            imgSrc = "<img src='InfoGraphicsEmpForm/img/mgu_logo.jpg'>";
                             break;
-                            
+                        case 'ИГХТУ':
+                            imgSrc = "<img src='InfoGraphicsEmpForm/img/him.jpg'>";
+                            break;    
                         default:
-                            console.log("Лого не найдено");
+                            console.log("Лого не найдено" + imgSrc);
                     }
+                    logoId.innerHTML = imgSrc;
+                    parentBlockDiv.appendChild(logoId);
+                    
+                    
                 }
                 
                 function addYearsDegree(eduDegree,eduEntDate, eduEndDate){

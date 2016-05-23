@@ -130,6 +130,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     }
 
                 }
+                
+                
 
                 form.btnSkill.onActionPerformed = function (event) {
                     require(['Skills'], function (Skll) {
@@ -195,6 +197,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     user.soctype = form.soctypes.text;
                     user.psytype = form.ptypes.text;
                     
+//                    user.interests  = form.modelGridSkills.value;
+                    
                     
                     require(['temp'], function (Temp) {
                         var temp = new Temp(user);
@@ -205,8 +209,25 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
                 form.btnRecoms.onActionPerformed = function (event) {
                     require(['Recoms'], function (Recom) {
-                        var recom = new Recom();
+//                        var recom = new Recom();
+//                        recom.show();
+//                        
+//                         var recom = new Recom(model.qRecoms);
+////                       user.education.push(edu.getInfo);
+//                         recom.show();
+                         
+                         
+                        if (model.qRecomsById.params.recom_id) {
+                            var recom = new Recom(model.qRecomsById.params.recom_id);
+
+                        } else if
+                                (model.qRecomsById.length === 0) {
+                            var recom = new Recom(model.qRecomsById.push({}));
+                        }
+                       
                         recom.show();
+                
+                         
                     });
                 };
 
