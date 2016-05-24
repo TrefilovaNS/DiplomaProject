@@ -3,14 +3,14 @@
  * @author Пользователь
  * @module EmpForm
  */
-define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
-        function (Orm, Forms, Ui, Invoke, ModuleName) {
+define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
+        function (Orm, Forms, Ui, Resource, Invoke, ModuleName) {
             function module_constructor(userId) {
                 var self = this
                         , model = Orm.loadModel(ModuleName)
                         , form = Forms.loadForm(ModuleName, model);
                 var aUserId = userId;
-                var onSucsess;
+//                var onSucsess;
 
                 var saveCareer = [];
                 var user = {};
@@ -55,6 +55,13 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                         pnlDiv2.width = 1;
                         pnlDiv2.background = Ui.Color.BLACK;
                         form.panel82.add(pnlDiv2);
+                        if (model.human[0].icon) {
+                            Ui.Icon.load(model.human[0].icon, function (uploadedFile) {
+                                form.photo.icon = uploadedFile;
+                            }, function (e) {
+                                console.log(e);
+                            });
+                        }
 
 //                        if (!model.human[0].psyhotypes_id) {
 //                            model.qTypes.push({});
@@ -88,11 +95,43 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
 
                 self.showModal = function (callback) {
-                    onSucsess = callback;
+//                    onSucsess = callback;
                     preShow();
                     form.showModal();
                 };
 
+                form.btnPhoto.onActionPerformed = function (event) {
+                    var fileFilter = ".png,.ico,.gif,.jpg";
+                    Ui.selectFile(function (aFile) {
+                        var loading;
+                        if (loading == null) {
+                            if (aFile != null) {
+                                loading = Resource.upload(aFile, aFile.name,
+                                        function (aUrl) {
+                                            //We have uploaded only one file, but the system
+                                            //return's us a array of urls
+                                            loading = null;
+                                            model.human[0].icon = aUrl[0];
+                                            Ui.Icon.load(aUrl[0], function (uploadedFile) {
+                                                form.photo.icon = uploadedFile;
+
+                                            }, function (e) {
+                                                console.log(e);
+                                            });
+                                        },
+                                        function (aEvent) {
+                                        },
+                                        function (aError) {
+                                            loading = null;
+                                            alert("Uploading is aborted with message: " + aError);
+                                        }
+                                );
+                            } else
+                                alert("Select a file please...");
+                        } else
+                            alert("Wait please while current upload ends!");
+                    }, fileFilter);
+                };
 
                 form.btnAddEducation.onActionPerformed = function (event) {
                     require(['Education', 'forms/box-pane'], function (Edu, Bp) {
@@ -130,8 +169,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                     }
 
                 }
-                
-                
+
+
 
                 form.btnSkill.onActionPerformed = function (event) {
                     require(['Skills'], function (Skll) {
@@ -174,32 +213,51 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 
 
                 form.onWindowClosed = function (event) {
-                    onSucsess();
+//                    onSucsess();
                 };
                 form.export.onActionPerformed = function () {
 
-                    user.surname=form.surname.value;
-                    user.name=form.name.value;
-                    user.middlename=form.middlename.value;
-                    
+                    user.surname = form.surname.value;
+                    user.name = form.name.value;
+                    user.middlename = form.middlename.value;
+
                     var now = new Date();
                     var nowYear = now.getFullYear();
-                    
-                    var birthdate = form.modelDate.value; 
+
+                    var birthdate = form.modelDate.value;
                     var birthYear = birthdate.getFullYear();
-                    
+
                     user.age = nowYear - birthYear;
-                    
+
                     user.phone = form.phone.value;
                     user.email = form.email.value;
                     user.socpage = form.socpage.value;
-                    
+
                     user.soctype = form.soctypes.text;
                     user.psytype = form.ptypes.text;
+                    user.icon = model.human[0].icon;
+//                    user.interests  = form.modelGridSkills.data;
+                    for (var i = 0; i < form.modelGridSkills.data.length; i++) {
+                        var skillsname = arguments[0];
+//                        var skillslevel = arguments[0];
+                       
+
+//                        for (var j = 0; j < form.modelGridSkills.data.skill.length; i++) {
+                             
+                            skillsname[i] = form.modelGridSkills.data[i].skill.skillname;
+//                            skillslevel[i] = form.modelGridSkills.data[i].level;
+                            console.log(skillsname[i]);
+//                            skills[i].skillname[j].level = form.modelGridSkills.data[i].level;
+//                        }
+//                     console.log(skillsname);
+//                        {jobname:form.jobname.value, postname:form.postname.value, entrydate:entryYear, reason:form.reason.value,
+//            dismisdate:dismisYear}
+
+                    }
+
                     
-//                    user.interests  = form.modelGridSkills.value;
-                    
-                    
+
+
                     require(['temp'], function (Temp) {
                         var temp = new Temp(user);
                         temp.show();
@@ -215,8 +273,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
 //                         var recom = new Recom(model.qRecoms);
 ////                       user.education.push(edu.getInfo);
 //                         recom.show();
-                         
-                         
+
+
                         if (model.qRecomsById.params.recom_id) {
                             var recom = new Recom(model.qRecomsById.params.recom_id);
 
@@ -224,10 +282,10 @@ define('EmpForm', ['orm', 'forms', 'ui', 'invoke'],
                                 (model.qRecomsById.length === 0) {
                             var recom = new Recom(model.qRecomsById.push({}));
                         }
-                       
+
                         recom.show();
-                
-                         
+
+
                     });
                 };
 

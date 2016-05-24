@@ -225,6 +225,9 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
             
             var socpage = document.getElementById("socpage");
             socpage.innerHTML = user.socpage;
+            
+            var icon = document.getElementById("photo");
+            icon.innerHTML = "<img src='" + user.icon + "'>";
        
             //Блок подкидывания соцтипа
             var socType = user.soctype;
@@ -501,9 +504,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
        
         form.pnlHtml.element.innerHTML = '<section id="main" class="main-container">\
 		<div class="emp-main-block" id="sn-main">\
-			<div class="photo">\
- 				 <img src="InfoGraphicsEmpForm/img/photoRan.jpg" alt="" />\
-			</div>\
+			<div class="photo" id="photo">\
+ 				 	</div>\
 			<div class="main-info">\
 				<div class="main-info-line orange">\
 					<div class="main-info-selfinfo"><span id="surname">Фамилия</span></div>\

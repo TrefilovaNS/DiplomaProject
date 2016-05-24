@@ -23,7 +23,7 @@ define(['orm', 'forms', 'ui', 'EmpForm', 'logger'],
                 form.modelGrid.onMouseClicked = function (event) {
                     if (event.clickCount > 1) {
                         var empForm = new EmpForm(form.modelGrid.selected[0].human_id);
-                        empForm.showModal(aCallback);
+                        empForm.show(aCallback);
                     }
                 };
 
@@ -36,7 +36,7 @@ define(['orm', 'forms', 'ui', 'EmpForm', 'logger'],
                     console.log("Hi");
                     var index = model.qEmpList.push({});
                     var addEmp = new EmpForm(model.qEmpList[index]);
-                    addEmp.showModal(aCallback);
+                    addEmp.show(aCallback);
            
                       };
                       
