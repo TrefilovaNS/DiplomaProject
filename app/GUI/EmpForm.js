@@ -11,7 +11,8 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                         , form = Forms.loadForm(ModuleName, model);
                 var aUserId = userId;
 //                var onSucsess;
-
+                form.panel5.height = null;
+                form.panel2.height = null;
                 var saveCareer = [];
                 var user = {};
                 user.career = [];
@@ -239,22 +240,20 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
 //                    user.interests  = form.modelGridSkills.data;
                     for (var i = 0; i < form.modelGridSkills.data.length; i++) {
                         var skillsname = arguments[0];
-//                        var skillslevel = arguments[0];
-                       
-
-//                        for (var j = 0; j < form.modelGridSkills.data.skill.length; i++) {
+//                        
                              
                             skillsname[i] = form.modelGridSkills.data[i].skill.skillname;
-//                            skillslevel[i] = form.modelGridSkills.data[i].level;
+//                            
                             console.log(skillsname[i]);
-//                            skills[i].skillname[j].level = form.modelGridSkills.data[i].level;
-//                        }
-//                     console.log(skillsname);
-//                        {jobname:form.jobname.value, postname:form.postname.value, entrydate:entryYear, reason:form.reason.value,
-//            dismisdate:dismisYear}
+                            
+                              }
 
-                    }
+//                        
+                       
+//                      skillslevel[i] = form.modelGridSkills.data[i].level;
+//                      
 
+                  
                     
 
 
