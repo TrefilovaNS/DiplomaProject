@@ -26,8 +26,13 @@ define('Career', ['orm', 'forms', 'ui', 'Jobs', 'Posts', 'Dismissions'], functio
             var entryDate = form.entryDate.value;
             var entryYear = entryDate.getFullYear();
             
+            if(form.dismisDate.value){
             var dismisDate = form.dismisDate.value;
             var dismisYear = dismisDate.getFullYear();
+            }else{
+                dismisYear = "...";
+            }
+           
             
             return {jobname:form.jobname.value, postname:form.postname.value, entrydate:entryYear, reason:form.reason.value,
             dismisdate:dismisYear};

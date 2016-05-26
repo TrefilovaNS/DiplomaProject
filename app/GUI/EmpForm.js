@@ -239,12 +239,13 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                     user.icon = model.human[0].icon;
 //                    user.interests  = form.modelGridSkills.data;
                     for (var i = 0; i < form.modelGridSkills.data.length; i++) {
-                        var skillsname = arguments[0];
+//                        var skillsname[i].skill = arguments[0];
 //                        
                              
-                            skillsname[i] = form.modelGridSkills.data[i].skill.skillname;
+                            form.modelGridSkills.data[i].skill.skillname;
+                            form.modelGridSkills.data[i].level;
 //                            
-                            console.log(skillsname[i]);
+//                            console.log(form.modelGridSkills.data[i].skill.skillname, form.modelGridSkills.data[i].level);
                             
                               }
 

@@ -6,15 +6,15 @@
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label1" parent="view" prefHeight="30px" prefWidth="100px" text="Фамилия">
     <font family="Arial" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="160px" top="80px" width="100px"/>
+    <AnchorsPaneConstraints height="30px" left="200px" top="80px" width="100px"/>
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label11" parent="view" prefHeight="30px" prefWidth="100px" text="Имя">
     <font family="Arial" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="160px" top="120px" width="100px"/>
+    <AnchorsPaneConstraints height="30px" left="200px" top="120px" width="100px"/>
   </Label>
   <Label cursor="0" horizontalAlignment="4" name="label111" parent="view" prefHeight="30px" prefWidth="100px" text="Отчество">
     <font family="Arial" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="160px" top="160px" width="100px"/>
+    <AnchorsPaneConstraints height="30px" left="200px" top="160px" width="100px"/>
   </Label>
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="390px" prefWidth="760px" selectedComponent="panel">
     <AnchorsPaneConstraints height="390px" left="40px" top="240px" width="760px"/>
@@ -117,23 +117,23 @@
     </ModelGridColumn>
   </ModelGrid>
   <ModelFormattedField cursor="0" data="human" emptyText="Иван" field="cursor.name" format="" name="name" parent="view" prefHeight="30px" prefWidth="320px">
-    <AnchorsPaneConstraints height="30px" left="270px" top="120px" width="320px"/>
+    <AnchorsPaneConstraints height="30px" left="310px" top="120px" width="320px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" data="human" emptyText="Иванов" field="cursor.surname" format="" name="surname" parent="view" prefHeight="30px" prefWidth="320px">
-    <AnchorsPaneConstraints height="30px" left="270px" top="80px" width="320px"/>
+    <AnchorsPaneConstraints height="30px" left="310px" top="80px" width="320px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" data="human" emptyText="Иванович" field="cursor.middlename" format="" name="middlename" parent="view" prefHeight="30px" prefWidth="320px">
-    <AnchorsPaneConstraints height="30px" left="270px" top="160px" width="320px"/>
+    <AnchorsPaneConstraints height="30px" left="310px" top="160px" width="320px"/>
   </ModelFormattedField>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="21px" height="30px" right="76px" width="100px"/>
   </Button>
   <Label cursor="0" horizontalAlignment="4" name="label1111" parent="view" prefHeight="30px" prefWidth="200px" text="Дата рождения">
     <font family="Arial" size="14" style="0"/>
-    <AnchorsPaneConstraints height="30px" left="170px" top="200px" width="200px"/>
+    <AnchorsPaneConstraints height="30px" left="210px" top="200px" width="200px"/>
   </Label>
   <ModelDate cursor="0" data="human" field="cursor.birthdate" format="dd.MM.yyyy" name="modelDate" parent="view" prefHeight="30px" prefWidth="160px">
-    <AnchorsPaneConstraints height="30px" left="380px" top="200px" width="160px"/>
+    <AnchorsPaneConstraints height="30px" left="420px" top="200px" width="160px"/>
   </ModelDate>
   <Button cursor="0" name="button3" parent="view" prefHeight="30px" prefWidth="100px" text="Сброс">
     <AnchorsPaneConstraints bottom="21px" height="30px" left="550px" width="100px"/>
@@ -147,10 +147,10 @@
   <Button cursor="0" name="btnRecoms" parent="view" prefHeight="30px" prefWidth="160px" text="Внести рекомендации">
     <AnchorsPaneConstraints bottom="21px" height="30px" left="40px" width="160px"/>
   </Button>
-  <Label cursor="0" name="photo" parent="view" prefHeight="120px" prefWidth="130px">
-    <AnchorsPaneConstraints height="120px" left="30px" top="40px" width="130px"/>
+  <Label cursor="0" name="photo" parent="view" prefHeight="150px" prefWidth="160px">
+    <AnchorsPaneConstraints height="150px" left="30px" top="30px" width="160px"/>
   </Label>
   <Button cursor="0" name="btnPhoto" parent="view" prefHeight="30px" prefWidth="130px" text="Загрузить фото">
-    <AnchorsPaneConstraints height="30px" left="30px" top="170px" width="130px"/>
+    <AnchorsPaneConstraints height="30px" left="40px" top="190px" width="130px"/>
   </Button>
 </layout>
