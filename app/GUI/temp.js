@@ -8,8 +8,8 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 
                 , form = Forms.loadForm(ModuleName);
         var user = arguments[0];
-        
-        
+
+
 //        form.maximize();
 
         self.show = function () {
@@ -23,65 +23,112 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
         Invoke.later(function () {
             form.undecorated = true;
             form.maximize();
-            
+
             var orange = "orange";
-                var blue = "blue";
-                var yellow = "yellow";
+            var blue = "blue";
+            var yellow = "yellow";
+//                user.skillsname = form.modelGridSkills.data[0].skill.skillname;
+//                    user.skillslevel = form.modelGridSkills.data[0].level;
+            for (var i = 0; i < user.skills.length; i++) {
+               var colors = [orange,blue,yellow];
+               colors[i];
+               
+//                console.log(user.skills[i].skill.skillname);
+//                console.log(user.skills[i].level);
+//                console.log(skillsname,skillslevel);
+
+                function addSkills(skillsName, skillsLevel) {
+                var parentDiv = document.getElementById('skills');
+                var divSkill = document.createElement('div');
+                divSkill.className = 'skill';
+                divSkill.id = 'skill' + i;
+                parentDiv.appendChild(divSkill);
+
+
+                var divSkillName = document.createElement('div');
+                divSkillName.className = 'skill-name';
+                divSkillName.id = 'skillNameID' + i;
+                divSkill.appendChild(divSkillName);
+
+//                   
+                divSkillName.innerHTML = skillsName;
+//                  
+                var divSkillLine = document.createElement('div');
+                divSkillLine.className = 'skill-line';
+                divSkillLine.id = 'skillLineID' + i;
+                divSkill.appendChild(divSkillLine);
+
+                var divMeter = document.createElement('div');
+                divMeter.className = 'meter ' + colors[i];
+                divMeter.id = 'meterID' + i;
+                divSkillLine.appendChild(divMeter);
+
+                var spanMeter = document.createElement('span');
+                spanMeter.style = 'width: ' + skillsLevel + '%';
+                divMeter.appendChild(spanMeter);
+
+            }
+            ;
             
-             
-            
+                addSkills(user.skills[i].skill.skillname, user.skills[i].level);
+
+               
+        
+            }
+
             for (var i = 0; i < user.career.length; i++) {
                 var career = user.career[i]();
                 console.log(career);
-                
+
 //                 
-                 
-                 
-                                    
-                 
-                
+
+
+
+
+
                 addCareer(career.jobname, career.postname, career.entrydate, career.reason, career.dismisdate);
-                
-                 function addCareer(carJobname, carPostname, carEntryDate, carReason, carDismisDate){
+
+                function addCareer(carJobname, carPostname, carEntryDate, carReason, carDismisDate) {
                     var parentDiv = document.getElementById('cd-timeline');
                     var div = document.createElement('div');
                     div.className = 'cd-timeline-block';
                     div.id = 'timelineBlockID' + i;
                     parentDiv.appendChild(div);
-                    
+
                     var divImg = document.createElement('div');
                     divImg.className = 'cd-timeline-img cd-picture';
                     div.appendChild(divImg);
-                    
+
                     var divContent = document.createElement('div');
                     divContent.className = 'cd-timeline-content';
                     divContent.id = 'timelineContentID' + i;
                     div.appendChild(divContent);
-                    
-                   
+
+
                     divContent.innerHTML = "<h2>" + carJobname + "</h2><br>" + "<span class='cd-date'>" + carEntryDate + "-" + carDismisDate + "</span>" +
                             "<p><span id='postname'>" + carPostname + "</span><br>Причина увольнения: <span>" + carReason + "</span></p>";
                     divImg.innerHTML = "<img src='InfoGraphicsEmpForm/vertical-timeline/img/cd-icon-main.png' alt='Picture'>";
 
                     var lastPostNameId = document.getElementById("lastpostname");
                     lastPostNameId.innerHTML = carPostname;
-                                      
-                };
-                
+
+                }
+                ;
+
             }
-            
+
 //                var lastPostName = career.postname[career.length - 1];
-            
-             for (var i = 0; i < user.education.length; i++) {
+
+            for (var i = 0; i < user.education.length; i++) {
                 var edu = user.education[i]();
 //                console.log(edu);
-                            
-                 
-                addEdu(edu.name, edu.course, edu.direction,edu.degree, edu.entDate, edu.endDate); 
+
+
+                addEdu(edu.name, edu.course, edu.direction, edu.degree, edu.entDate, edu.endDate);
                 //, eduDegree, eduCourse, eduDir, eduEntDate, eduEndDate
-                
-                
-                function createEduLineName(color){
+
+
+                function createEduLineName(color) {
                     var parentBlockDiv = document.getElementById('eduBlockID' + i);
                     var divBlock = document.createElement('div');
                     divBlock.className = 'edu-line-name ' + color;
@@ -92,10 +139,10 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     var divLine = document.createElement('div');
                     divLine.className = 'edu-line-selfname';
                     divLine.id = 'eduSelfNameID' + i;
-                    parentLineDiv.appendChild(divLine); 
+                    parentLineDiv.appendChild(divLine);
                 }
-                
-                function createEduLineCourse(color){
+
+                function createEduLineCourse(color) {
                     var parentBlockDiv = document.getElementById('eduBlockID' + i);
                     var divBlock = document.createElement('div');
                     divBlock.className = 'edu-line-name ' + color;
@@ -106,10 +153,10 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     var divLine = document.createElement('div');
                     divLine.className = 'edu-line-selfname';
                     divLine.id = 'eduSelfCourseID' + i;
-                    parentLineDiv.appendChild(divLine); 
+                    parentLineDiv.appendChild(divLine);
                 }
-                
-                function createEduLineDir(color){
+
+                function createEduLineDir(color) {
                     var parentBlockDiv = document.getElementById('eduBlockID' + i);
                     var divBlock = document.createElement('div');
                     divBlock.className = 'edu-line-name ' + color;
@@ -120,61 +167,61 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     var divLine = document.createElement('div');
                     divLine.className = 'edu-line-selfname';
                     divLine.id = 'eduSelfDirID' + i;
-                    parentLineDiv.appendChild(divLine); 
+                    parentLineDiv.appendChild(divLine);
                 }
-                
-                function addEduLogo(eduName){
+
+                function addEduLogo(eduName) {
                     var parentBlockDiv = document.getElementById('eduBlockID' + i);
                     var logoId = document.createElement("div");
                     logoId.className = 'edu-logo';
                     logoId.id = 'edu-logoID' + i;
                     var imgSrc;
-                    switch(eduName){
+                    switch (eduName) {
                         case 'МГУ':
                             imgSrc = "<img src='InfoGraphicsEmpForm/img/mgu_logo.jpg'>";
                             break;
                         case 'ИГХТУ':
                             imgSrc = "<img src='InfoGraphicsEmpForm/img/him.jpg'>";
-                            break;    
+                            break;
                         default:
                             console.log("Лого не найдено" + imgSrc);
                     }
                     logoId.innerHTML = imgSrc;
                     parentBlockDiv.appendChild(logoId);
-                    
-                    
+
+
                 }
-                
-                function addYearsDegree(eduDegree,eduEntDate, eduEndDate){
+
+                function addYearsDegree(eduDegree, eduEntDate, eduEndDate) {
                     var parentBlockDiv = document.getElementById('eduBlockID' + i);
                     var eduYearsId = document.createElement("div");
                     eduYearsId.className = 'edu-years';
                     eduYearsId.id = 'eduYearsID' + i;
                     parentBlockDiv.appendChild(eduYearsId);
-                    
+
                     var eduLineYearsId = document.createElement("div");
                     eduLineYearsId.className = 'edu-line-years orange';
                     eduLineYearsId.id = 'eduLineYearsID' + i;
-                    
+
                     var eduSelfYearsId = document.createElement("div");
                     eduSelfYearsId.className = 'edu-selfyears';
                     eduSelfYearsId.id = 'eduSelfYearsID' + i;
-                    
+
                     var eduSelfDegreeId = document.createElement("div");
                     eduSelfDegreeId.className = 'edu-selfdegree';
                     eduSelfYearsId.id = 'eduSelfDegreeID' + i;
-                    
+
                     parentBlockDiv.appendChild(eduYearsId);
                     eduYearsId.appendChild(eduLineYearsId);
                     eduLineYearsId.appendChild(eduSelfYearsId);
                     eduYearsId.appendChild(eduSelfDegreeId);
-                    
+
                     eduSelfYearsId.innerHTML = eduEntDate + "-" + eduEndDate;
                     eduSelfDegreeId.innerHTML = eduDegree;
-                    
+
                 }
-                
-                function addEdu(eduName, eduCourse, eduDir, eduDegree, eduEntDate, eduEndDate){
+
+                function addEdu(eduName, eduCourse, eduDir, eduDegree, eduEntDate, eduEndDate) {
                     var parentDiv = document.getElementById('edu');
                     var div = document.createElement('div');
                     div.className = 'edu-block';
@@ -184,93 +231,63 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     createEduLineName(orange);
                     createEduLineCourse(yellow);
                     createEduLineDir(blue);
-                    
+
                     var textUniversity = "ВУЗ: ";
                     var textCourse = "Специальность: ";
                     var textDirection = "Профиль: ";
-                    
+
                     var eduNameID = document.getElementById('eduSelfNameID' + i);
                     var eduCourseID = document.getElementById('eduSelfCourseID' + i);
                     var eduDirID = document.getElementById('eduSelfDirID' + i);
-                    
+
                     eduNameID.innerHTML = textUniversity + eduName;
                     eduCourseID.innerHTML = textCourse + eduCourse;
                     eduDirID.innerHTML = textDirection + eduDir;
 //                    console.log(edu.name);
                     addYearsDegree(eduDegree, eduEntDate, eduEndDate);
 
-                };
+                }
+                ;
 
-                                       
-                
-                
+
+
+
             }
+
             
-            function addSkills(skillsName,skillsLevel) {
-                    var parentDiv = document.getElementById('skills');
-                    var divSkill = document.createElement('div');
-                    divSkill.className = 'skill';
-                    divSkill.id = 'skill' + i;
-                    parentDiv.appendChild(divSkill);
-                    
-                    
-                    var divSkillName = document.createElement('div');
-                    divSkillName.className = 'skill-name';
-                    divSkillName.id = 'skillNameID' + i;
-                    divSkill.appendChild(divSkillName);
-                
-//                   
-                    divSkillName.innerHTML = skillsName;
-//                  
-                    var divSkillLine = document.createElement('div');
-                    divSkillLine.className = 'skill-line';
-                    divSkillLine.id = 'skillLineID' + i;
-                    divSkill.appendChild(divSkillLine);
-                    
-                    var divMeter = document.createElement('div');
-                    divMeter.className = 'meter orange';
-                    divMeter.id = 'meterID' + i;
-                    divSkillLine.appendChild(divMeter);
-                    
-                    var spanMeter = document.createElement('span');
-                    spanMeter.style = 'width: ' +  skillsLevel + '%';
-                    divMeter.appendChild(spanMeter);
-                    
-                }; 
-                
-            addSkills("Навык",30);
+
             
-            
+
             var name = document.getElementById("name");
             name.innerHTML = user.name;
 //            console.log(user.name);
-               
+
             var surname = document.getElementById("surname");
             surname.innerHTML = user.surname;
-               
+
             var middlename = document.getElementById("middlename");
             middlename.innerHTML = user.middlename;
-            
+
             var age = document.getElementById("age");
             age.innerHTML = user.age;
-            
+
             var phone = document.getElementById("phonenumber");
             phone.innerHTML = user.phone;
-            
+
             var email = document.getElementById("email");
             email.innerHTML = user.email;
-            
+
             var socpage = document.getElementById("socpage");
             socpage.innerHTML = user.socpage;
-            
+
             var icon = document.getElementById("photo");
             icon.innerHTML = "<img src='" + user.icon + "'>";
-       
+
             //Блок подкидывания соцтипа
             var socType = user.soctype;
             var socTypeInner = document.getElementById("soc-type");
             socTypeInner.innerHTML = socType;
-            
+
             var textEgo = document.getElementById("ego-text");
             var textKid = document.getElementById("kid-text");
 //СИЛЬНЫЕ ФУНКЦИИ
@@ -394,151 +411,151 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                     textEgo.innerHTML = "ТИМ не определен";
                     textKid.innerHTML = "ТИМ не определен";
             }
-            
-             //Блок подкидывания ПЙ-типа
+
+            //Блок подкидывания ПЙ-типа
             var psType = user.psytype;
             var pTypeInner = document.getElementById("p-type");
             pTypeInner.innerHTML = psType;
-            
-             var res = psType.split("");
+
+            var res = psType.split("");
 
 //1 функция
-        var oneContent = document.getElementById("one-content");
-        var oneCircle = document.getElementById("one-circle");
+            var oneContent = document.getElementById("one-content");
+            var oneCircle = document.getElementById("one-circle");
 //2 функция
-        var twoContent = document.getElementById("two-content");
-        var twoCircle = document.getElementById("two-circle");
+            var twoContent = document.getElementById("two-content");
+            var twoCircle = document.getElementById("two-circle");
 //3 функция
-        var threeContent = document.getElementById("three-content");
-        var threeCircle = document.getElementById("three-circle");
+            var threeContent = document.getElementById("three-content");
+            var threeCircle = document.getElementById("three-circle");
 //4 функция
-        var fourContent = document.getElementById("four-content");
-        var fourCircle = document.getElementById("four-circle");
-        
-        
+            var fourContent = document.getElementById("four-content");
+            var fourCircle = document.getElementById("four-circle");
 
 
-        var F = "Физика - мир всего<br> материального.<br> Физика отвечает за <br>отношение к <br>собственному телу и <br>его потребностям, за <br>желание обладать<br> материальными<br> благами, за <br>отношение к <br>физическому труду и <br>работе вообще.<br>";
-        var V = "Воля - это ощущения <br>цели, смысла <br>существования <br>человека, восприятие<br> жизненных задач, а<br> также собственных <br>желаний. Воля - это <br>стержень личности,<br> уверенность в своем <br>праве на что-либо.<br>";
-        var E = "Эмоция - мир<br> внутренних<br> переживаний<br> человека: чувств,<br> эмоций. Кроме этого, <br>Эмоция отвечает за <br>отношение к искусству <br>и красоте <br>окружающего мира <br>вообще.<br>";
-        var L = "Логика — мир идей.<br> Логика определяет <br>степень субъективной<br> ценности <br>умозаключений,<br> красоты и <br>завершенности идей и <br>концепций, вне<br> зависимости от того,<br> имеют ли они <br>материальное <br>воплощение или нет.<br>";
-        var recForOne = "Функция избыточна.<br> Человек не считается <br>с чужим мнением, <br>склонен к <br>доминированию по <br>данному аспекту.";
-        var recForTwo = "Функция сильная, <br>но гибкая и <br>подстраивающаяся. <br>Настроена на <br>диалог и обсуждение<br> вопросов по <br>данному аспекту.";
-        var recForThree = "Функция слабая, <br>но доминирующая. <br>Человеку хочется<br> быть лучше по<br> данному аспекту,<br> но критика <br>болезненна.";
-        var recForFour = "Функция слабая и<br> инертная. Человек<br> готов принять любое<br> чужое мнение по <br>данному аспекту.";
+
+
+            var F = "Физика - мир всего<br> материального.<br> Физика отвечает за <br>отношение к <br>собственному телу и <br>его потребностям, за <br>желание обладать<br> материальными<br> благами, за <br>отношение к <br>физическому труду и <br>работе вообще.<br>";
+            var V = "Воля - это ощущения <br>цели, смысла <br>существования <br>человека, восприятие<br> жизненных задач, а<br> также собственных <br>желаний. Воля - это <br>стержень личности,<br> уверенность в своем <br>праве на что-либо.<br>";
+            var E = "Эмоция - мир<br> внутренних<br> переживаний<br> человека: чувств,<br> эмоций. Кроме этого, <br>Эмоция отвечает за <br>отношение к искусству <br>и красоте <br>окружающего мира <br>вообще.<br>";
+            var L = "Логика — мир идей.<br> Логика определяет <br>степень субъективной<br> ценности <br>умозаключений,<br> красоты и <br>завершенности идей и <br>концепций, вне<br> зависимости от того,<br> имеют ли они <br>материальное <br>воплощение или нет.<br>";
+            var recForOne = "Функция избыточна.<br> Человек не считается <br>с чужим мнением, <br>склонен к <br>доминированию по <br>данному аспекту.";
+            var recForTwo = "Функция сильная, <br>но гибкая и <br>подстраивающаяся. <br>Настроена на <br>диалог и обсуждение<br> вопросов по <br>данному аспекту.";
+            var recForThree = "Функция слабая, <br>но доминирующая. <br>Человеку хочется<br> быть лучше по<br> данному аспекту,<br> но критика <br>болезненна.";
+            var recForFour = "Функция слабая и<br> инертная. Человек<br> готов принять любое<br> чужое мнение по <br>данному аспекту.";
 //Switch-case для отображения текста в ПЕРВОМ из ЧЕТЫРЕХ блоков в зависимости от ПЙ-типа
-        switch (res[0]) {
-            case "Ф":
-                oneContent.innerHTML = F + " " + recForOne;
-                oneCircle.innerHTML = "1Ф";
-                break;
+            switch (res[0]) {
+                case "Ф":
+                    oneContent.innerHTML = F + " " + recForOne;
+                    oneCircle.innerHTML = "1Ф";
+                    break;
 
-            case "Э":
-                oneContent.innerHTML = E + " " + recForOne;
-                oneCircle.innerHTML = "1Э";
-                break;
+                case "Э":
+                    oneContent.innerHTML = E + " " + recForOne;
+                    oneCircle.innerHTML = "1Э";
+                    break;
 
-            case "В":
-                oneContent.innerHTML = V + " " + recForOne;
-                oneCircle.innerHTML = "1В";
-                break;
+                case "В":
+                    oneContent.innerHTML = V + " " + recForOne;
+                    oneCircle.innerHTML = "1В";
+                    break;
 
-            case "Л":
-                oneContent.innerHTML = L + " " + recForOne;
-                oneCircle.innerHTML = "1Л";
-                break;
+                case "Л":
+                    oneContent.innerHTML = L + " " + recForOne;
+                    oneCircle.innerHTML = "1Л";
+                    break;
 
-            default:
-                oneContent.innerHTML = "Первая функция не определена";
-        }
-        ;
+                default:
+                    oneContent.innerHTML = "Первая функция не определена";
+            }
+            ;
 
 
 //Switch-case для отображения текста во ВТОРОМ из ЧЕТЫРЕХ блоков в зависимости от ПЙ-типа
-        switch (res[1]) {
-            case "Ф":
-                twoContent.innerHTML = F + " " + recForTwo;
-                twoCircle.innerHTML = "2Ф";
-                break;
+            switch (res[1]) {
+                case "Ф":
+                    twoContent.innerHTML = F + " " + recForTwo;
+                    twoCircle.innerHTML = "2Ф";
+                    break;
 
-            case "Э":
-                twoContent.innerHTML = E + " " + recForTwo;
-                twoCircle.innerHTML = "2Э";
-                break;
+                case "Э":
+                    twoContent.innerHTML = E + " " + recForTwo;
+                    twoCircle.innerHTML = "2Э";
+                    break;
 
-            case "В":
-                twoContent.innerHTML = V + " " + recForTwo;
-                twoCircle.innerHTML = "2В";
-                break;
+                case "В":
+                    twoContent.innerHTML = V + " " + recForTwo;
+                    twoCircle.innerHTML = "2В";
+                    break;
 
-            case "Л":
-                twoContent.innerHTML = L + " " + recForTwo;
-                twoCircle.innerHTML = "2Л";
-                break;
+                case "Л":
+                    twoContent.innerHTML = L + " " + recForTwo;
+                    twoCircle.innerHTML = "2Л";
+                    break;
 
-            default:
-                twoContent.innerHTML = "Вторая функция не определена";
-        }
-        ;
+                default:
+                    twoContent.innerHTML = "Вторая функция не определена";
+            }
+            ;
 
 //Switch-case для отображения текста в ТРЕТЬЕМ из ЧЕТЫРЕХ блоков в зависимости от ПЙ-типа
-        switch (res[2]) {
-            case "Ф":
-                threeContent.innerHTML = F + " " + recForThree;
-                threeCircle.innerHTML = "3Ф";
-                break;
+            switch (res[2]) {
+                case "Ф":
+                    threeContent.innerHTML = F + " " + recForThree;
+                    threeCircle.innerHTML = "3Ф";
+                    break;
 
-            case "Э":
-                threeContent.innerHTML = E + " " + recForThree;
-                threeCircle.innerHTML = "3Э";
-                break;
+                case "Э":
+                    threeContent.innerHTML = E + " " + recForThree;
+                    threeCircle.innerHTML = "3Э";
+                    break;
 
-            case "В":
-                threeContent.innerHTML = V + " " + recForThree;
-                threeCircle.innerHTML = "3В";
-                break;
+                case "В":
+                    threeContent.innerHTML = V + " " + recForThree;
+                    threeCircle.innerHTML = "3В";
+                    break;
 
-            case "Л":
-                threeContent.innerHTML = L + " " + recForThree;
-                threeCircle.innerHTML = "3Л";
-                break;
+                case "Л":
+                    threeContent.innerHTML = L + " " + recForThree;
+                    threeCircle.innerHTML = "3Л";
+                    break;
 
-            default:
-                threeContent.innerHTML = "Третья функция не определена";
-        }
-        ;
+                default:
+                    threeContent.innerHTML = "Третья функция не определена";
+            }
+            ;
 
 //Switch-case для отображения текста во ЧЕТВЕРТОМ из ЧЕТЫРЕХ блоков в зависимости от ПЙ-типа
-        switch (res[3]) {
-            case "Ф":
-                fourContent.innerHTML = F + " " + recForFour;
-                fourCircle.innerHTML = "4Ф";
-                break;
+            switch (res[3]) {
+                case "Ф":
+                    fourContent.innerHTML = F + " " + recForFour;
+                    fourCircle.innerHTML = "4Ф";
+                    break;
 
-            case "Э":
-                fourContent.innerHTML = E + " " + recForFour;
-                fourCircle.innerHTML = "4Э";
-                break;
+                case "Э":
+                    fourContent.innerHTML = E + " " + recForFour;
+                    fourCircle.innerHTML = "4Э";
+                    break;
 
-            case "В":
-                fourContent.innerHTML = V + " " + recForFour;
-                fourCircle.innerHTML = "4В";
-                break;
+                case "В":
+                    fourContent.innerHTML = V + " " + recForFour;
+                    fourCircle.innerHTML = "4В";
+                    break;
 
-            case "Л":
-                fourContent.innerHTML = L + " " + recForFour;
-                fourCircle.innerHTML = "4Л";
-                break;
+                case "Л":
+                    fourContent.innerHTML = L + " " + recForFour;
+                    fourCircle.innerHTML = "4Л";
+                    break;
 
-            default:
-                fourContent.innerHTML = "Четвертая функция не определена";
-        }
-        ;
-            
+                default:
+                    fourContent.innerHTML = "Четвертая функция не определена";
+            }
+            ;
+
         });
-               
-       
-       
+
+
+
         form.pnlHtml.element.innerHTML = '<section id="main" class="main-container">\
 		<div class="emp-main-block" id="sn-main">\
 			<div class="photo" id="photo">\
@@ -580,34 +597,11 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 <div class="section-name yellow" align="center" id="sn-skills"><div class="section-selfname">НАВЫКИ</div></div>\
 <section class="skills-container">\
 	<div class="skills-block"  id="skills">\
-		<div class="skill">\
-			<div class="skill-name">Владение пакетом программ MS Office</div>\
-			<div class="skill-line">\
-				<div class="meter orange">\
-					<span style="width: 40%"></span>\
-				</div>\
-			</div>\
-		</div>\
-		<div class="skill">\
-			<div class="skill-name">Навык общения</div>\
-			<div class="skill-line">\
-				<div class="meter blue">\
-					<span style="width: 60%"></span>\
-				</div>\
-			</div>\
-		</div>\
-		<div class="skill">\
-			<div class="skill-name">Организаторский навык</div>\
-			<div class="skill-line">\
-				<div class="meter yellow">\
-					<span style="width: 76%"></span>\
-				</div>\
-			</div>\
 		</div>\
 </section>\
 <div class="section-name blue" align="center" id="sn-interests"><div class="section-selfname">ИНТЕРЕСЫ</div></div>\
 <section id="interests" class="interests-container">\
-	<div class="interests-block">\
+	<div class="interests-block" id="interests-blockID">\
 		<div class="interest">\
 			<div class="int-img orange" id="int-IT"><img src="InfoGraphicsEmpForm/icons/int-IT.png"></div>\
 			<div class="int-text">Информационные технологии</div>\
@@ -696,7 +690,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 				</div>\
 			\
 			<div class="soc-kid-block">\
-				<div class="soc-ego-text" id="rec-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</div>\
+				<div class="soc-ego-text" id="rec-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores <br>voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae <br>rerum quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque<br> asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem <br>ipsam quae rerum quis.</div>\
 				<div class="row">\
     				<div class="col-lg-2">\
         				<div id="test-circle"></div>\
@@ -760,18 +754,16 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 				</span>\
 			</div>\
 		</div>\
-\
 	</div>\
 </section>/\n\
         <div class="section-name orange" align="center" id="sn-career"><div class="section-selfname">ТРУДОВАЯ ДЕЯТЕЛЬНОСТЬ</div></div>\
 	<section id="cd-timeline" class="cd-container">\
-		\
 	</section>';
 
 
-           
+
     }
-    
+
 
 
     return module_constructor;

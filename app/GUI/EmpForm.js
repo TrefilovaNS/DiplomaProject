@@ -237,17 +237,10 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                     user.soctype = form.soctypes.text;
                     user.psytype = form.ptypes.text;
                     user.icon = model.human[0].icon;
+                    user.skills = form.modelGridSkills.data;
+                    
 //                    user.interests  = form.modelGridSkills.data;
-                    for (var i = 0; i < form.modelGridSkills.data.length; i++) {
-//                        var skillsname[i].skill = arguments[0];
-//                        
-                             
-                            form.modelGridSkills.data[i].skill.skillname;
-                            form.modelGridSkills.data[i].level;
-//                            
-//                            console.log(form.modelGridSkills.data[i].skill.skillname, form.modelGridSkills.data[i].level);
-                            
-                              }
+                    
 
 //                        
                        
