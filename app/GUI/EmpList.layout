@@ -7,11 +7,11 @@
   <ModelGrid cursor="0" data="qEmpList" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="330px" prefWidth="630px" rowsHeight="20">
     <AnchorsPaneConstraints height="330px" left="80px" top="110px" width="630px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="fullName" name="colFullName" title="ФИО" width="295px">
+    <ModelGridColumn field="fullName" name="colFullName" title="ФИО" width="298px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="birthdate" name="colBirthdate" title="Дата рождения" width="294px">
-      <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
+    <ModelGridColumn field="birthdate" name="colBirthdate" title="Дата рождения" width="297px">
+      <ModelDate format="dd.MM.yyyy"/>
     </ModelGridColumn>
   </ModelGrid>
   <Label cursor="0" horizontalAlignment="0" name="label2" parent="view" prefHeight="30px" prefWidth="540px" text="Дважды щелкните по строке, чтобы редактировать данные">
