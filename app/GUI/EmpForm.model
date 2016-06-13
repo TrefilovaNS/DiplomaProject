@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qCarrer" Title="" entityHeight="200" entityIconified="false" entityId="146029251635546" entityLocationX="25" entityLocationY="294" entityWidth="150" queryId="qCarrer" tableName="" tableSchemaName=""/>
   <entity Name="qInterestsByHuman" Title="" entityHeight="123" entityIconified="false" entityId="146199855035194" entityLocationX="229" entityLocationY="379" entityWidth="150" queryId="qInterestsByHuman" tableName="" tableSchemaName=""/>
-  <entity Name="qInterests" Title="" entityHeight="200" entityIconified="false" entityId="146435339652737" entityLocationX="653" entityLocationY="479" entityWidth="150" queryId="qInterests" tableName="" tableSchemaName=""/>
-  <entity Name="qContacts" Title="" entityHeight="105" entityIconified="false" entityId="145600672014160" entityLocationX="266" entityLocationY="73" entityWidth="150" queryId="qContacts" tableName="" tableSchemaName=""/>
+  <entity Name="qInterests" Title="" entityHeight="97" entityIconified="false" entityId="146435339652737" entityLocationX="653" entityLocationY="479" entityWidth="150" queryId="qInterests" tableName="" tableSchemaName=""/>
+  <entity Name="qContacts" Title="" entityHeight="112" entityIconified="false" entityId="145600672014160" entityLocationX="277" entityLocationY="60" entityWidth="150" queryId="qContacts" tableName="" tableSchemaName=""/>
   <entity Name="qEdu" Title="" entityHeight="200" entityIconified="false" entityId="145632149544374" entityLocationX="627" entityLocationY="0" entityWidth="150" queryId="qEdu" tableName="" tableSchemaName=""/>
-  <entity Name="human" Title="" entityHeight="200" entityIconified="false" entityId="145597047302417" entityLocationX="22" entityLocationY="11" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
+  <entity Name="human" Title="" entityHeight="228" entityIconified="false" entityId="145597047302417" entityLocationX="22" entityLocationY="11" entityWidth="150" queryId="Human" tableName="" tableSchemaName=""/>
   <entity Name="qSocTypes" Title="" entityHeight="75" entityIconified="false" entityId="146058202256678" entityLocationX="277" entityLocationY="191" entityWidth="150" queryId="qSocTypes" tableName="" tableSchemaName=""/>
   <entity Name="qSkills" Title="" entityHeight="79" entityIconified="false" entityId="146174811204816" entityLocationX="689" entityLocationY="215" entityWidth="150" queryId="qSkills" tableName="" tableSchemaName=""/>
   <entity Name="qRecomsById" Title="" entityHeight="107" entityIconified="false" entityId="146403434473956" entityLocationX="423" entityLocationY="431" entityWidth="150" queryId="qRecomsById" tableName="" tableSchemaName=""/>
@@ -12,21 +12,21 @@
   <entity Name="qEduDegree" Title="" entityHeight="79" entityIconified="false" entityId="145857093174219" entityLocationX="440" entityLocationY="115" entityWidth="150" queryId="qEduDegree" tableName="" tableSchemaName=""/>
   <entity Name="qSkillsById" Title="" entityHeight="96" entityIconified="false" entityId="146195079274412" entityLocationX="656" entityLocationY="363" entityWidth="150" queryId="qSkillsById" tableName="" tableSchemaName=""/>
   <entity Name="qSkillsByHuman" Title="" entityHeight="174" entityIconified="false" entityId="146174812961315" entityLocationX="445" entityLocationY="229" entityWidth="195" queryId="qSkillsByHuman" tableName="" tableSchemaName=""/>
-  <relation leftEntityFieldName="human_id" leftEntityId="145597047302417" rightEntityId="146029251635546" rightEntityParameterName="human_id"/>
+  <relation leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityId="146195079274412" rightEntityParameterName="skills_id"/>
   <relation leftEntityFieldName="human_id" leftEntityId="145597047302417" rightEntityId="146199855035194" rightEntityParameterName="human_id"/>
+  <relation leftEntityFieldName="human_id" leftEntityId="145597047302417" rightEntityId="146029251635546" rightEntityParameterName="human_id"/>
   <relation leftEntityFieldName="human_id" leftEntityId="145597047302417" rightEntityId="146174812961315" rightEntityParameterName="human_id"/>
   <relation leftEntityFieldName="human_id" leftEntityId="145597047302417" rightEntityId="145632149544374" rightEntityParameterName="human_id"/>
-  <relation leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityId="146195079274412" rightEntityParameterName="skills_id"/>
-  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="psyhosophytypes_id" leftEntityId="145597047302417" rightEntityFieldName="psyhosophytypes_id" rightEntityId="146097493381621" scalarPropertyName="psytype"/>
-  <referenceRelation leftEntityFieldName="human_id" leftEntityId="146435339652737" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
-  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145632149544374" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
   <referenceRelation collectionPropertyName="humans" leftEntityFieldName="human_id" leftEntityId="146199855035194" rightEntityFieldName="human_id" rightEntityId="145597047302417" scalarPropertyName="intrst"/>
-  <referenceRelation leftEntityFieldName="edudegree_id" leftEntityId="145632149544374" rightEntityFieldName="edudegree_id" rightEntityId="145857093174219"/>
-  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityFieldName="skills_id" rightEntityId="146174811204816" scalarPropertyName="skill"/>
-  <referenceRelation leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityFieldName="skills_id" rightEntityId="146195079274412"/>
-  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="socionicstypes_id" leftEntityId="145597047302417" rightEntityFieldName="socionicstypes_id" rightEntityId="146058202256678" scalarPropertyName="soctype"/>
-  <referenceRelation leftEntityFieldName="human_id" leftEntityId="146029251635546" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
+  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="psyhosophytypes_id" leftEntityId="145597047302417" rightEntityFieldName="psyhosophytypes_id" rightEntityId="146097493381621" scalarPropertyName="psytype"/>
   <referenceRelation leftEntityFieldName="human_id" leftEntityId="146174812961315" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
   <referenceRelation collectionPropertyName="humans" leftEntityFieldName="contacts_id" leftEntityId="145597047302417" rightEntityFieldName="contacts_id" rightEntityId="145600672014160" scalarPropertyName="contact"/>
+  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityFieldName="skills_id" rightEntityId="146174811204816" scalarPropertyName="skill"/>
+  <referenceRelation leftEntityFieldName="human_id" leftEntityId="146029251635546" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
+  <referenceRelation leftEntityFieldName="edudegree_id" leftEntityId="145632149544374" rightEntityFieldName="edudegree_id" rightEntityId="145857093174219"/>
+  <referenceRelation leftEntityFieldName="skills_id" leftEntityId="146174812961315" rightEntityFieldName="skills_id" rightEntityId="146195079274412"/>
   <referenceRelation leftEntityFieldName="recom_id" leftEntityId="145597047302417" rightEntityFieldName="recommendations_id" rightEntityId="146403434473956"/>
+  <referenceRelation collectionPropertyName="humans" leftEntityFieldName="socionicstypes_id" leftEntityId="145597047302417" rightEntityFieldName="socionicstypes_id" rightEntityId="146058202256678" scalarPropertyName="soctype"/>
+  <referenceRelation leftEntityFieldName="human_id" leftEntityId="146435339652737" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
+  <referenceRelation leftEntityFieldName="human_id" leftEntityId="145632149544374" rightEntityFieldName="human_id" rightEntityId="145597047302417"/>
 </datamodel>

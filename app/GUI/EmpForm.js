@@ -3,14 +3,14 @@
  * @author Пользователь
  * @module EmpForm
  */
-define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
-        function (Orm, Forms, Ui, Resource, Invoke, ModuleName) {
+define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke', 'id'],
+        function (Orm, Forms, Ui, Resource, Invoke, Id, ModuleName) {
             function module_constructor(userId) {
                 var self = this
                         , model = Orm.loadModel(ModuleName)
                         , form = Forms.loadForm(ModuleName, model);
                 var aUserId = userId;
-//                var onSucsess;
+                var onSucsess;
                 form.panel5.height = null;
                 form.panel2.height = null;
                 var saveCareer = [];
@@ -39,12 +39,14 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                             career.showOn(form.panel5);
                         }
 
-                        form.email.data = model.human[0].contact;
                         form.email.field = "email";
-                        form.phone.data = model.human[0].contact;
                         form.phone.field = "phonenumber";
-                        form.socpage.data = model.human[0].contact;
                         form.socpage.field = "socialpage";
+                        form.email.data = model.human[0].contact;
+                        form.phone.data = model.human[0].contact;
+                        form.socpage.data = model.human[0].contact;
+
+
 
                         var pnlDiv = new Bp();
                         pnlDiv.height = 1;
@@ -80,15 +82,17 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                     }
                     model.requery(function () {
                         if (model.human.length === 0) {
-                            model.human.push({});
-                            model.qContacts.push({});
+                            var contactsId = Id.generate();
+                            model.human.push({contacts_id: contactsId});
+                            model.qContacts.push({contacts_id: contactsId});
                         }
                         onShow();
                     });
                 }
 
 
-                self.show = function () {
+                self.show = function (callback) {
+                    onSucsess = callback;
                     preShow();
                     form.show();
                 };
@@ -96,7 +100,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
 
 
                 self.showModal = function (callback) {
-//                    onSucsess = callback;
+                    onSucsess = callback;
                     preShow();
                     form.showModal();
                 };
@@ -201,14 +205,16 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                 };
 
                 form.btnSave.onActionPerformed = function (event) {
-                    model.save();
-                    for (var i = 0; i < saveCareer.length; i++) {
-                        var fn = saveCareer[i];
-                        fn();
-                    }
+                    model.save(function () {
+                        for (var i = 0; i < saveCareer.length; i++) {
+                            var fn = saveCareer[i];
+                            fn();
+                        }
+                    });
                 };
 
                 form.btnClose.onActionPerformed = function (event) {
+                    onSucsess();
                     form.close();
                 };
 
@@ -219,7 +225,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                 form.export.onActionPerformed = function () {
 
                     user.surname = form.surname.value;
-                    user.name = form.name.value;
+                    user.name = form.hname.value;
                     user.middlename = form.middlename.value;
 
                     var now = new Date();
@@ -238,17 +244,17 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
                     user.psytype = form.ptypes.text;
                     user.icon = model.human[0].icon;
                     user.skills = form.modelGridSkills.data;
-                    
+
 //                    user.interests  = form.modelGridSkills.data;
-                    
+
 
 //                        
-                       
+
 //                      skillslevel[i] = form.modelGridSkills.data[i].level;
 //                      
 
-                  
-                    
+
+
 
 
                     require(['temp'], function (Temp) {
@@ -267,15 +273,17 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke'],
 ////                       user.education.push(edu.getInfo);
 //                         recom.show();
 
-
+                        var recom;
                         if (model.qRecomsById.params.recom_id) {
-                            var recom = new Recom(model.qRecomsById.params.recom_id);
+                            recom = new Recom(model.qRecomsById.params.recom_id);
 
-                        } else if
-                                (model.qRecomsById.length === 0) {
-                            var recom = new Recom(model.qRecomsById.push({}));
+                        } else {
+                            if (model.qRecomsById.length === 0) {
+                                recom = new Recom(model.qRecomsById.push({}));
+                            }else{
+                                recom = new Recom();
+                            }
                         }
-
                         recom.show();
 
 

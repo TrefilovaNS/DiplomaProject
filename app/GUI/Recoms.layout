@@ -16,20 +16,20 @@
   <Label cursor="0" name="label2" parent="view" prefHeight="30px" prefWidth="630px" text="Задачи, которые способен решать">
     <AnchorsPaneConstraints height="30px" left="20px" top="230px" width="630px"/>
   </Label>
-  <ModelGrid cursor="0" data="qTasks" name="modelGrid" parent="view" prefHeight="100px" prefWidth="630px">
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="100px" prefWidth="630px">
     <AnchorsPaneConstraints height="100px" left="20px" top="300px" width="630px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="tasks_id" name="colTasks_id" title="colTasks_id" width="195px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="tasks_id" name="colTasks_id" title="colTasks_id" width="203px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="task" name="colTask" title="colTask" width="195px">
-      <ModelFormattedField/>
+    <ModelGridColumn field="task" name="colTask" title="colTask" width="203px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="195px">
+    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="202px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="130px" text="Выбрать задачи">
+  <Button cursor="0" name="btnInt" parent="view" prefHeight="30px" prefWidth="130px" text="Выбрать задачи">
     <AnchorsPaneConstraints height="30px" left="20px" top="260px" width="130px"/>
   </Button>
   <Label cursor="0" name="label21" parent="view" prefHeight="30px" prefWidth="630px" text="Способы мотивации">
@@ -38,16 +38,16 @@
   <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="130px" text="Выбрать">
     <AnchorsPaneConstraints bottom="185px" height="30px" left="20px" width="130px"/>
   </Button>
-  <ModelGrid cursor="0" data="qMotivations" name="modelGrid1" parent="view" prefHeight="100px" prefWidth="630px">
+  <ModelGrid cursor="0" name="modelGrid1" parent="view" prefHeight="100px" prefWidth="630px">
     <AnchorsPaneConstraints bottom="75px" height="100px" left="20px" width="630px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="motivations_id" name="colMotivations_id" title="colMotivations_id" width="195px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="motivations_id" name="colMotivations_id" title="colMotivations_id" width="203px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="motivation" name="colMotivation" title="colMotivation" width="195px">
-      <ModelFormattedField/>
+    <ModelGridColumn field="motivation" name="colMotivation" title="colMotivation" width="203px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="195px">
+    <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="202px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
