@@ -2,9 +2,9 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="372px"/>
   <ModelGrid cursor="0" data="qTasks" name="modelGrid" parent="view" prefHeight="230px" prefWidth="360px">
     <AnchorsPaneConstraints height="230px" left="10px" top="0px" width="360px"/>
-    <CheckGridColumn name="column"/>
+    <CheckGridColumn name="column" resizable="true"/>
     <ModelGridColumn field="task" name="colTask" title="colTask" width="315px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnAdd" parent="view" prefHeight="30px" prefWidth="80px" text="Внести">
@@ -14,6 +14,6 @@
     <AnchorsPaneConstraints bottom="10px" height="30px" left="110px" width="130px"/>
   </Button>
   <Button cursor="0" name="btnOK" parent="view" prefHeight="30px" prefWidth="100px" text="Ok">
-    <AnchorsPaneConstraints bottom="10px" height="30px" right="0px" width="100px"/>
+    <AnchorsPaneConstraints bottom="10px" height="30px" right="12px" width="100px"/>
   </Button>
 </layout>

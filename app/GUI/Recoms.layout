@@ -7,22 +7,16 @@
     <AnchorsPaneConstraints height="100px" left="20px" top="80px" width="630px"/>
   </ScrollPane>
   <ModelTextArea cursor="0" name="modelTextArea" parent="scrollPane" prefHeight="98px" prefWidth="628px" text="modelTextArea"/>
-  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="60px" text="Процент:">
-    <AnchorsPaneConstraints height="20px" left="20px" top="190px" width="60px"/>
-  </Label>
-  <ModelSpin cursor="0" name="modelSpin" parent="view" prefHeight="22px" prefWidth="100px">
-    <AnchorsPaneConstraints height="22px" left="80px" top="190px" width="100px"/>
-  </ModelSpin>
   <Label cursor="0" name="label2" parent="view" prefHeight="30px" prefWidth="630px" text="Задачи, которые способен решать">
     <AnchorsPaneConstraints height="30px" left="20px" top="230px" width="630px"/>
   </Label>
   <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="100px" prefWidth="630px">
     <AnchorsPaneConstraints height="100px" left="20px" top="300px" width="630px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="tasks_id" name="colTasks_id" title="colTasks_id" width="203px">
+    <ModelGridColumn field="tasks_id" name="colTasks_id" title="colTasks_id" width="202px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="task" name="colTask" title="colTask" width="203px">
+    <ModelGridColumn field="task" name="colTask" title="colTask" width="202px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="202px">
@@ -41,10 +35,10 @@
   <ModelGrid cursor="0" name="modelGrid1" parent="view" prefHeight="100px" prefWidth="630px">
     <AnchorsPaneConstraints bottom="75px" height="100px" left="20px" width="630px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="motivations_id" name="colMotivations_id" title="colMotivations_id" width="203px">
+    <ModelGridColumn field="motivations_id" name="colMotivations_id" title="colMotivations_id" width="202px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="motivation" name="colMotivation" title="colMotivation" width="203px">
+    <ModelGridColumn field="motivation" name="colMotivation" title="colMotivation" width="202px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="recom_id" name="colRecom_id" title="colRecom_id" width="202px">

@@ -225,7 +225,7 @@ define('EmpForm', ['orm', 'forms', 'ui', 'resource', 'invoke', 'id'],
                 form.export.onActionPerformed = function () {
 
                     user.surname = form.surname.value;
-                    user.name = form.hname.value;
+                    user.name = form.name.value;
                     user.middlename = form.middlename.value;
 
                     var now = new Date();

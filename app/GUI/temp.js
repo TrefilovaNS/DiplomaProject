@@ -183,6 +183,10 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
                         case 'ИГХТУ':
                             imgSrc = "<img src='InfoGraphicsEmpForm/img/him.jpg'>";
                             break;
+                            
+                        case 'ВШЭ':
+                            imgSrc = "<img src='InfoGraphicsEmpForm/img/vshe.jpg'>";
+                            break;
                         default:
                             console.log("Лого не найдено" + imgSrc);
                     }
@@ -604,7 +608,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 	<div class="interests-block" id="interests-blockID">\
 		<div class="interest">\
 			<div class="int-img orange" id="int-IT"><img src="InfoGraphicsEmpForm/icons/int-IT.png"></div>\
-			<div class="int-text">Информационные технологии</div>\
+			<div class="int-text">ИТ</div>\
 		</div>\
 		<div class="interest">\
 			<div class="int-img yellow" id="int-Lan"><img src="InfoGraphicsEmpForm/icons/int-Lan.png"></div>\
@@ -612,7 +616,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 		</div>\
 		<div class="interest">\
 			<div class="int-img blue" id="int-Sports"><img src="InfoGraphicsEmpForm/icons/int-Sports.png"></div>\
-			<div class="int-text">Спорт: лыжи</div>\
+			<div class="int-text">Спорт: баскетбол</div>\
 		</div>\
 		<div class="interest">\
 			<div class="int-img orange" id="int-Photo"><img src="InfoGraphicsEmpForm/icons/int-Photo.png"></div>\
@@ -719,7 +723,7 @@ define("temp", ["forms", "ui", "invoke"], function (Forms, Ui, Invoke, ModuleNam
 					<div><img src="InfoGraphicsEmpForm/icons/check.png"></div>\
 						 <div class="task">Проведение вебинаров и видео-конференций</div>\
 					<div><img src="InfoGraphicsEmpForm/icons/check.png"></div>\
-						 <div class="task">Осуществление контроля над исполнением задач другими людьми</div>\
+						 <div class="task">Осуществление контроля над исполнением задач</div>\
 					\
 				</span>\
 			</div>\

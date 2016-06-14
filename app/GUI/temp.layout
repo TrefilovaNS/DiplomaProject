@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="3283px" prefWidth="848px"/>
-  <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="button">
+  <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="Назад">
     <AnchorsPaneConstraints height="30px" left="10px" top="10px" width="100px"/>
   </Button>
   <ScrollPane cursor="0" name="scrollPane" parent="view" prefHeight="3226px" prefWidth="800px" verticalScrollBarPolicy="32">
     <AnchorsPaneConstraints bottom="7px" left="40px" right="8px" top="50px"/>
   </ScrollPane>
-  <BoxPane background="#ffffff" cursor="0" name="pnlHtml" orientation="1" parent="scrollPane" prefHeight="3224px" prefWidth="781px"/>
+  <BoxPane background="#ffffff" cursor="0" name="pnlHtml" orientation="1" parent="scrollPane" prefHeight="3224px" prefWidth="777px"/>
 </layout>

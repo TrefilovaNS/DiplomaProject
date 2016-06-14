@@ -23,7 +23,7 @@ define('Tasks', ['orm', 'forms', 'ui'], function (Orm, Forms, Ui, ModuleName) {
         };
 
         form.btnAdd.onActionPerformed = function (event) {
-            model.qSkills.push({});
+            model.qTasks.push({});
         };
 
         form.btnSave.onActionPerformed = function () {

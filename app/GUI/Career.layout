@@ -32,13 +32,13 @@
   <Button cursor="0" name="btnAdd" parent="view" prefHeight="30px" prefWidth="110px" text="Добавить">
     <AnchorsPaneConstraints height="30px" left="260px" top="140px" width="110px"/>
   </Button>
-  <ModelFormattedField cursor="0" data="qJobById" field="cursor.jobname" format="" name="jobname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qJobById" field="cursor.jobname" format="" name="jobname" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="20px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qPostById" field="cursor.postname" format="" name="postname" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qPostById" field="cursor.postname" format="" name="postname" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints height="30px" left="260px" top="60px" width="350px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qDismisById" field="cursor.reason" format="" name="reason" parent="view" prefHeight="30px" prefWidth="350px" text="modelFormattedField1">
+  <ModelFormattedField cursor="0" data="qDismisById" field="cursor.reason" format="" name="reason" parent="view" prefHeight="30px" prefWidth="350px">
     <AnchorsPaneConstraints bottom="87px" height="30px" left="260px" width="350px"/>
   </ModelFormattedField>
 </layout>
